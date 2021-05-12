@@ -1,0 +1,664 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C?
+U 1 1 62160D25
+P 3900 5600
+AR Path="/6032F251/62160D25" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/62160D25" Ref="C?"  Part="1" 
+F 0 "C?" V 3648 5600 50  0000 C CNN
+F 1 "2.2u" V 3739 5600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3938 5450 50  0001 C CNN
+F 3 "~" H 3900 5600 50  0001 C CNN
+F 4 "CL10B225KP8NNNC" H 3648 5700 50  0001 C CNN "Manf#"
+F 5 "10%" H 3648 5700 50  0001 C CNN "Tolerance"
+F 6 "10V" H 3648 5700 50  0001 C CNN "voltage"
+	1    3900 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L covg-kicad:OPA828 U?
+U 1 1 62160D2C
+P 5800 1500
+AR Path="/6032F251/62160D2C" Ref="U?"  Part="1" 
+AR Path="/6032F251/62017813/62160D2C" Ref="U?"  Part="1" 
+F 0 "U?" H 5750 1700 50  0000 L CNN
+F 1 "OPA828" H 5750 1350 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 1300 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa828.pdf" H 5950 1650 50  0001 C CNN
+F 4 "OPA828ID" H 5800 1500 50  0001 C CNN "Manf#"
+	1    5800 1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 62160D34
+P 6650 1600
+AR Path="/6032F251/62160D34" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/62160D34" Ref="R?"  Part="1" 
+F 0 "R?" V 6597 1668 59  0000 L CNN
+F 1 "3.01k" V 6702 1668 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6650 1600 50  0001 C CNN
+F 3 "" H 6650 1600 50  0001 C CNN
+F 4 "RC0603FR-073k01L" H 6597 1768 50  0001 C CNN "Manf#"
+F 5 "1%" H 6650 1600 50  0001 C CNN "Tolerance"
+	1    6650 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-15V #PWR?
+U 1 1 62160D42
+P 5900 1800
+AR Path="/6032F251/62160D42" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160D42" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5900 1900 50  0001 C CNN
+F 1 "-15V" H 5915 1973 50  0000 C CNN
+F 2 "" H 5900 1800 50  0001 C CNN
+F 3 "" H 5900 1800 50  0001 C CNN
+	1    5900 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 62160D48
+P 5900 1200
+AR Path="/6032F251/62160D48" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160D48" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5900 1050 50  0001 C CNN
+F 1 "+15V" H 5915 1373 50  0000 C CNN
+F 2 "" H 5900 1200 50  0001 C CNN
+F 3 "" H 5900 1200 50  0001 C CNN
+	1    5900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62160D4E
+P 4600 5800
+AR Path="/6032F251/62160D4E" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160D4E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4600 5550 50  0001 C CNN
+F 1 "GND" V 4605 5672 50  0001 R CNN
+F 2 "" H 4600 5800 50  0001 C CNN
+F 3 "" H 4600 5800 50  0001 C CNN
+	1    4600 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2050 5250 2050
+Wire Wire Line
+	5750 2050 6200 2050
+Wire Wire Line
+	6200 2050 6200 1600
+Wire Wire Line
+	6800 1600 7100 1600
+$Comp
+L covg-kicad:DAC53401DSGR IC?
+U 1 1 62160D63
+P 4000 5000
+AR Path="/6032F251/62160D63" Ref="IC?"  Part="1" 
+AR Path="/6032F251/62017813/62160D63" Ref="IC?"  Part="1" 
+F 0 "IC?" H 4600 5265 50  0000 C CNN
+F 1 "DAC53401DSGR" H 4600 5174 50  0000 C CNN
+F 2 "SON50P200X200X80-9N" H 5050 5100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/dac53401.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1589734386977" H 5050 5000 50  0001 L CNN
+F 4 "Digital to Analog Converters - DAC 10-bit 1-channel DAC with NVM, buffered voltage output and I2C interface 8-WSON -40 to 125" H 5050 4900 50  0001 L CNN "Description"
+F 5 "0.8" H 5050 4800 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 5050 4700 50  0001 L CNN "Manufacturer_Name"
+F 7 "DAC53401DSGR" H 5050 4600 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-DAC53401DSGR" H 5050 4500 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DAC53401DSGR/?qs=wnTfsH77Xs7g1K1l%2Ft63Fg%3D%3D" H 5050 4400 50  0001 L CNN "Mouser Price/Stock"
+F 10 "DAC53401DSGR" H 5050 4300 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/dac53401dsgr/texas-instruments" H 5050 4200 50  0001 L CNN "Arrow Price/Stock"
+	1    4000 5000
+	1    0    0    -1  
+$EndComp
+Text Label 3750 5100 0    50   ~ 0
+SCL
+Text Label 3750 5200 0    50   ~ 0
+SDA
+Text Label 3750 5100 0    50   ~ 0
+SCL
+Text Label 3750 5200 0    50   ~ 0
+SDA
+Wire Wire Line
+	4000 5100 3750 5100
+Wire Wire Line
+	3750 5200 4000 5200
+Wire Wire Line
+	4000 5300 3900 5300
+Wire Wire Line
+	3900 5800 4600 5800
+Connection ~ 4600 5800
+Wire Wire Line
+	3900 5800 3900 5750
+Wire Wire Line
+	3900 5450 3900 5300
+$Comp
+L Device:R_US R?
+U 1 1 62160D76
+P 3500 5200
+AR Path="/6032F251/62160D76" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/62160D76" Ref="R?"  Part="1" 
+F 0 "R?" V 3447 5268 59  0000 L CNN
+F 1 "10k" V 3552 5268 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3500 5200 50  0001 C CNN
+F 3 "" H 3500 5200 50  0001 C CNN
+F 4 "RC0603FR-0710KL" H 3447 5368 50  0001 C CNN "Manf#"
+F 5 "5%" H 3500 5200 50  0001 C CNN "Tolerance"
+	1    3500 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 5800 3500 5800
+Wire Wire Line
+	3500 5800 3500 5350
+Connection ~ 3900 5800
+Wire Wire Line
+	3500 5050 3500 5000
+Wire Wire Line
+	3500 5000 4000 5000
+Text Notes 1050 4550 0    50   ~ 0
+A0 to AGND, VDD, SCL or SDA\n\n0x48 = ‘b1001000 (7-bit) with AGND 
+$Comp
+L power:GND #PWR?
+U 1 1 62160D82
+P 5200 5300
+AR Path="/6032F251/62160D82" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160D82" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5200 5050 50  0001 C CNN
+F 1 "GND" V 5205 5172 50  0001 R CNN
+F 2 "" H 5200 5300 50  0001 C CNN
+F 3 "" H 5200 5300 50  0001 C CNN
+	1    5200 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 62160D8B
+P 5500 5500
+AR Path="/6032F251/62160D8B" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/62160D8B" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/62160D8B" Ref="C?"  Part="1" 
+F 0 "C?" V 5248 5500 50  0000 C CNN
+F 1 "0.1u" V 5339 5500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5538 5350 50  0001 C CNN
+F 3 "~" H 5500 5500 50  0001 C CNN
+F 4 "CC0603MRX7R8BB104" H 5248 5600 50  0001 C CNN "Manf#"
+F 5 "20%" H 5248 5600 50  0001 C CNN "Tolerance"
+F 6 "25V" H 5248 5600 50  0001 C CNN "voltage"
+	1    5500 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 5800 5500 5650
+$Comp
+L power:+5V #PWR?
+U 1 1 62160D92
+P 5500 5250
+AR Path="/6032F251/62160D92" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160D92" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5500 5100 50  0001 C CNN
+F 1 "+5V" H 5515 5423 50  0000 C CNN
+F 2 "" H 5500 5250 50  0001 C CNN
+F 3 "" H 5500 5250 50  0001 C CNN
+	1    5500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5800 4600 5800
+$Comp
+L Amplifier_Operational:OPA188xxDBV U?
+U 1 1 62160D99
+P 6650 5100
+AR Path="/6032F251/62160D99" Ref="U?"  Part="1" 
+AR Path="/6032F251/62017813/62160D99" Ref="U?"  Part="1" 
+F 0 "U?" H 6994 5146 50  0000 L CNN
+F 1 "OPA188xxDBV" H 6994 5055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 6650 5100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa188.pdf" H 6650 5300 50  0001 C CNN
+	1    6650 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5100 7100 5100
+$Comp
+L power:+15V #PWR?
+U 1 1 62160DA0
+P 6550 4800
+AR Path="/6032F251/62160DA0" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160DA0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6550 4650 50  0001 C CNN
+F 1 "+15V" H 6565 4973 50  0000 C CNN
+F 2 "" H 6550 4800 50  0001 C CNN
+F 3 "" H 6550 4800 50  0001 C CNN
+	1    6550 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR?
+U 1 1 62160DA6
+P 6550 5400
+AR Path="/6032F251/62160DA6" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160DA6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6550 5500 50  0001 C CNN
+F 1 "-15V" H 6565 5573 50  0000 C CNN
+F 2 "" H 6550 5400 50  0001 C CNN
+F 3 "" H 6550 5400 50  0001 C CNN
+	1    6550 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 5250 5500 5350
+Wire Wire Line
+	5500 5250 5350 5250
+Wire Wire Line
+	5350 5250 5350 5200
+Wire Wire Line
+	5350 5200 5200 5200
+Connection ~ 5500 5250
+Wire Wire Line
+	5200 5000 5350 5000
+$Comp
+L power:+3.3V #PWR?
+U 1 1 62160DB2
+P 5800 5250
+AR Path="/6032F251/62160DB2" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160DB2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5800 5100 50  0001 C CNN
+F 1 "+3.3V" H 5815 5423 50  0000 C CNN
+F 2 "" H 5800 5250 50  0001 C CNN
+F 3 "" H 5800 5250 50  0001 C CNN
+	1    5800 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 62160DBA
+P 6050 5250
+AR Path="/6032F251/62160DBA" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/62160DBA" Ref="R?"  Part="1" 
+F 0 "R?" V 5997 5318 59  0000 L CNN
+F 1 "33k" V 6102 5318 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6050 5250 50  0001 C CNN
+F 3 "" H 6050 5250 50  0001 C CNN
+F 4 "" H 5997 5418 50  0001 C CNN "Manf#"
+F 5 "1%" H 6050 5250 50  0001 C CNN "Tolerance"
+	1    6050 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 62160DC2
+P 6650 5800
+AR Path="/6032F251/62160DC2" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/62160DC2" Ref="R?"  Part="1" 
+F 0 "R?" V 6597 5868 59  0000 L CNN
+F 1 "10k" V 6702 5868 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6650 5800 50  0001 C CNN
+F 3 "" H 6650 5800 50  0001 C CNN
+F 4 "" H 6597 5968 50  0001 C CNN "Manf#"
+F 5 "1%" H 6650 5800 50  0001 C CNN "Tolerance"
+	1    6650 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 62160DCA
+P 6300 5950
+AR Path="/6032F251/62160DCA" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/62160DCA" Ref="R?"  Part="1" 
+F 0 "R?" V 6247 6018 59  0000 L CNN
+F 1 "27.5k" V 6352 6018 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6300 5950 50  0001 C CNN
+F 3 "" H 6300 5950 50  0001 C CNN
+F 4 "" H 6247 6118 50  0001 C CNN "Manf#"
+F 5 "1%" H 6300 5950 50  0001 C CNN "Tolerance"
+	1    6300 5950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62160DD0
+P 6300 6200
+AR Path="/6032F251/62160DD0" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160DD0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6300 5950 50  0001 C CNN
+F 1 "GND" V 6305 6072 50  0001 R CNN
+F 2 "" H 6300 6200 50  0001 C CNN
+F 3 "" H 6300 6200 50  0001 C CNN
+	1    6300 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 6200 6300 6100
+Wire Wire Line
+	6300 5800 6500 5800
+Wire Wire Line
+	5800 5250 5900 5250
+Wire Wire Line
+	6200 5250 6300 5250
+Wire Wire Line
+	6300 5250 6300 5200
+Wire Wire Line
+	6300 5200 6350 5200
+Wire Wire Line
+	6300 5800 6300 5250
+Connection ~ 6300 5800
+Connection ~ 6300 5250
+Wire Wire Line
+	6800 5800 7100 5800
+Wire Wire Line
+	7100 5800 7100 5100
+Text Notes 5050 4900 0    50   ~ 0
+Use internal reference (1.20 V)\nGain = x1
+Wire Wire Line
+	5200 5100 5350 5100
+Wire Wire Line
+	5350 5100 5350 5000
+Connection ~ 5350 5000
+Wire Wire Line
+	5350 5000 6350 5000
+$Comp
+L Device:C C?
+U 1 1 62160DEA
+P 8050 5200
+AR Path="/6032F251/62160DEA" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/62160DEA" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/62160DEA" Ref="C?"  Part="1" 
+F 0 "C?" V 7798 5200 50  0000 C CNN
+F 1 "0.1u" V 7889 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8088 5050 50  0001 C CNN
+F 3 "~" H 8050 5200 50  0001 C CNN
+F 4 "CC0603MRX7R8BB104" H 7798 5300 50  0001 C CNN "Manf#"
+F 5 "20%" H 7798 5300 50  0001 C CNN "Tolerance"
+F 6 "25V" H 7798 5300 50  0001 C CNN "voltage"
+	1    8050 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 62160DF3
+P 8550 5200
+AR Path="/6032F251/62160DF3" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/62160DF3" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/62160DF3" Ref="C?"  Part="1" 
+F 0 "C?" V 8298 5200 50  0000 C CNN
+F 1 "0.1u" V 8389 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8588 5050 50  0001 C CNN
+F 3 "~" H 8550 5200 50  0001 C CNN
+F 4 "CC0603MRX7R8BB104" H 8298 5300 50  0001 C CNN "Manf#"
+F 5 "20%" H 8298 5300 50  0001 C CNN "Tolerance"
+F 6 "25V" H 8298 5300 50  0001 C CNN "voltage"
+	1    8550 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62160DF9
+P 8050 5450
+AR Path="/6032F251/62160DF9" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160DF9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8050 5200 50  0001 C CNN
+F 1 "GND" V 8055 5322 50  0001 R CNN
+F 2 "" H 8050 5450 50  0001 C CNN
+F 3 "" H 8050 5450 50  0001 C CNN
+	1    8050 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62160DFF
+P 8550 4950
+AR Path="/6032F251/62160DFF" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160DFF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8550 4700 50  0001 C CNN
+F 1 "GND" V 8555 4822 50  0001 R CNN
+F 2 "" H 8550 4950 50  0001 C CNN
+F 3 "" H 8550 4950 50  0001 C CNN
+	1    8550 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 62160E05
+P 8050 4950
+AR Path="/6032F251/62160E05" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160E05" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8050 4800 50  0001 C CNN
+F 1 "+15V" H 8065 5123 50  0000 C CNN
+F 2 "" H 8050 4950 50  0001 C CNN
+F 3 "" H 8050 4950 50  0001 C CNN
+	1    8050 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR?
+U 1 1 62160E0B
+P 8550 5450
+AR Path="/6032F251/62160E0B" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62160E0B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8550 5550 50  0001 C CNN
+F 1 "-15V" H 8565 5623 50  0000 C CNN
+F 2 "" H 8550 5450 50  0001 C CNN
+F 3 "" H 8550 5450 50  0001 C CNN
+	1    8550 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8550 5450 8550 5350
+Wire Wire Line
+	8550 4950 8550 5050
+Wire Wire Line
+	8050 4950 8050 5050
+Wire Wire Line
+	8050 5450 8050 5350
+$Comp
+L Analog_Switch:DG412xUE U?
+U 1 1 62160E15
+P 4950 2050
+AR Path="/6032F251/62160E15" Ref="U?"  Part="1" 
+AR Path="/6032F251/62017813/62160E15" Ref="U?"  Part="1" 
+F 0 "U?" H 4950 2317 50  0000 C CNN
+F 1 "DG412xUE" H 4950 2226 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4950 1950 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 4950 2050 50  0001 C CNN
+	1    4950 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 1600 6200 1600
+Connection ~ 6200 1600
+Wire Wire Line
+	6200 1600 6500 1600
+Connection ~ 7100 5100
+$Comp
+L Analog_Switch:DG412xUE U?
+U 2 1 621A9B7C
+P 4950 2550
+F 0 "U?" H 4950 2817 50  0000 C CNN
+F 1 "DG412xUE" H 4950 2726 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4950 2450 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 4950 2550 50  0001 C CNN
+	2    4950 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_Switch:DG412xUE U?
+U 3 1 621ACC09
+P 4950 3100
+F 0 "U?" H 4950 3367 50  0000 C CNN
+F 1 "DG412xUE" H 4950 3276 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4950 3000 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 4950 3100 50  0001 C CNN
+	3    4950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_Switch:DG412xUE U?
+U 4 1 621AF5A1
+P 4950 3650
+F 0 "U?" H 4950 3917 50  0000 C CNN
+F 1 "DG412xUE" H 4950 3826 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4950 3550 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 4950 3650 50  0001 C CNN
+	4    4950 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1600 7100 5100
+Wire Wire Line
+	4650 2550 4100 2550
+Wire Wire Line
+	4100 2550 4100 2050
+Wire Wire Line
+	4100 1500 5500 1500
+Wire Wire Line
+	4650 2050 4100 2050
+Connection ~ 4100 2050
+Wire Wire Line
+	4100 2050 4100 1500
+Wire Wire Line
+	4650 3100 4100 3100
+Wire Wire Line
+	4100 3100 4100 2550
+Connection ~ 4100 2550
+Wire Wire Line
+	4650 3650 4100 3650
+Wire Wire Line
+	4100 3650 4100 3100
+Connection ~ 4100 3100
+Wire Wire Line
+	4950 3300 4500 3300
+Wire Wire Line
+	4950 2750 4500 2750
+Wire Wire Line
+	4950 2250 4500 2250
+$Comp
+L Device:R_US R?
+U 1 1 621C59AF
+P 5500 2550
+AR Path="/6032F251/621C59AF" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/621C59AF" Ref="R?"  Part="1" 
+F 0 "R?" V 5447 2618 59  0000 L CNN
+F 1 "12.1k" V 5552 2618 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5500 2550 50  0001 C CNN
+F 3 "" H 5500 2550 50  0001 C CNN
+F 4 "RC0603FR-0712K1L" H 5447 2718 50  0001 C CNN "Manf#"
+F 5 "1%" H 5500 2550 50  0001 C CNN "Tolerance"
+	1    5500 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 621C60E2
+P 5500 3100
+AR Path="/6032F251/621C60E2" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/621C60E2" Ref="R?"  Part="1" 
+F 0 "R?" V 5447 3168 59  0000 L CNN
+F 1 "30.1k" V 5552 3168 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5500 3100 50  0001 C CNN
+F 3 "" H 5500 3100 50  0001 C CNN
+F 4 "RC0603FR-0730K1L" H 5447 3268 50  0001 C CNN "Manf#"
+F 5 "1%" H 5500 3100 50  0001 C CNN "Tolerance"
+	1    5500 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 621C6497
+P 5500 3650
+AR Path="/6032F251/621C6497" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/621C6497" Ref="R?"  Part="1" 
+F 0 "R?" V 5447 3718 59  0000 L CNN
+F 1 "60.4k" V 5552 3718 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5500 3650 50  0001 C CNN
+F 3 "" H 5500 3650 50  0001 C CNN
+F 4 "RC0603FR-0760k4L" H 5447 3818 50  0001 C CNN "Manf#"
+F 5 "1%" H 5500 3650 50  0001 C CNN "Tolerance"
+	1    5500 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 2550 6200 2550
+Wire Wire Line
+	6200 2550 6200 2050
+Connection ~ 6200 2050
+Wire Wire Line
+	5650 3100 6200 3100
+Wire Wire Line
+	6200 3100 6200 2550
+Connection ~ 6200 2550
+Wire Wire Line
+	5650 3650 6200 3650
+Wire Wire Line
+	6200 3650 6200 3100
+Connection ~ 6200 3100
+Wire Wire Line
+	5350 3100 5250 3100
+Wire Wire Line
+	5350 3650 5250 3650
+Wire Wire Line
+	5350 2550 5250 2550
+$Comp
+L Device:R_US R?
+U 1 1 621CE5F6
+P 5600 2050
+AR Path="/6032F251/621CE5F6" Ref="R?"  Part="1" 
+AR Path="/6032F251/62017813/621CE5F6" Ref="R?"  Part="1" 
+F 0 "R?" V 5547 2118 59  0000 L CNN
+F 1 "3.01k" V 5652 2118 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5600 2050 50  0001 C CNN
+F 3 "" H 5600 2050 50  0001 C CNN
+F 4 "RC0603FR-073k01L" H 5547 2218 50  0001 C CNN "Manf#"
+F 5 "1%" H 5600 2050 50  0001 C CNN "Tolerance"
+	1    5600 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 1500 3000 1500
+Connection ~ 4100 1500
+Wire Wire Line
+	6100 1400 7800 1400
+Text HLabel 7800 1400 2    50   Input ~ 0
+IN
+Text HLabel 3000 1500 0    50   Output ~ 0
+OUT
+Wire Wire Line
+	4950 3850 4500 3850
+Text Label 4550 2250 0    50   ~ 0
+RF1
+Text Label 4550 2750 0    50   ~ 0
+RF2
+Text Label 4550 3300 0    50   ~ 0
+RF3
+Text Label 4550 3850 0    50   ~ 0
+RF4
+Entry Wire Line
+	4500 2250 4400 2350
+Entry Wire Line
+	4400 2850 4500 2750
+Entry Wire Line
+	4400 3400 4500 3300
+Entry Wire Line
+	4500 3850 4400 3950
+Wire Bus Line
+	4400 3950 4000 3950
+Text Label 4000 3950 0    50   ~ 0
+RF[1:4]
+Wire Bus Line
+	4400 2350 4400 3950
+$EndSCHEMATC

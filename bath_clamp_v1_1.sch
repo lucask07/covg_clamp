@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 2 5
+Sheet 2 6
 Title "Bath/Guard Clamp"
 Date "2021-04-06"
 Rev "1"
@@ -13,15 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Sheet
-S 3700 4100 600  600 
-U 60DC1C0F
-F0 "sheet_compensation_switching" 50
-F1 "compensation_switching.sch" 50
-F2 "SEL[1..4]" I L 3700 4600 50 
-F3 "IN" I L 3700 4300 50 
-F4 "OUT" O R 4300 4300 50 
-$EndSheet
 $Sheet
 S 6600 8900 1400 700 
 U 608FDC40
@@ -219,17 +210,6 @@ F 12 "Active" H 11950 5350 60  0001 L CNN "Status"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0101
-U 1 1 603F0A2D
-P 8400 3900
-F 0 "#PWR0101" H 8400 3650 50  0001 C CNN
-F 1 "GND" V 8405 3772 50  0001 R CNN
-F 2 "" H 8400 3900 50  0001 C CNN
-F 3 "" H 8400 3900 50  0001 C CNN
-	1    8400 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L covg-kicad:ADG1208 U2
 U 1 1 604C753D
 P 8200 3000
@@ -283,14 +263,14 @@ $EndComp
 $Comp
 L Device:R_US R8
 U 1 1 604E1783
-P 6400 4400
-F 0 "R8" V 6347 4468 59  0000 L CNN
-F 1 "10M" V 6452 4468 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6400 4400 50  0001 C CNN
-F 3 "" H 6400 4400 50  0001 C CNN
-F 4 "RC0603FR-0710ML" H 6347 4568 50  0001 C CNN "Manf#"
-F 5 "5%" H 6400 4400 50  0001 C CNN "Tolerance"
-	1    6400 4400
+P 6400 4250
+F 0 "R8" V 6347 4318 59  0000 L CNN
+F 1 "10M" V 6452 4318 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6400 4250 50  0001 C CNN
+F 3 "" H 6400 4250 50  0001 C CNN
+F 4 "RC0603FR-0710ML" H 6347 4418 50  0001 C CNN "Manf#"
+F 5 "5%" H 6400 4250 50  0001 C CNN "Tolerance"
+	1    6400 4250
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -388,17 +368,6 @@ F 2 "" H 10250 2050 50  0001 C CNN
 F 3 "" H 10250 2050 50  0001 C CNN
 	1    10250 2050
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0105
-U 1 1 605F6B6B
-P 10750 1150
-F 0 "#PWR0105" H 10750 900 50  0001 C CNN
-F 1 "GND" V 10755 1022 50  0001 R CNN
-F 2 "" H 10750 1150 50  0001 C CNN
-F 3 "" H 10750 1150 50  0001 C CNN
-	1    10750 1150
-	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0106
@@ -532,28 +501,6 @@ F 3 "" H 9600 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+15V #PWR0118
-U 1 1 607249DE
-P 8400 1850
-F 0 "#PWR0118" H 8400 1700 50  0001 C CNN
-F 1 "+15V" H 8415 2023 50  0000 C CNN
-F 2 "" H 8400 1850 50  0001 C CNN
-F 3 "" H 8400 1850 50  0001 C CNN
-	1    8400 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-15V #PWR0119
-U 1 1 60724FF3
-P 8500 4050
-F 0 "#PWR0119" H 8500 4150 50  0001 C CNN
-F 1 "-15V" H 8515 4223 50  0000 C CNN
-F 2 "" H 8500 4050 50  0001 C CNN
-F 3 "" H 8500 4050 50  0001 C CNN
-	1    8500 4050
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:+5V #PWR0126
 U 1 1 606056DF
 P 2200 2950
@@ -618,20 +565,6 @@ F 12 "Active" H 12750 6500 60  0001 L CNN "Status"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C6
-U 1 1 60790D74
-P 12250 5450
-F 0 "C6" V 11998 5450 50  0000 C CNN
-F 1 "5n" V 12089 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 12288 5300 50  0001 C CNN
-F 3 "~" H 12250 5450 50  0001 C CNN
-F 4 "CC0603JRX7R9BB472" H 11998 5550 50  0001 C CNN "Manf#"
-F 5 "5%" H 11998 5550 50  0001 C CNN "Tolerance"
-F 6 "50V" H 11998 5550 50  0001 C CNN "voltage"
-	1    12250 5450
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R_US R23
 U 1 1 6080C092
 P 11850 5450
@@ -656,17 +589,6 @@ F 4 "RC0603FR-0710KL" H 7097 2668 50  0001 C CNN "Manf#"
 F 5 "5%" H 7150 2500 50  0001 C CNN "Tolerance"
 	1    7150 2500
 	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR0131
-U 1 1 6060A5A4
-P 7150 2050
-F 0 "#PWR0131" H 7150 1900 50  0001 C CNN
-F 1 "+5V" H 7165 2223 50  0000 C CNN
-F 2 "" H 7150 2050 50  0001 C CNN
-F 3 "" H 7150 2050 50  0001 C CNN
-	1    7150 2050
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D4
@@ -898,66 +820,6 @@ F 4 "OPA828ID" H 5150 3200 50  0001 C CNN "Manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L covg-kicad:OPA828 U14
-U 1 1 60B7DEA9
-P 7600 5050
-F 0 "U14" H 7550 5250 50  0000 L CNN
-F 1 "OPA828" H 7550 4900 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7500 4850 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa828.pdf" H 7750 5200 50  0001 C CNN
-F 4 "OPA828ID" H 7600 5050 50  0001 C CNN "Manf#"
-	1    7600 5050
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R34
-U 1 1 60B7ECA7
-P 8300 5150
-F 0 "R34" V 8247 5218 59  0000 L CNN
-F 1 "10k" V 8352 5218 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 8300 5150 50  0001 C CNN
-F 3 "" H 8300 5150 50  0001 C CNN
-F 4 "RC0603FR-0710KL" H 8247 5318 50  0001 C CNN "Manf#"
-F 5 "1%" H 8300 5150 50  0001 C CNN "Tolerance"
-	1    8300 5150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_US R32
-U 1 1 60B7FDDA
-P 7300 5600
-F 0 "R32" V 7247 5668 59  0000 L CNN
-F 1 "10k" V 7352 5668 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7300 5600 50  0001 C CNN
-F 3 "" H 7300 5600 50  0001 C CNN
-F 4 "RC0603FR-0710KL" H 7247 5768 50  0001 C CNN "Manf#"
-F 5 "5%" H 7300 5600 50  0001 C CNN "Tolerance"
-	1    7300 5600
-	0    1    1    0   
-$EndComp
-$Comp
-L power:-15V #PWR036
-U 1 1 60B80EFC
-P 7700 5350
-F 0 "#PWR036" H 7700 5450 50  0001 C CNN
-F 1 "-15V" H 7715 5523 50  0000 C CNN
-F 2 "" H 7700 5350 50  0001 C CNN
-F 3 "" H 7700 5350 50  0001 C CNN
-	1    7700 5350
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+15V #PWR034
-U 1 1 60B97BC9
-P 7700 4750
-F 0 "#PWR034" H 7700 4600 50  0001 C CNN
-F 1 "+15V" H 7715 4923 50  0000 C CNN
-F 2 "" H 7700 4750 50  0001 C CNN
-F 3 "" H 7700 4750 50  0001 C CNN
-	1    7700 4750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_US R30
 U 1 1 60C097CE
 P 4000 3850
@@ -969,17 +831,6 @@ F 4 "RC0603FR-0720KL" H 3947 4018 50  0001 C CNN "Manf#"
 F 5 "1%" H 4000 3850 50  0001 C CNN "Tolerance"
 	1    4000 3850
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR041
-U 1 1 60CC92A4
-P 8650 5200
-F 0 "#PWR041" H 8650 4950 50  0001 C CNN
-F 1 "GND" V 8655 5072 50  0001 R CNN
-F 2 "" H 8650 5200 50  0001 C CNN
-F 3 "" H 8650 5200 50  0001 C CNN
-	1    8650 5200
-	1    0    0    -1  
 $EndComp
 $Comp
 L dk_Transistors-Bipolar-BJT-Arrays:MBT3904DW1T1G Q4
@@ -1121,65 +972,6 @@ F 2 "" H 2050 750 50  0001 C CNN
 F 3 "~" H 2050 750 50  0001 C CNN
 	1    2050 750 
 	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_US R33
-U 1 1 60A3B02E
-P 8300 5150
-F 0 "R33" V 8247 5218 59  0000 L CNN
-F 1 "10k" V 8352 5218 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 8300 5150 50  0001 C CNN
-F 3 "" H 8300 5150 50  0001 C CNN
-F 4 "RC0603FR-0710KL" H 8247 5318 50  0001 C CNN "Manf#"
-F 5 "1%" H 8300 5150 50  0001 C CNN "Tolerance"
-	1    8300 5150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_US R31
-U 1 1 60A3B039
-P 7300 5600
-F 0 "R31" V 7247 5668 59  0000 L CNN
-F 1 "10k" V 7352 5668 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7300 5600 50  0001 C CNN
-F 3 "" H 7300 5600 50  0001 C CNN
-F 4 "RC0603FR-0710KL" H 7247 5768 50  0001 C CNN "Manf#"
-F 5 "5%" H 7300 5600 50  0001 C CNN "Tolerance"
-	1    7300 5600
-	0    1    1    0   
-$EndComp
-$Comp
-L power:-15V #PWR035
-U 1 1 60A3B043
-P 7700 5350
-F 0 "#PWR035" H 7700 5450 50  0001 C CNN
-F 1 "-15V" H 7715 5523 50  0000 C CNN
-F 2 "" H 7700 5350 50  0001 C CNN
-F 3 "" H 7700 5350 50  0001 C CNN
-	1    7700 5350
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+15V #PWR033
-U 1 1 60A3B04D
-P 7700 4750
-F 0 "#PWR033" H 7700 4600 50  0001 C CNN
-F 1 "+15V" H 7715 4923 50  0000 C CNN
-F 2 "" H 7700 4750 50  0001 C CNN
-F 3 "" H 7700 4750 50  0001 C CNN
-	1    7700 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR040
-U 1 1 60A3B06C
-P 8650 5200
-F 0 "#PWR040" H 8650 4950 50  0001 C CNN
-F 1 "GND" V 8655 5072 50  0001 R CNN
-F 2 "" H 8650 5200 50  0001 C CNN
-F 3 "" H 8650 5200 50  0001 C CNN
-	1    8650 5200
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR017
@@ -1478,12 +1270,12 @@ $EndComp
 $Comp
 L power:+3.3V #PWR028
 U 1 1 60A00DAE
-P 4400 7500
-F 0 "#PWR028" H 4400 7350 50  0001 C CNN
-F 1 "+3.3V" H 4415 7673 50  0000 C CNN
-F 2 "" H 4400 7500 50  0001 C CNN
-F 3 "" H 4400 7500 50  0001 C CNN
-	1    4400 7500
+P 4400 7650
+F 0 "#PWR028" H 4400 7500 50  0001 C CNN
+F 1 "+3.3V" H 4415 7823 50  0000 C CNN
+F 2 "" H 4400 7650 50  0001 C CNN
+F 3 "" H 4400 7650 50  0001 C CNN
+	1    4400 7650
 	1    0    0    -1  
 $EndComp
 Text Notes 12650 4900 0    50   ~ 0
@@ -1668,8 +1460,6 @@ Text Notes 10400 3200 0    50   ~ 0
 28.1 mA coil
 Text Notes 9700 4400 0    50   ~ 0
 35 mA coil current
-Text Notes 9400 5650 0    50   ~ 0
-28.1 mA coil
 Text Notes 11900 2400 0    50   ~ 0
 35 mA coil current
 Text HLabel 2300 2750 2    50   BiDi ~ 0
@@ -1717,8 +1507,6 @@ AMP_OUT
 Text Label 8100 8250 0    50   ~ 0
 CC
 Wire Wire Line
-	9200 4950 9200 4100
-Wire Wire Line
 	9200 4000 9200 3400
 Wire Wire Line
 	8400 1850 8400 2100
@@ -1727,7 +1515,7 @@ Wire Wire Line
 Wire Wire Line
 	5850 3200 5850 4250
 Wire Wire Line
-	7000 4400 7000 3600
+	7000 4250 7000 3600
 Wire Wire Line
 	7000 3600 7800 3600
 Wire Wire Line
@@ -1939,8 +1727,6 @@ Wire Wire Line
 Wire Wire Line
 	1900 2350 2300 2350
 Wire Wire Line
-	12400 5450 12550 5450
-Wire Wire Line
 	10900 4800 12550 4800
 Wire Wire Line
 	11600 2100 11350 2100
@@ -1984,8 +1770,6 @@ Wire Wire Line
 	6050 2050 6050 2300
 Wire Wire Line
 	11200 5450 11700 5450
-Wire Wire Line
-	12000 5450 12100 5450
 Wire Wire Line
 	11900 7400 11900 7500
 Wire Wire Line
@@ -2045,13 +1829,13 @@ Wire Wire Line
 Wire Wire Line
 	6250 4000 6050 4000
 Wire Wire Line
-	6050 4000 6050 4400
+	6050 4000 6050 4250
 Wire Wire Line
 	6550 4000 6900 4000
 Wire Wire Line
-	6250 4400 6050 4400
+	6250 4250 6050 4250
 Wire Wire Line
-	6550 4400 7000 4400
+	6550 4250 7000 4250
 Wire Wire Line
 	3100 3300 3650 3300
 Wire Wire Line
@@ -2079,29 +1863,7 @@ Wire Wire Line
 Wire Wire Line
 	5050 2800 5050 2900
 Wire Wire Line
-	7150 5600 7050 5600
-Wire Wire Line
-	7050 5600 7050 5050
-Wire Wire Line
-	7450 5600 8000 5600
-Wire Wire Line
-	8000 5600 8000 5150
-Wire Wire Line
-	8450 5150 8650 5150
-Wire Wire Line
-	8650 5150 8650 5200
-Wire Wire Line
-	7900 4950 9200 4950
-Wire Wire Line
 	4550 4250 5100 4250
-Wire Wire Line
-	9200 4950 10400 4950
-Wire Wire Line
-	7900 5150 8000 5150
-Wire Wire Line
-	7050 5050 7300 5050
-Wire Wire Line
-	8000 5150 8150 5150
 Wire Wire Line
 	4300 4300 4550 4300
 Wire Wire Line
@@ -2140,8 +1902,6 @@ Wire Wire Line
 	3300 5500 3550 5500
 Wire Wire Line
 	3300 5050 3450 5050
-Wire Wire Line
-	3450 5050 7050 5050
 Wire Wire Line
 	11250 8900 11500 8900
 Wire Wire Line
@@ -2235,7 +1995,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 8700 5550 8700
 Wire Wire Line
-	4400 7700 4400 7500
+	4400 7700 4400 7650
 Wire Wire Line
 	5100 8600 5550 8600
 Wire Wire Line
@@ -2321,16 +2081,12 @@ Connection ~ 6050 3700
 Connection ~ 6050 4000
 Connection ~ 4550 3300
 Connection ~ 5850 3200
-Connection ~ 9200 4950
-Connection ~ 7050 5050
-Connection ~ 8000 5150
 Connection ~ 4550 4250
 Connection ~ 3450 4300
 Connection ~ 2750 5500
 Connection ~ 2750 5050
 Connection ~ 4550 3850
 Connection ~ 2350 4650
-Connection ~ 3450 5050
 Connection ~ 10300 9500
 Connection ~ 10300 9600
 Connection ~ 1850 4950
@@ -2370,8 +2126,8 @@ $Comp
 L Interface_Expansion:TCA9555DBR U12
 U 1 1 6098BDDF
 P 4400 8800
-F 0 "U12" H 4400 10081 50  0000 C CNN
-F 1 "TCA9555DBR" H 4400 9990 50  0000 C CNN
+F 0 "U12" H 3900 9900 50  0000 C CNN
+F 1 "TCA9555DBR" H 4050 9800 50  0000 C CNN
 F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 5450 7800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tca9555.pdf" H 3900 9700 50  0001 C CNN
 	1    4400 8800
@@ -2422,6 +2178,47 @@ Wire Wire Line
 	3550 9600 3700 9600
 Wire Wire Line
 	4400 9900 4400 9950
+$Comp
+L Device:C C?
+U 1 1 619D6409
+P 12250 5450
+F 0 "C?" V 11998 5450 50  0000 C CNN
+F 1 "4.7n" V 12089 5450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12288 5300 50  0001 C CNN
+F 3 "~" H 12250 5450 50  0001 C CNN
+F 4 "CC0603JRX7R9BB472" H 11998 5550 50  0001 C CNN "Manf#"
+F 5 "5%" H 11998 5550 50  0001 C CNN "Tolerance"
+F 6 "50V" H 11998 5550 50  0001 C CNN "voltage"
+	1    12250 5450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12400 5450 12550 5450
+Wire Wire Line
+	12100 5450 12000 5450
+Text Notes 10400 10200 0    50   ~ 0
+Addr = 0111_A2_A1_A0
+$Sheet
+S 14900 5250 800  500 
+U 62017813
+F0 "feedback_buffer" 50
+F1 "feedback_buffer.sch" 50
+$EndSheet
+Text Notes 9400 5650 0    50   ~ 0
+28.1 mA coil
+Wire Wire Line
+	9200 4950 9200 4100
+Wire Wire Line
+	9200 4950 10400 4950
+$Sheet
+S 3700 4100 600  600 
+U 6217F546
+F0 "compensation_switching" 50
+F1 "compensation_switching.sch" 50
+F2 "SEL[1..4]" I L 3700 4600 50 
+F3 "IN" I L 3700 4300 50 
+F4 "OUT" O R 4300 4300 50 
+$EndSheet
 Wire Bus Line
 	5550 9000 5550 9300
 Wire Bus Line

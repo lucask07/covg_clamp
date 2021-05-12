@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -394,10 +394,10 @@ P 1350 4350
 AR Path="/6032F251/60A6A83E" Ref="R?"  Part="1" 
 AR Path="/6032F251/608FDC40/60A6A83E" Ref="R35"  Part="1" 
 F 0 "R35" V 1297 4418 59  0000 L CNN
-F 1 "523" V 1402 4418 59  0000 L CNN
+F 1 "200" V 1402 4418 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 1350 4350 50  0001 C CNN
 F 3 "" H 1350 4350 50  0001 C CNN
-F 4 "RC0603FR-07523RL" H 1297 4518 50  0001 C CNN "Manf#"
+F 4 "RC0603FR-07200RL" H 1297 4518 50  0001 C CNN "Manf#"
 F 5 "1%" H 1350 4350 50  0001 C CNN "Tolerance"
 	1    1350 4350
 	-1   0    0    1   
@@ -611,16 +611,12 @@ Text Label 6100 3750 0    50   ~ 0
 IOUT
 Text Notes 5250 3450 0    50   ~ 0
 InAmp
-Text Notes 2900 4400 0    50   ~ 0
-G = 1
 Text Label 4550 3950 0    50   ~ 0
 AMP_OUT
 Text Label 4550 3550 0    50   ~ 0
 P2
 Text Notes 5250 3450 0    50   ~ 0
 InAmp
-Text Notes 2200 4400 0    50   ~ 0
-G = 1
 Text Label 4550 3950 0    50   ~ 0
 AMP_OUT
 Text Label 4550 3550 0    50   ~ 0
@@ -636,7 +632,7 @@ P2
 Text Notes 5250 3450 0    50   ~ 0
 InAmp
 Text Notes 3600 4400 0    50   ~ 0
-G = 1
+G = 1.99
 Text Label 9500 4150 0    50   ~ 0
 VCM
 Text Notes 8300 3200 0    50   ~ 0
@@ -892,10 +888,16 @@ Wire Wire Line
 	9300 4600 9300 4500
 Wire Wire Line
 	7700 4850 7700 4750
-Wire Bus Line
-	900  3450 3050 3450
 Connection ~ 7700 4850
 Connection ~ 7700 4750
 Wire Wire Line
 	7700 4750 7700 4650
+Wire Bus Line
+	900  3450 3050 3450
+Text Notes 2950 4400 0    50   ~ 0
+G = 4.98
+Text Notes 2200 4400 0    50   ~ 0
+G = 10.00
+Text Notes 1450 4400 0    50   ~ 0
+G = 50
 $EndSCHEMATC
