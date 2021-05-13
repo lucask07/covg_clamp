@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 3 6
 Title ""
 Date ""
 Rev ""
@@ -892,12 +892,12 @@ Connection ~ 7700 4850
 Connection ~ 7700 4750
 Wire Wire Line
 	7700 4750 7700 4650
-Wire Bus Line
-	900  3450 3050 3450
 Text Notes 2950 4400 0    50   ~ 0
 G = 4.98
 Text Notes 2200 4400 0    50   ~ 0
 G = 10.00
 Text Notes 1450 4400 0    50   ~ 0
 G = 50
+Wire Bus Line
+	900  3450 3050 3450
 $EndSCHEMATC

@@ -411,18 +411,6 @@ F 3 "~" H 1900 6850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L covg-kicad:24AA025-OT U6
-U 1 1 60ECBA53
-P 2250 4350
-F 0 "U6" H 1800 4800 50  0000 C CNN
-F 1 "24AA025-OT" H 1950 4700 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2250 4350 50  0001 C CNN
-F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/20005202A.pdf" H 2250 4350 50  0001 C CNN
-F 4 "24AA025UIDT-I/SN" H 2250 4931 50  0001 C CNN "Manf#"
-	1    2250 4350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR03
 U 1 1 60ECCC4B
 P 2250 3900
@@ -478,8 +466,6 @@ Text Label 1650 1050 0    50   ~ 0
 SDA
 Text Notes 650  1450 0    50   ~ 0
 SDA, SCL to top-level to read the UID EEPROM
-Text Label 2750 4250 0    50   ~ 0
-SDA
 Text Label 2750 4350 0    50   ~ 0
 SCL
 Wire Wire Line
@@ -585,8 +571,6 @@ Wire Wire Line
 Wire Wire Line
 	8750 2450 9100 2450
 Wire Wire Line
-	2650 4250 3100 4250
-Wire Wire Line
 	2650 4350 3100 4350
 Wire Wire Line
 	1000 1050 650  1050
@@ -621,4 +605,24 @@ Connection ~ 1700 4300
 Connection ~ 1700 4400
 Wire Wire Line
 	2250 3900 2250 4050
+NoConn ~ 8600 2750
+NoConn ~ 8600 2950
+NoConn ~ 900  6950
+NoConn ~ 900  7450
+NoConn ~ 1900 7450
+Wire Wire Line
+	2650 4250 3100 4250
+Text Label 2750 4250 0    50   ~ 0
+SDA
+$Comp
+L covg-kicad:24AA025UID U?
+U 1 1 627267F8
+P 2250 4350
+F 0 "U?" H 2250 4831 50  0000 C CNN
+F 1 "24AA025UID" H 2250 4740 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2250 4350 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/20005202A.pdf" H 2250 4350 50  0001 C CNN
+	1    2250 4350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -321,6 +321,8 @@ Connection ~ 4300 1800
 Connection ~ 4300 2050
 Connection ~ 4150 4800
 Connection ~ 4050 5550
+NoConn ~ 5000 5950
+NoConn ~ 5000 2800
 Wire Bus Line
 	4450 1700 4450 2750
 Wire Bus Line
