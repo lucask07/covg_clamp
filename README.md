@@ -17,3 +17,7 @@ Now we need to *git clone* (in effect download) the digikey and COVG libraries.
 
 
 
+## Block diagram
+drawio (also named add.diagrams.net) is used to create block diagrams by integrating drawio with the GitHub repository. 
+
+![Test block diagram](documentation/test_github.svg)
