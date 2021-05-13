@@ -98,9 +98,7 @@ F 3 "" H 4600 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5450 2050 5250 2050
-Wire Wire Line
-	5750 2050 6200 2050
+	5750 2050 5850 2050
 Wire Wire Line
 	6200 2050 6200 1600
 Wire Wire Line
@@ -113,7 +111,7 @@ AR Path="/6032F251/62160D63" Ref="IC?"  Part="1"
 AR Path="/6032F251/62017813/62160D63" Ref="IC1"  Part="1" 
 F 0 "IC1" H 4600 5265 50  0000 C CNN
 F 1 "DAC53401DSGR" H 4600 5174 50  0000 C CNN
-F 2 "SON50P200X200X80-9N" H 5050 5100 50  0001 L CNN
+F 2 "covg-kicad:SON50P200X200X80-9N" H 5050 5100 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/dac53401.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1589734386977" H 5050 5000 50  0001 L CNN
 F 4 "Digital to Analog Converters - DAC 10-bit 1-channel DAC with NVM, buffered voltage output and I2C interface 8-WSON -40 to 125" H 5050 4900 50  0001 L CNN "Description"
 F 5 "0.8" H 5050 4800 50  0001 L CNN "Height"
@@ -533,8 +531,6 @@ Wire Wire Line
 	4100 3100 4100 2550
 Connection ~ 4100 2550
 Wire Wire Line
-	4650 3650 4100 3650
-Wire Wire Line
 	4100 3650 4100 3100
 Connection ~ 4100 3100
 Wire Wire Line
@@ -589,26 +585,26 @@ F 5 "1%" H 5500 3650 50  0001 C CNN "Tolerance"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5650 2550 6200 2550
+	5650 2550 5850 2550
 Wire Wire Line
 	6200 2550 6200 2050
 Connection ~ 6200 2050
 Wire Wire Line
-	5650 3100 6200 3100
+	5650 3100 5850 3100
 Wire Wire Line
 	6200 3100 6200 2550
 Connection ~ 6200 2550
 Wire Wire Line
-	5650 3650 6200 3650
+	5650 3650 5850 3650
 Wire Wire Line
 	6200 3650 6200 3100
 Connection ~ 6200 3100
 Wire Wire Line
-	5350 3100 5250 3100
+	5350 3100 5300 3100
 Wire Wire Line
-	5350 3650 5250 3650
+	5350 3650 5300 3650
 Wire Wire Line
-	5350 2550 5250 2550
+	5350 2550 5300 2550
 $Comp
 L Device:R_US R?
 U 1 1 621CE5F6
@@ -633,8 +629,6 @@ Text HLabel 7800 1400 2    50   Input ~ 0
 IN
 Text HLabel 3000 1500 0    50   Output ~ 0
 OUT
-Wire Wire Line
-	4950 3850 4500 3850
 Text Label 4550 2250 0    50   ~ 0
 RF1
 Text Label 4550 2750 0    50   ~ 0
@@ -665,6 +659,136 @@ Wire Wire Line
 	3250 5000 4000 5000
 Wire Wire Line
 	3250 5000 3250 5050
+$Comp
+L Device:C C?
+U 1 1 6274A814
+P 5550 2350
+AR Path="/6032F251/6274A814" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/6274A814" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/6274A814" Ref="C23"  Part="1" 
+F 0 "C23" V 5450 2200 50  0000 C CNN
+F 1 "DNI" V 5450 2500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5588 2200 50  0001 C CNN
+F 3 "~" H 5550 2350 50  0001 C CNN
+F 4 "" H 5298 2450 50  0001 C CNN "Manf#"
+F 5 "20%" H 5298 2450 50  0001 C CNN "Tolerance"
+F 6 "25V" H 5298 2450 50  0001 C CNN "voltage"
+	1    5550 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6275089B
+P 5550 2850
+AR Path="/6032F251/6275089B" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/6275089B" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/6275089B" Ref="C24"  Part="1" 
+F 0 "C24" V 5450 2700 50  0000 C CNN
+F 1 "DNI" V 5450 3000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5588 2700 50  0001 C CNN
+F 3 "~" H 5550 2850 50  0001 C CNN
+F 4 "" H 5298 2950 50  0001 C CNN "Manf#"
+F 5 "20%" H 5298 2950 50  0001 C CNN "Tolerance"
+F 6 "25V" H 5298 2950 50  0001 C CNN "voltage"
+	1    5550 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 62750F44
+P 5550 3400
+AR Path="/6032F251/62750F44" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/62750F44" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/62750F44" Ref="C25"  Part="1" 
+F 0 "C25" V 5450 3250 50  0000 C CNN
+F 1 "DNI" V 5450 3550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5588 3250 50  0001 C CNN
+F 3 "~" H 5550 3400 50  0001 C CNN
+F 4 "" H 5298 3500 50  0001 C CNN "Manf#"
+F 5 "20%" H 5298 3500 50  0001 C CNN "Tolerance"
+F 6 "25V" H 5298 3500 50  0001 C CNN "voltage"
+	1    5550 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 62751479
+P 5550 3950
+AR Path="/6032F251/62751479" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/62751479" Ref="C?"  Part="1" 
+AR Path="/6032F251/62017813/62751479" Ref="C26"  Part="1" 
+F 0 "C26" V 5450 3800 50  0000 C CNN
+F 1 "DNI" V 5450 4100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5588 3800 50  0001 C CNN
+F 3 "~" H 5550 3950 50  0001 C CNN
+F 4 "" H 5298 4050 50  0001 C CNN "Manf#"
+F 5 "20%" H 5298 4050 50  0001 C CNN "Tolerance"
+F 6 "25V" H 5298 4050 50  0001 C CNN "voltage"
+	1    5550 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 2350 5850 2350
+Wire Wire Line
+	5850 2350 5850 2050
+Connection ~ 5850 2050
+Wire Wire Line
+	5850 2050 6200 2050
+Wire Wire Line
+	5400 2350 5300 2350
+Wire Wire Line
+	5300 2350 5300 2050
+Wire Wire Line
+	5250 2050 5300 2050
+Connection ~ 5300 2050
+Wire Wire Line
+	5300 2050 5450 2050
+Wire Wire Line
+	5400 2850 5300 2850
+Wire Wire Line
+	5300 2850 5300 2550
+Connection ~ 5300 2550
+Wire Wire Line
+	5300 2550 5250 2550
+Wire Wire Line
+	5700 2850 5850 2850
+Wire Wire Line
+	5850 2850 5850 2550
+Connection ~ 5850 2550
+Wire Wire Line
+	5850 2550 6200 2550
+Wire Wire Line
+	5400 3400 5300 3400
+Wire Wire Line
+	5300 3400 5300 3100
+Connection ~ 5300 3100
+Wire Wire Line
+	5300 3100 5250 3100
+Wire Wire Line
+	5700 3400 5850 3400
+Wire Wire Line
+	5850 3400 5850 3100
+Connection ~ 5850 3100
+Wire Wire Line
+	5850 3100 6200 3100
+Wire Wire Line
+	5400 3950 5300 3950
+Wire Wire Line
+	5300 3950 5300 3650
+Connection ~ 5300 3650
+Wire Wire Line
+	4950 3850 4500 3850
+Wire Wire Line
+	5250 3650 5300 3650
+Wire Wire Line
+	4650 3650 4100 3650
+Wire Wire Line
+	5700 3950 5850 3950
+Wire Wire Line
+	5850 3950 5850 3650
+Connection ~ 5850 3650
+Wire Wire Line
+	5850 3650 6200 3650
 Wire Bus Line
 	4400 2350 4400 3950
 $EndSCHEMATC

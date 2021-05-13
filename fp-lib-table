@@ -1,5 +1,4 @@
 (fp_lib_table
   (lib (name bath_clamp_v1)(type KiCad)(uri "$(KIPRJMOD)/bath_clamp_v1.pretty")(options "")(descr ""))
-  (lib (name digikey-footprints)(type KiCad)(uri "/Users/koer2434/Google Drive/UST/research/patch_clamp/kicad/libraries/digikey-kicad-library/digikey-footprints.pretty")(options "")(descr ""))
-  (lib (name covg_bath_clamp_v1)(type KiCad)(uri ${MYLIBRARY}/clamps/covg_bath_clamp_v1.pretty)(options "")(descr ""))
+  (lib (name digikey-footprints)(type KiCad)(uri ${MYLIBRARY}/digikey-kicad-library/digikey-footprints.pretty)(options "")(descr ""))
 )

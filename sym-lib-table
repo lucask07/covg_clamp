@@ -1,5 +1,5 @@
 (sym_lib_table
-  (lib (name bath_clamp_v1-eagle-import)(type Legacy)(uri ${KIPRJMOD}/bath_clamp_v1-eagle-import.lib)(options "")(descr ""))
+  (lib (name bath_clamp_v1-eagle-import)(type Legacy)(uri ${KIPRJMOD}/bath_clamp_v1-eagle-import.lib)(options "")(descr "")(disabled))
   (lib (name dk_USB-DVI-HDMI-Connectors)(type Legacy)(uri ${MYLIBRARY}/digikey-kicad-library/digikey-symbols/dk_USB-DVI-HDMI-Connectors.lib)(options "")(descr ""))
   (lib (name dk_Trimmer-Potentiometers)(type Legacy)(uri ${MYLIBRARY}/digikey-kicad-library/digikey-symbols/dk_Trimmer-Potentiometers.lib)(options "")(descr ""))
   (lib (name dk_Transistors-JFETs)(type Legacy)(uri ${MYLIBRARY}/digikey-kicad-library/digikey-symbols/dk_Transistors-JFETs.lib)(options "")(descr ""))

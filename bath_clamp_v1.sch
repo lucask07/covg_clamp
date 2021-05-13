@@ -366,7 +366,7 @@ AR Path="/6032F251/60EC1EFA" Ref="H?"  Part="1"
 AR Path="/60EC1EFA" Ref="H1"  Part="1" 
 F 0 "H1" H 1000 6899 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1000 6808 50  0000 L CNN
-F 2 "" H 900 6850 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 900 6850 50  0001 C CNN
 F 3 "~" H 900 6850 50  0001 C CNN
 	1    900  6850
 	1    0    0    -1  
@@ -379,7 +379,7 @@ AR Path="/6032F251/60EC1F00" Ref="H?"  Part="1"
 AR Path="/60EC1F00" Ref="H3"  Part="1" 
 F 0 "H3" H 1000 7399 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1000 7308 50  0000 L CNN
-F 2 "" H 900 7350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 900 7350 50  0001 C CNN
 F 3 "~" H 900 7350 50  0001 C CNN
 	1    900  7350
 	1    0    0    -1  
@@ -392,7 +392,7 @@ AR Path="/6032F251/60EC1F06" Ref="H?"  Part="1"
 AR Path="/60EC1F06" Ref="H7"  Part="1" 
 F 0 "H7" H 2000 7399 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2000 7308 50  0000 L CNN
-F 2 "" H 1900 7350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 1900 7350 50  0001 C CNN
 F 3 "~" H 1900 7350 50  0001 C CNN
 	1    1900 7350
 	1    0    0    -1  
@@ -405,7 +405,7 @@ AR Path="/6032F251/60EC1F0C" Ref="H?"  Part="1"
 AR Path="/60EC1F0C" Ref="H5"  Part="1" 
 F 0 "H5" H 2000 6899 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2000 6808 50  0000 L CNN
-F 2 "" H 1900 6850 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 1900 6850 50  0001 C CNN
 F 3 "~" H 1900 6850 50  0001 C CNN
 	1    1900 6850
 	1    0    0    -1  
@@ -615,14 +615,42 @@ Wire Wire Line
 Text Label 2750 4250 0    50   ~ 0
 SDA
 $Comp
-L covg-kicad:24AA025UID U?
+L covg-kicad:24AA025UID U6
 U 1 1 627267F8
 P 2250 4350
-F 0 "U?" H 2250 4831 50  0000 C CNN
+F 0 "U6" H 2250 4831 50  0000 C CNN
 F 1 "24AA025UID" H 2250 4740 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2250 4350 50  0001 C CNN
 F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/20005202A.pdf" H 2250 4350 50  0001 C CNN
 	1    2250 4350
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_US R?
+U 1 1 6277A90A
+P 1050 7100
+AR Path="/6032F251/6277A90A" Ref="R?"  Part="1" 
+AR Path="/6277A90A" Ref="R51"  Part="1" 
+F 0 "R51" V 997 7168 59  0000 L CNN
+F 1 "DNI" V 1102 7168 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1050 7100 50  0001 C CNN
+F 3 "" H 1050 7100 50  0001 C CNN
+F 4 "RC0603FR-07240RL" H 997 7268 50  0001 C CNN "Manf#"
+F 5 "1%" H 1050 7100 50  0001 C CNN "Tolerance"
+	1    1050 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0136
+U 1 1 6277B1AB
+P 1200 7100
+F 0 "#PWR0136" H 1200 6850 50  0001 C CNN
+F 1 "GND" H 1205 6927 50  0000 C CNN
+F 2 "" H 1200 7100 50  0001 C CNN
+F 3 "" H 1200 7100 50  0001 C CNN
+	1    1200 7100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	900  7100 900  6950
 $EndSCHEMATC
