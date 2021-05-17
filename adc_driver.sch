@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 6 6
 Title ""
 Date ""
 Rev ""
@@ -603,30 +603,16 @@ F 4 "AD8421ARMZ" H 5694 3896 50  0001 C CNN "Manf#"
 	1    5150 3750
 	1    0    0    -1  
 $EndComp
-Text Label 4550 3950 0    50   ~ 0
-AMP_OUT
-Text Label 4550 3550 0    50   ~ 0
-P2
 Text Notes 5250 3450 0    50   ~ 0
 InAmp
 Text Label 4550 3950 0    50   ~ 0
-AMP_OUT
-Text Label 4550 3550 0    50   ~ 0
 P2
 Text Notes 5250 3450 0    50   ~ 0
 InAmp
-Text Label 4550 3950 0    50   ~ 0
-AMP_OUT
-Text Label 4550 3550 0    50   ~ 0
-P2
 Text Notes 5250 3450 0    50   ~ 0
 InAmp
 Text Label 5350 4200 0    50   ~ 0
 VCM
-Text Label 4550 3950 0    50   ~ 0
-AMP_OUT
-Text Label 4550 3550 0    50   ~ 0
-P2
 Text Notes 5250 3450 0    50   ~ 0
 InAmp
 Text Notes 3600 4400 0    50   ~ 0
@@ -635,9 +621,9 @@ Text Label 9300 4150 0    50   ~ 0
 VCM
 Text Notes 8300 3200 0    50   ~ 0
 ADC Driver \nAlternative part LMP8350
-Text HLabel 4550 3550 0    50   Input ~ 0
-P2
 Text HLabel 4550 3950 0    50   Input ~ 0
+P2
+Text HLabel 4550 3550 0    50   Input ~ 0
 AMP_OUT
 Text HLabel 5350 4200 3    50   Input ~ 0
 VCM
