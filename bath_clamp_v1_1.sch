@@ -28,20 +28,6 @@ F8 "AMP_OUT" I R 5700 8200 50
 F9 "CC" I R 5700 8300 50 
 $EndSheet
 $Comp
-L covg-kicad:HDMI U$2
-U 1 1 6197D135
-P 1700 2450
-AR Path="/6197D135" Ref="U$2"  Part="1" 
-AR Path="/6032F251/6197D135" Ref="U22"  Part="1" 
-F 0 "U22" H 1000 3450 85  0000 L BNN
-F 1 "HDMI" H 1000 1150 85  0000 L BNN
-F 2 "bath_clamp_v1:HDMI_A" H 1700 2450 50  0001 C CNN
-F 3 "" H 1700 2450 50  0001 C CNN
-F 4 "10029449-111RLF" H 1700 2450 50  0001 C CNN "Manf#"
-	1    1700 2450
-	1    0    0    -1  
-$EndComp
-$Comp
 L dk_Banana-and-Tip-Connectors-Jacks-Plugs:105-1103-001 J1
 U 1 1 603C4D5B
 P 12550 3250
@@ -208,19 +194,6 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG1208
 F 4 "ADG1208YCPZ-REEL7" H 8744 3196 50  0001 C CNN "Manf#"
 	1    8200 3000
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R1
-U 1 1 604DDA3B
-P 6400 2050
-F 0 "R1" V 6347 2118 59  0000 L CNN
-F 1 "0" V 6452 2118 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6400 2050 50  0001 C CNN
-F 3 "" H 6400 2050 50  0001 C CNN
-F 4 "RC0603FR-070RL" H 6347 2218 50  0001 C CNN "Manf#"
-F 5 "5%" H 6400 2050 50  0001 C CNN "Tolerance"
-	1    6400 2050
-	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R_US R5
@@ -489,50 +462,6 @@ F 3 "" H 9600 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0126
-U 1 1 606056DF
-P 2200 2950
-F 0 "#PWR0126" H 2200 2800 50  0001 C CNN
-F 1 "+5V" H 2215 3123 50  0000 C CNN
-F 2 "" H 2200 2950 50  0001 C CNN
-F 3 "" H 2200 2950 50  0001 C CNN
-	1    2200 2950
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0127
-U 1 1 60605E23
-P 1950 3550
-F 0 "#PWR0127" H 1950 3300 50  0001 C CNN
-F 1 "GND" V 1955 3422 50  0001 R CNN
-F 2 "" H 1950 3550 50  0001 C CNN
-F 3 "" H 1950 3550 50  0001 C CNN
-	1    1950 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-15V #PWR0128
-U 1 1 6062DCF2
-P 2300 2850
-F 0 "#PWR0128" H 2300 2950 50  0001 C CNN
-F 1 "-15V" H 2315 3023 50  0000 C CNN
-F 2 "" H 2300 2850 50  0001 C CNN
-F 3 "" H 2300 2850 50  0001 C CNN
-	1    2300 2850
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+15V #PWR0129
-U 1 1 606BD3E0
-P 2300 2250
-F 0 "#PWR0129" H 2300 2100 50  0001 C CNN
-F 1 "+15V" H 2315 2423 50  0000 C CNN
-F 2 "" H 2300 2250 50  0001 C CNN
-F 3 "" H 2300 2250 50  0001 C CNN
-	1    2300 2250
-	0    1    1    0   
-$EndComp
-$Comp
 L dk_Banana-and-Tip-Connectors-Jacks-Plugs:105-1103-001 J3
 U 1 1 6078E699
 P 12550 5300
@@ -743,12 +672,12 @@ $EndComp
 $Comp
 L power:+15V #PWR0111
 U 1 1 606CB14D
-P 5050 2800
-F 0 "#PWR0111" H 5050 2650 50  0001 C CNN
-F 1 "+15V" H 5065 2973 50  0000 C CNN
-F 2 "" H 5050 2800 50  0001 C CNN
-F 3 "" H 5050 2800 50  0001 C CNN
-	1    5050 2800
+P 5050 2850
+F 0 "#PWR0111" H 5050 2700 50  0001 C CNN
+F 1 "+15V" H 5065 3023 50  0000 C CNN
+F 2 "" H 5050 2850 50  0001 C CNN
+F 3 "" H 5050 2850 50  0001 C CNN
+	1    5050 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -922,10 +851,10 @@ L Device:R_US R20
 U 1 1 60742525
 P 3150 5050
 F 0 "R20" V 3097 5118 59  0000 L CNN
-F 1 "73.2k" V 3202 5118 59  0000 L CNN
+F 1 "DNI" V 3202 5118 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 3150 5050 50  0001 C CNN
 F 3 "" H 3150 5050 50  0001 C CNN
-F 4 "RC0603FR-0773K2L" H 3097 5218 50  0001 C CNN "Manf#"
+F 4 "" H 3097 5218 50  0001 C CNN "Manf#"
 F 5 "1%" H 3150 5050 50  0001 C CNN "Tolerance"
 	1    3150 5050
 	0    -1   -1   0   
@@ -1116,26 +1045,6 @@ Text Label 8900 3400 0    50   ~ 0
 P2
 Text Label 5650 3200 0    50   ~ 0
 RF_1
-Text Label 2150 2650 0    50   ~ 0
-SDA
-Text Label 2150 2750 0    50   ~ 0
-SCL
-Text Label 1950 1650 0    50   ~ 0
-CMD
-Text Label 1950 1750 0    50   ~ 0
-CAL_DAC
-Text Label 1950 1850 0    50   ~ 0
-OUT_P
-Text Label 1950 1950 0    50   ~ 0
-OUT_N
-Text Label 1950 2550 0    50   ~ 0
-AMP_OUT
-Text Label 1950 2150 0    50   ~ 0
-CAL_ADC
-Text Label 2000 2050 0    50   ~ 0
-CC
-Text Label 2000 2350 0    50   ~ 0
-VCM
 Text Notes 12650 5550 0    50   ~ 0
 CC (bath)
 Text Label 11200 5450 0    50   ~ 0
@@ -1226,8 +1135,6 @@ Text Label 3100 4600 0    50   ~ 0
 CCOMP[1..4]
 Text Notes 7350 2050 0    50   ~ 0
 3V compatible inputs
-Text Notes 1000 6200 0    50   ~ 0
-0 - 4.096\n V range
 Text Label 2850 9350 0    50   ~ 0
 G1
 Text Label 2850 9450 0    50   ~ 0
@@ -1254,10 +1161,6 @@ Text Notes 9700 4400 0    50   ~ 0
 35 mA coil current
 Text Notes 11900 2400 0    50   ~ 0
 35 mA coil current
-Text HLabel 2300 2750 2    50   BiDi ~ 0
-SCL
-Text HLabel 2300 2650 2    50   BiDi ~ 0
-SDA
 Text Label 1150 8050 0    50   ~ 0
 SDA
 Text Label 1150 8150 0    50   ~ 0
@@ -1320,8 +1223,6 @@ Wire Wire Line
 	6800 2600 6800 3100
 Wire Wire Line
 	6900 2300 6900 3000
-Wire Wire Line
-	7000 2900 7000 2050
 Wire Wire Line
 	8400 3900 8400 3800
 Wire Wire Line
@@ -1467,54 +1368,6 @@ Wire Wire Line
 Wire Wire Line
 	10550 1050 10550 1250
 Wire Wire Line
-	1900 3050 1950 3050
-Wire Wire Line
-	1950 3050 1950 3150
-Wire Wire Line
-	1950 3450 1900 3450
-Wire Wire Line
-	1900 3350 1950 3350
-Wire Wire Line
-	1950 3350 1950 3450
-Wire Wire Line
-	1900 3250 1950 3250
-Wire Wire Line
-	1950 3250 1950 3350
-Wire Wire Line
-	1900 3150 1950 3150
-Wire Wire Line
-	1950 3150 1950 3250
-Wire Wire Line
-	1900 2950 2200 2950
-Wire Wire Line
-	1950 3450 1950 3550
-Wire Wire Line
-	1900 2750 2300 2750
-Wire Wire Line
-	1900 2650 2300 2650
-Wire Wire Line
-	1900 2850 2300 2850
-Wire Wire Line
-	1900 2450 2300 2450
-Wire Wire Line
-	1900 2550 2300 2550
-Wire Wire Line
-	1900 1650 2300 1650
-Wire Wire Line
-	1900 1750 2300 1750
-Wire Wire Line
-	1900 1850 2300 1850
-Wire Wire Line
-	1900 1950 2300 1950
-Wire Wire Line
-	1900 2050 2300 2050
-Wire Wire Line
-	1900 2150 2300 2150
-Wire Wire Line
-	1900 2250 2300 2250
-Wire Wire Line
-	1900 2350 2300 2350
-Wire Wire Line
 	10900 4800 12550 4800
 Wire Wire Line
 	11600 2100 11350 2100
@@ -1555,8 +1408,6 @@ Wire Wire Line
 Wire Wire Line
 	6050 3200 6050 3350
 Wire Wire Line
-	6050 2050 6050 2300
-Wire Wire Line
 	11200 5450 11700 5450
 Wire Wire Line
 	11900 7400 11900 7500
@@ -1576,10 +1427,6 @@ Wire Wire Line
 	9300 1050 9850 1050
 Wire Wire Line
 	10150 1050 10550 1050
-Wire Wire Line
-	6050 2050 6250 2050
-Wire Wire Line
-	6550 2050 7000 2050
 Wire Wire Line
 	6550 2300 6900 2300
 Wire Wire Line
@@ -1649,7 +1496,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 3200 5850 3200
 Wire Wire Line
-	5050 2800 5050 2900
+	5050 2850 5050 2900
 Wire Wire Line
 	4550 4250 5100 4250
 Wire Wire Line
@@ -1840,14 +1687,9 @@ Connection ~ 9950 2500
 Connection ~ 10350 2500
 Connection ~ 13000 2450
 Connection ~ 12900 1900
-Connection ~ 1950 3350
-Connection ~ 1950 3250
-Connection ~ 1950 3150
-Connection ~ 1950 3450
 Connection ~ 10900 4800
 Connection ~ 11350 3400
 Connection ~ 11250 3950
-Connection ~ 6050 2300
 Connection ~ 6050 2600
 Connection ~ 6050 3000
 Connection ~ 6050 3350
@@ -1867,7 +1709,6 @@ Connection ~ 2750 6950
 Connection ~ 2750 6500
 Connection ~ 1850 6400
 Connection ~ 3150 9600
-NoConn ~ 2300 2450
 NoConn ~ 9950 3200
 NoConn ~ 10000 5150
 NoConn ~ 7100 8250
@@ -2335,20 +2176,6 @@ Wire Wire Line
 Wire Wire Line
 	1850 5800 1850 5500
 Connection ~ 1850 5500
-Wire Bus Line
-	3150 9450 3150 9600
-Wire Bus Line
-	9200 9450 9200 9750
-Wire Bus Line
-	3150 9600 3150 9750
-Wire Bus Line
-	3250 9050 3250 9350
-Wire Bus Line
-	3350 8550 3350 8850
-Wire Bus Line
-	9300 9050 9300 9500
-Wire Bus Line
-	3500 8000 3500 8450
 $Comp
 L power:+15V #PWR?
 U 1 1 61258792
@@ -2371,4 +2198,339 @@ F 3 "" H 1000 7350 50  0001 C CNN
 	1    1000 7350
 	-1   0    0    1   
 $EndComp
+$Comp
+L power:-15V #PWR?
+U 1 1 60A524A6
+P 4350 1800
+F 0 "#PWR?" H 4350 1900 50  0001 C CNN
+F 1 "-15V" H 4365 1973 50  0000 C CNN
+F 2 "" H 4350 1800 50  0001 C CNN
+F 3 "" H 4350 1800 50  0001 C CNN
+	1    4350 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 60A524B0
+P 4350 1150
+F 0 "#PWR?" H 4350 1000 50  0001 C CNN
+F 1 "+15V" H 4365 1323 50  0000 C CNN
+F 2 "" H 4350 1150 50  0001 C CNN
+F 3 "" H 4350 1150 50  0001 C CNN
+	1    4350 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 1750 4350 1800
+Wire Wire Line
+	3700 1350 3950 1350
+$Comp
+L Device:C C?
+U 1 1 60B261CA
+P 5100 2250
+F 0 "C?" V 4848 2250 50  0000 C CNN
+F 1 "5p" V 4939 2250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5138 2100 50  0001 C CNN
+F 3 "~" H 5100 2250 50  0001 C CNN
+F 4 "CC0603JRX7R9BB472" H 4848 2350 50  0001 C CNN "Manf#"
+F 5 "5%" H 4848 2350 50  0001 C CNN "Tolerance"
+F 6 "50V" H 4848 2350 50  0001 C CNN "voltage"
+	1    5100 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 2250 5400 2250
+Wire Wire Line
+	5400 2000 5250 2000
+Wire Wire Line
+	4950 2000 4800 2000
+Wire Wire Line
+	4800 2000 4800 2250
+Wire Wire Line
+	4800 2250 4950 2250
+Wire Wire Line
+	4800 2250 3950 2250
+Wire Wire Line
+	3950 2250 3950 1550
+Wire Wire Line
+	3500 1550 3950 1550
+Connection ~ 4800 2250
+Connection ~ 3950 1550
+Wire Wire Line
+	3950 1550 4150 1550
+Wire Wire Line
+	5400 2250 5750 2250
+Wire Wire Line
+	5750 2250 5750 1450
+Wire Wire Line
+	5750 1450 4750 1450
+Connection ~ 5400 2250
+Wire Wire Line
+	5400 2250 5400 2000
+$Comp
+L Device:R_US R?
+U 1 1 60C8AD77
+P 4650 750
+F 0 "R?" V 4597 818 59  0000 L CNN
+F 1 "1M" V 4702 818 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4650 750 50  0001 C CNN
+F 3 "" H 4650 750 50  0001 C CNN
+F 4 "RT0603BRD071ML" H 4597 918 50  0001 C CNN "Manf#"
+F 5 "0.1" H 4650 750 50  0001 C CNN "Tolerance"
+	1    4650 750 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 750  3950 750 
+Wire Wire Line
+	3950 750  3950 1350
+Connection ~ 3950 1350
+Wire Wire Line
+	3950 1350 4150 1350
+$Comp
+L power:GND #PWR?
+U 1 1 60CB1688
+P 3200 1650
+F 0 "#PWR?" H 3200 1400 50  0001 C CNN
+F 1 "GND" V 3205 1522 50  0001 R CNN
+F 2 "" H 3200 1650 50  0001 C CNN
+F 3 "" H 3200 1650 50  0001 C CNN
+	1    3200 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 1650 3200 1550
+Wire Wire Line
+	3400 1350 3200 1350
+Text Label 3200 1350 0    50   ~ 0
+CMD
+Wire Wire Line
+	5750 750  5750 1450
+Connection ~ 5750 1450
+Wire Wire Line
+	7000 600  7000 2900
+$Comp
+L covg-kicad:OPA991S U?
+U 1 1 60E3B4E3
+P 4450 1450
+F 0 "U?" H 4794 1496 50  0000 L CNN
+F 1 "OPA991S" H 4794 1405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4600 1200 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/opa991.pdf" H 4600 1600 50  0001 C CNN
+	1    4450 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 750  3950 600 
+Wire Wire Line
+	3950 600  7000 600 
+Connection ~ 3950 750 
+Wire Wire Line
+	4800 750  5750 750 
+Text Notes 4650 1750 0    50   ~ 0
+SDOWN referenced to V-\ninternal pull-down\n
+Wire Wire Line
+	4450 1750 4550 1750
+Wire Wire Line
+	4550 1750 4550 2100
+Text Label 4550 2100 1    50   ~ 0
+H_SDOWN
+Text Notes 4750 1100 0    50   ~ 0
+50 nA to 10 uA\n=> 50 mV to 10 V 
+$Comp
+L Device:R_US R?
+U 1 1 6101F96E
+P 3550 1350
+F 0 "R?" V 3497 1418 59  0000 L CNN
+F 1 "1M" V 3602 1418 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3550 1350 50  0001 C CNN
+F 3 "" H 3550 1350 50  0001 C CNN
+F 4 "RT0603BRD071ML" H 3497 1518 50  0001 C CNN "Manf#"
+F 5 "0.1" H 3550 1350 50  0001 C CNN "Tolerance"
+	1    3550 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 610203BA
+P 3350 1550
+F 0 "R?" V 3297 1618 59  0000 L CNN
+F 1 "1M" V 3402 1618 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 1550 50  0001 C CNN
+F 3 "" H 3350 1550 50  0001 C CNN
+F 4 "RT0603BRD071ML" H 3297 1718 50  0001 C CNN "Manf#"
+F 5 "0.1" H 3350 1550 50  0001 C CNN "Tolerance"
+	1    3350 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 61020AA0
+P 5100 2000
+F 0 "R?" V 5047 2068 59  0000 L CNN
+F 1 "1M" V 5152 2068 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5100 2000 50  0001 C CNN
+F 3 "" H 5100 2000 50  0001 C CNN
+F 4 "RT0603BRD071ML" H 5047 2168 50  0001 C CNN "Manf#"
+F 5 "0.1" H 5100 2000 50  0001 C CNN "Tolerance"
+	1    5100 2000
+	0    1    1    0   
+$EndComp
+Text Notes 700  6150 0    50   ~ 0
+ADS8686 range\n +/-2.5V, +/-5V, +/-10V
+Text Notes 2550 1100 0    50   ~ 0
+Howland Current Pump\nTexas Instrument AN-1515\nR matching sets output impedance\nUse 0.1%
+$Comp
+L Connector:HDMI_A J?
+U 1 1 61A0195E
+P 1250 2450
+F 0 "J?" H 1680 2496 50  0000 L CNN
+F 1 "HDMI_A" H 1680 2405 50  0000 L CNN
+F 2 "" H 1275 2450 50  0001 C CNN
+F 3 "https://en.wikipedia.org/wiki/HDMI" H 1275 2450 50  0001 C CNN
+	1    1250 2450
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 2050 3050
+Wire Wire Line
+	1650 2350 2050 2350
+Wire Wire Line
+	1650 2250 2050 2250
+Wire Wire Line
+	1650 2150 2050 2150
+Wire Wire Line
+	1650 2050 2050 2050
+Wire Wire Line
+	1650 1950 2050 1950
+Wire Wire Line
+	1650 1850 2050 1850
+Wire Wire Line
+	1650 1750 2050 1750
+Wire Wire Line
+	1650 1650 2050 1650
+Wire Wire Line
+	1650 3150 2050 3150
+Wire Wire Line
+	1650 3050 2050 3050
+Wire Wire Line
+	1650 2550 2050 2550
+Wire Wire Line
+	1650 2750 2050 2750
+Wire Wire Line
+	1650 2850 2050 2850
+Wire Wire Line
+	1250 3550 1250 3600
+Wire Wire Line
+	1250 3600 1150 3600
+Connection ~ 1150 3600
+Wire Wire Line
+	1150 3550 1150 3600
+Wire Wire Line
+	1150 3600 1050 3600
+Connection ~ 1050 3600
+Wire Wire Line
+	1050 3550 1050 3600
+Wire Wire Line
+	950  3600 850  3600
+Wire Wire Line
+	1050 3600 950  3600
+Connection ~ 950  3600
+Wire Wire Line
+	950  3600 950  3550
+Connection ~ 1250 3600
+Wire Wire Line
+	1350 3550 1350 3600
+Text HLabel 2050 2750 2    50   BiDi ~ 0
+SDA
+Text HLabel 2050 2850 2    50   BiDi ~ 0
+SCL
+Text Label 1750 2350 0    50   ~ 0
+VCM
+Text Label 1750 2050 0    50   ~ 0
+CC
+Text Label 1700 2150 0    50   ~ 0
+CAL_ADC
+Text Label 1700 1950 0    50   ~ 0
+OUT_N
+Text Label 1700 1850 0    50   ~ 0
+OUT_P
+Text Label 1700 1750 0    50   ~ 0
+CAL_DAC
+Text Label 1700 1650 0    50   ~ 0
+CMD
+Text Label 1900 2850 0    50   ~ 0
+SCL
+Text Label 1900 2750 0    50   ~ 0
+SDA
+$Comp
+L power:+15V #PWR0129
+U 1 1 606BD3E0
+P 2050 2250
+F 0 "#PWR0129" H 2050 2100 50  0001 C CNN
+F 1 "+15V" H 2065 2423 50  0000 C CNN
+F 2 "" H 2050 2250 50  0001 C CNN
+F 3 "" H 2050 2250 50  0001 C CNN
+	1    2050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:-15V #PWR0128
+U 1 1 6062DCF2
+P 2050 2550
+F 0 "#PWR0128" H 2050 2650 50  0001 C CNN
+F 1 "-15V" H 2065 2723 50  0000 C CNN
+F 2 "" H 2050 2550 50  0001 C CNN
+F 3 "" H 2050 2550 50  0001 C CNN
+	1    2050 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 60605E23
+P 850 3600
+F 0 "#PWR0127" H 850 3350 50  0001 C CNN
+F 1 "GND" V 855 3472 50  0001 R CNN
+F 2 "" H 850 3600 50  0001 C CNN
+F 3 "" H 850 3600 50  0001 C CNN
+	1    850  3600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0126
+U 1 1 606056DF
+P 1250 1250
+F 0 "#PWR0126" H 1250 1100 50  0001 C CNN
+F 1 "+5V" H 1265 1423 50  0000 C CNN
+F 2 "" H 1250 1250 50  0001 C CNN
+F 3 "" H 1250 1250 50  0001 C CNN
+	1    1250 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 3550 1450 3600
+Wire Wire Line
+	1250 3600 1350 3600
+Connection ~ 1350 3600
+Wire Wire Line
+	1350 3600 1450 3600
+Wire Wire Line
+	1250 1350 1250 1250
+Text Label 1700 3150 0    50   ~ 0
+AMP_OUT
+Wire Bus Line
+	9200 9450 9200 9750
+Wire Bus Line
+	3150 9600 3150 9750
+Wire Bus Line
+	3150 9450 3150 9600
+Wire Bus Line
+	3250 9050 3250 9350
+Wire Bus Line
+	3350 8550 3350 8850
+Wire Bus Line
+	9300 9050 9300 9500
+Wire Bus Line
+	3500 8000 3500 8450
+Text Notes 2150 3050 0    50   ~ 0
+Add a VIA
 $EndSCHEMATC
