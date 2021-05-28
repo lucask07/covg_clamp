@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title "Bath/Guard Clamp"
 Date "2021-04-06"
 Rev "1"
@@ -607,7 +607,6 @@ Wire Wire Line
 	2250 3900 2250 4050
 NoConn ~ 8600 2750
 NoConn ~ 8600 2950
-NoConn ~ 900  6950
 NoConn ~ 900  7450
 NoConn ~ 1900 7450
 Wire Wire Line
@@ -618,7 +617,7 @@ $Comp
 L covg-kicad:24AA025UID U6
 U 1 1 627267F8
 P 2250 4350
-F 0 "U6" H 2250 4831 50  0000 C CNN
+F 0 "U6" H 2050 4850 50  0000 C CNN
 F 1 "24AA025UID" H 2250 4740 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2250 4350 50  0001 C CNN
 F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/20005202A.pdf" H 2250 4350 50  0001 C CNN
@@ -652,5 +651,5 @@ F 3 "" H 1200 7100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	900  7100 900  6950
+	900  6950 900  7100
 $EndSCHEMATC

@@ -51,7 +51,7 @@ An HDMI-A cable is used for input output signals. The HDMI carries:
 | Pin | HDMI name    | Generic      | Bath clamp | Notes                                                                     |
 |-----|--------------|--------------|------------|---------------------------------------------------------------------------|
 | 1   | Data2+       | fastDAC1     | CMD        | ~1 us settling time                                                                          |
-| 2   | Data2 shield | gnd          | gnd        |                                                                           |
+| 2   | Data2 shield | gnd          | gnd        |                     w                                                      |
 | 3   | Data2-       | Analog/GPIO1 | CAL_DAC    |  DAC8050, 16 bit, 5us settle, 5 V supply                                                                         |
 | 4   | Data1+       | fastADC+     | IM_P       | to AD7960/AD7961. Differential low-pass filter on DAQ board                                                                          |
 | 5   | Data1 shield | gnd          | gnd        |                                                                           |

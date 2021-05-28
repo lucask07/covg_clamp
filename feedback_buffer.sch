@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -789,8 +789,8 @@ Wire Wire Line
 Connection ~ 5850 3650
 Wire Wire Line
 	5850 3650 6200 3650
-Wire Bus Line
-	4400 2350 4400 3950
 Text Notes 2750 2450 0    50   ~ 0
 9 pF OFF source/drain\n\n35 pF on
+Wire Bus Line
+	4400 2350 4400 3950
 $EndSCHEMATC
