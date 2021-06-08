@@ -1958,7 +1958,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 9550 9050 9550
 Text Label 8800 9550 0    50   ~ 0
-H_SDOWN
+EN_IPUMP
 Wire Wire Line
 	6000 5400 6300 5400
 Text Label 6000 5400 0    50   ~ 0
@@ -2392,8 +2392,6 @@ Wire Wire Line
 Wire Bus Line
 	3150 9600 3150 9650
 Wire Wire Line
-	2800 9650 3100 9650
-Wire Wire Line
 	6000 5800 6700 5800
 $Comp
 L power:GND #PWR0161
@@ -2488,7 +2486,7 @@ U 1 1 61A0195E
 P 1250 2450
 F 0 "J4" H 1680 2496 50  0000 L CNN
 F 1 "HDMI_A" H 1680 2405 50  0000 L CNN
-F 2 "bath_clamp_v1:HDMI_A" H 1275 2450 50  0001 C CNN
+F 2 "covg-kicad:HDMI_A" H 1275 2450 50  0001 C CNN
 F 3 "https://en.wikipedia.org/wiki/HDMI" H 1275 2450 50  0001 C CNN
 	1    1250 2450
 	-1   0    0    -1  
@@ -2500,7 +2498,7 @@ F0 "howland_ipump" 50
 F1 "howland_ipump.sch" 50
 F2 "I_OUT" O R 5500 1100 50 
 F3 "CMD" I L 4600 1100 50 
-F4 "H_SDOWN" I L 4600 1200 50 
+F4 "EN_IPUMP" I L 4600 1200 50 
 $EndSheet
 Wire Wire Line
 	5500 1100 7000 1100
@@ -2512,6 +2510,10 @@ Wire Wire Line
 	3100 1100 4600 1100
 Wire Wire Line
 	4600 1200 3950 1200
+Text Label 4100 1200 0    50   ~ 0
+EN_IPUMP
+Wire Wire Line
+	2800 9650 2950 9650
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line
@@ -2524,6 +2526,4 @@ Wire Bus Line
 	9300 9050 9300 9500
 Wire Bus Line
 	3500 8000 3500 8450
-Text Label 4100 1200 0    50   ~ 0
-H_SDOWN
 $EndSCHEMATC

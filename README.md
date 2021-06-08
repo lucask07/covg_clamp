@@ -51,7 +51,7 @@ An HDMI-A cable is used for input output signals. The HDMI carries:
 | Pin | HDMI name    | Generic      | Bath clamp | Notes                                                                     |
 |-----|--------------|--------------|------------|---------------------------------------------------------------------------|
 | 1   | Data2+       | fastDAC1     | CMD        | ~1 us settling time                                                                          |
-| 2   | Data2 shield | gnd          | gnd        |                     w                                                      |
+| 2   | Data2 shield | gnd          | gnd        |                                                                           |
 | 3   | Data2-       | Analog/GPIO1 | CAL_DAC    |  DAC8050, 16 bit, 5us settle, 5 V supply                                                                         |
 | 4   | Data1+       | fastADC+     | IM_P       | to AD7960/AD7961. Differential low-pass filter on DAQ board                                                                          |
 | 5   | Data1 shield | gnd          | gnd        |                                                                           |
@@ -62,7 +62,7 @@ An HDMI-A cable is used for input output signals. The HDMI carries:
 | 10  | Clock+       | 15V          | 15V        | linear regulator, 75 mA max per channel                                                                         |
 | 11  | Clock shield | gnd          | gnd        |                                                                           |
 | 12  | Clock-       | VCM          | VCM        | buffered on DAQ board, nominal 2.5 V                                                                          |
-| 13  | CEC          | n15V         | n15V       |  linear regulator, 75 mA max per channel                                                                          |
+| 13  | CEC          | -15V         | -15V       |  linear regulator, 75 mA max per channel                                                                          |
 | 14  | Reserved     | open         | open       | This was connected on one of my cables. Possible that this pin is an open. |
 | 15  | SCL          | SCL          | SCL        | pull-up on main DAQ board, 3.3 V levels                                                        |
 | 16  | SDA          | SDA          | SDA        | pull-up on main DAQ board, 3.3 V levels                                                           |
@@ -76,6 +76,11 @@ An HDMI-A cable is used for input output signals. The HDMI carries:
 Two command-line tools are useful for finding and ordering the parts for the board. 
 
 [kifield](https://xess.com/KiField/docs/_build/singlehtml/index.html): extracts all fields from components on the schematic into a spreadsheet and also allows for "injecting" updates in the spreadsheet into the schematic.
+
+Example to extract parts:
+```kifield -x covg_daq_v2.sch --recurse -i covg_daq_v2_parts.csv```
+Example to uptate schematic from CSV file:
+``` kifield -x covg_daq_v2_parts.csv --recurse -i covg_daq_v2.sch ```
 
 [kicost](https://github.com/xesscorp/KiCost) which scrapes availability and prices from various distributors and creates a spreadsheet of component cost. 
 
