@@ -98,8 +98,6 @@ F 3 "" H 4600 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5750 2050 5850 2050
-Wire Wire Line
 	6200 2050 6200 1600
 Wire Wire Line
 	6800 1600 7100 1600
@@ -111,7 +109,7 @@ AR Path="/6032F251/62160D63" Ref="IC?"  Part="1"
 AR Path="/6032F251/62017813/62160D63" Ref="IC1"  Part="1" 
 F 0 "IC1" H 4600 5265 50  0000 C CNN
 F 1 "DAC53401DSGR" H 4600 5174 50  0000 C CNN
-F 2 "covg-kicad:SON50P200X200X80-9N" H 5050 5100 50  0001 L CNN
+F 2 "covg-kicad:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_posMask" H 5050 5100 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/dac53401.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1589734386977" H 5050 5000 50  0001 L CNN
 F 4 "Digital to Analog Converters - DAC 10-bit 1-channel DAC with NVM, buffered voltage output and I2C interface 8-WSON -40 to 125" H 5050 4900 50  0001 L CNN "Description"
 F 5 "0.8" H 5050 4800 50  0001 L CNN "Height"
@@ -158,12 +156,10 @@ F 3 "" H 3250 5200 50  0001 C CNN
 F 4 "RC0603FR-0710KL" H 3197 5368 50  0001 C CNN "Manf#"
 F 5 "5%" H 3250 5200 50  0001 C CNN "Tolerance"
 	1    3250 5200
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3900 5800 3250 5800
-Wire Wire Line
-	3250 5800 3250 5350
 Connection ~ 3900 5800
 Text Notes 2550 4900 0    50   ~ 0
 A0 to AGND, VDD, SCL or SDA\n\n0x48 = ‘b1001000 (7-bit) with AGND 
@@ -611,14 +607,14 @@ U 1 1 621CE5F6
 P 5600 2050
 AR Path="/6032F251/621CE5F6" Ref="R?"  Part="1" 
 AR Path="/6032F251/62017813/621CE5F6" Ref="R46"  Part="1" 
-F 0 "R46" V 5547 2118 59  0000 L CNN
+F 0 "R46" V 5550 1800 59  0000 L CNN
 F 1 "3.01k" V 5652 2118 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 5600 2050 50  0001 C CNN
 F 3 "" H 5600 2050 50  0001 C CNN
 F 4 "RC0603FR-073k01L" H 5547 2218 50  0001 C CNN "Manf#"
 F 5 "1%" H 5600 2050 50  0001 C CNN "Tolerance"
 	1    5600 2050
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	4100 1500 3000 1500
@@ -655,10 +651,6 @@ Text HLabel 3750 5100 0    50   Input ~ 0
 SCL
 Text HLabel 3750 5200 0    50   Input ~ 0
 SDA
-Wire Wire Line
-	3250 5000 4000 5000
-Wire Wire Line
-	3250 5000 3250 5050
 $Comp
 L Device:C C?
 U 1 1 6274A814
@@ -731,7 +723,6 @@ Wire Wire Line
 	5700 2350 5850 2350
 Wire Wire Line
 	5850 2350 5850 2050
-Connection ~ 5850 2050
 Wire Wire Line
 	5850 2050 6200 2050
 Wire Wire Line
@@ -740,9 +731,6 @@ Wire Wire Line
 	5300 2350 5300 2050
 Wire Wire Line
 	5250 2050 5300 2050
-Connection ~ 5300 2050
-Wire Wire Line
-	5300 2050 5450 2050
 Wire Wire Line
 	5400 2850 5300 2850
 Wire Wire Line
@@ -791,6 +779,18 @@ Wire Wire Line
 	5850 3650 6200 3650
 Text Notes 2750 2450 0    50   ~ 0
 9 pF OFF source/drain\n\n35 pF on
+Wire Wire Line
+	5450 2050 5300 2050
+Connection ~ 5300 2050
+Wire Wire Line
+	5750 2050 5850 2050
+Connection ~ 5850 2050
+Wire Wire Line
+	3250 5050 3250 5000
+Wire Wire Line
+	3250 5000 4000 5000
+Wire Wire Line
+	3250 5350 3250 5800
 Wire Bus Line
 	4400 2350 4400 3950
 $EndSCHEMATC

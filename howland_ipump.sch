@@ -124,6 +124,7 @@ F 0 "U11" H 5544 3746 50  0000 L CNN
 F 1 "OPA991S" H 5544 3655 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 5350 3450 50  0001 L CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa991.pdf" H 5350 3850 50  0001 C CNN
+F 4 "OPA991SIDBVR" H 5200 3700 50  0001 C CNN "Manf#"
 	1    5200 3700
 	1    0    0    -1  
 $EndComp
@@ -399,6 +400,7 @@ F 0 "Q2" H 7941 4004 50  0000 L CNN
 F 1 "BC856" H 7941 4095 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 7950 3975 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/BC860-D.pdf" H 7750 4050 50  0001 L CNN
+F 4 "BC856B-7-F" H 7750 4050 50  0001 C CNN "Manf#"
 	1    7750 4050
 	-1   0    0    1   
 $EndComp
