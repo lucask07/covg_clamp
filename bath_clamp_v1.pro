@@ -1,4 +1,4 @@
-update=Friday, 11 June 2021 at 07:47:51
+update=Saturday, 12 June 2021 at 15:54:14
 version=1
 last_client=kicad
 [general]
@@ -94,7 +94,7 @@ Type=2
 Enabled=1
 [pcbnew/Layer.In4.Cu]
 Name=Route15
-Type=1
+Type=2
 Enabled=1
 [pcbnew/Layer.In5.Cu]
 Name=In5.Cu
@@ -249,6 +249,17 @@ Clearance=0.15
 TrackWidth=0.15
 ViaDiameter=0.7
 ViaDrill=0.3
+uViaDiameter=0.6858
+uViaDrill=0.3302
+dPairWidth=0.1524
+dPairGap=0.254
+dPairViaGap=0.25
+[pcbnew/Netclasses/1]
+Name=Power
+Clearance=0.2032
+TrackWidth=0.508
+ViaDiameter=0.889
+ViaDrill=0.381
 uViaDiameter=0.6858
 uViaDrill=0.3302
 dPairWidth=0.1524
