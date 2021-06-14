@@ -843,6 +843,28 @@ X ~ 1 0 -150 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# dk_Test-Points_RCT-0C
+#
+DEF dk_Test-Points_RCT-0C TP 0 40 Y Y 1 F N
+F0 "TP" -100 50 50 H V R CNN
+F1 "dk_Test-Points_RCT-0C" 0 -100 50 H V C CNN
+F2 "digikey-footprints:PROBE_PAD_0805" 200 200 60 H I L CNN
+F3 "" 200 300 60 H I L CNN
+F4 "A106144CT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "RCT-0C" 200 500 60 H I L CNN "MPN"
+F6 "Test and Measurement" 200 600 60 H I L CNN "Category"
+F7 "Test Points" 200 700 60 H I L CNN "Family"
+F8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "PC TEST POINT NATURAL" 200 1000 60 H I L CNN "Description"
+F11 "TE Connectivity AMP Connectors" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+C 0 0 22 0 1 0 N
+X ~ 1 0 100 75 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # dk_Transistors-Bipolar-BJT-Arrays_MBT3904DW1T1G
 #
 DEF dk_Transistors-Bipolar-BJT-Arrays_MBT3904DW1T1G Q 0 0 Y Y 1 F N

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 5 7
 Title ""
 Date ""
 Rev ""
@@ -572,7 +572,7 @@ U 1 1 60FC96A6
 P 5150 3750
 F 0 "U18" H 5694 3796 50  0000 L CNN
 F 1 "AD8421ARZ" H 5694 3705 50  0000 L CNN
-F 2 "digikey-footprints:TSSOP-8_W3mm" H 5050 3750 50  0001 C CNN
+F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5050 3750 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8421.pdf" H 5600 3350 50  0001 C CNN
 F 4 "AD8421ARMZ" H 5694 3896 50  0001 C CNN "Manf#"
 	1    5150 3750

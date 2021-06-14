@@ -113,7 +113,7 @@ U 1 1 604062BF
 P 11900 7900
 F 0 "Q3" H 12228 7953 60  0000 L CNN
 F 1 "MBT3904DW1T1G" V 12400 7600 60  0000 L CNN
-F 2 "digikey-footprints:SOT-363" H 12100 8100 60  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 12100 8100 60  0001 L CNN
 F 3 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 12100 8200 60  0001 L CNN
 F 4 "Discrete Semiconductor Products" H 12100 8500 60  0001 L CNN "Category"
 F 5 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 12100 8700 60  0001 L CNN "DK_Datasheet_Link"
@@ -133,7 +133,7 @@ U 1 1 604077DA
 P 11750 4150
 F 0 "Q1" H 12078 4203 60  0000 L CNN
 F 1 "MBT3904DW1T1G" V 12250 3850 60  0000 L CNN
-F 2 "digikey-footprints:SOT-363" H 11950 4350 60  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 11950 4350 60  0001 L CNN
 F 3 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 11950 4450 60  0001 L CNN
 F 4 "Discrete Semiconductor Products" H 11950 4750 60  0001 L CNN "Category"
 F 5 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 11950 4950 60  0001 L CNN "DK_Datasheet_Link"
@@ -675,7 +675,7 @@ U 1 1 60A3AA53
 P 10550 1650
 F 0 "Q4" H 10878 1703 60  0000 L CNN
 F 1 "MBT3904DW1T1G" V 11050 1350 60  0000 L CNN
-F 2 "digikey-footprints:SOT-363" H 10750 1850 60  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 10750 1850 60  0001 L CNN
 F 3 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 10750 1950 60  0001 L CNN
 F 4 "Discrete Semiconductor Products" H 10750 2250 60  0001 L CNN "Category"
 F 5 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 10750 2450 60  0001 L CNN "DK_Datasheet_Link"
@@ -1073,15 +1073,15 @@ Text Label 3100 4600 0    50   ~ 0
 CCOMP[1..4]
 Text Notes 7350 2050 0    50   ~ 0
 3V compatible inputs
-Text Label 2850 9350 0    50   ~ 0
+Text Label 8850 8950 0    50   ~ 0
 G1
-Text Label 2850 9450 0    50   ~ 0
+Text Label 8850 9050 0    50   ~ 0
 G2
-Text Label 2850 9550 0    50   ~ 0
+Text Label 8850 9150 0    50   ~ 0
 G3
-Text Label 2800 9650 0    50   ~ 0
+Text Label 8800 9250 0    50   ~ 0
 FDBK
-Text Label 3250 9600 0    50   ~ 0
+Text Label 3650 9600 0    50   ~ 0
 G[1..3]
 Text Label 3900 9050 0    50   ~ 0
 P2
@@ -1517,8 +1517,6 @@ Wire Wire Line
 	1850 6950 1850 6400
 Wire Wire Line
 	1850 6400 1950 6400
-Wire Bus Line
-	4300 9600 3150 9600
 Wire Wire Line
 	4300 9350 3900 9350
 Wire Wire Line
@@ -1570,11 +1568,11 @@ Entry Wire Line
 Entry Wire Line
 	3150 9250 3250 9350
 Entry Wire Line
-	3050 9350 3150 9450
+	9050 8950 9150 9050
 Entry Wire Line
-	3050 9450 3150 9550
+	9050 9050 9150 9150
 Entry Wire Line
-	3050 9550 3150 9650
+	9050 9150 9150 9250
 Entry Wire Line
 	3400 8050 3500 8150
 Entry Wire Line
@@ -1620,7 +1618,6 @@ Connection ~ 7250 9650
 Connection ~ 1850 4950
 Connection ~ 2750 6950
 Connection ~ 1850 6400
-Connection ~ 3150 9600
 NoConn ~ 9950 3200
 NoConn ~ 10000 5150
 NoConn ~ 7100 8250
@@ -1630,11 +1627,11 @@ Wire Wire Line
 Wire Wire Line
 	1150 8150 1400 8150
 Wire Wire Line
-	2800 9550 3050 9550
+	8800 9150 9050 9150
 Wire Wire Line
-	2800 9450 3050 9450
+	8800 9050 9050 9050
 Wire Wire Line
-	2800 9350 3050 9350
+	8800 8950 9050 8950
 Wire Wire Line
 	2800 9250 3150 9250
 Wire Wire Line
@@ -1734,15 +1731,6 @@ Text Notes 9400 5650 0    50   ~ 0
 28.1 mA coil
 Wire Wire Line
 	9200 4950 10400 4950
-$Sheet
-S 3700 4100 600  600 
-U 6217F546
-F0 "compensation_switching" 50
-F1 "compensation_switching.sch" 50
-F2 "SEL[1..4]" I L 3700 4600 50 
-F3 "IN" I L 3700 4300 50 
-F4 "OUT" O R 4300 4300 50 
-$EndSheet
 $Comp
 L Interface_Expansion:TCA9555DBR U13
 U 1 1 622C14F2
@@ -1772,32 +1760,32 @@ SCL
 Text Label 7000 5250 0    50   ~ 0
 SDA
 Wire Wire Line
-	8800 8950 9200 8950
+	2800 9350 3200 9350
 Wire Wire Line
-	8800 9050 9200 9050
+	2800 9450 3200 9450
 Wire Wire Line
-	8800 9150 9200 9150
+	2800 9550 3200 9550
 Wire Wire Line
-	8800 9250 9200 9250
-Text Label 8900 8950 0    50   ~ 0
+	2800 9650 3200 9650
+Text Label 2900 9350 0    50   ~ 0
 RF1
-Text Label 8900 9050 0    50   ~ 0
+Text Label 2900 9450 0    50   ~ 0
 RF2
-Text Label 8900 9150 0    50   ~ 0
+Text Label 2900 9550 0    50   ~ 0
 RF3
-Text Label 8900 9250 0    50   ~ 0
+Text Label 2900 9650 0    50   ~ 0
 RF4
 Entry Wire Line
-	9200 8950 9300 9050
+	3200 9350 3300 9450
 Entry Wire Line
-	9200 9050 9300 9150
+	3200 9450 3300 9550
 Entry Wire Line
-	9200 9150 9300 9250
+	3200 9550 3300 9650
 Entry Wire Line
-	9200 9250 9300 9350
+	3200 9650 3300 9750
 Wire Bus Line
-	9300 9500 9400 9500
-Text Label 9300 9500 0    50   ~ 0
+	3300 9900 3400 9900
+Text Label 3300 9900 0    50   ~ 0
 RF[1..4]
 Wire Bus Line
 	8100 5200 8400 5200
@@ -2340,8 +2328,6 @@ Wire Wire Line
 	5250 2450 5250 2350
 Wire Wire Line
 	5250 2050 5250 1950
-Wire Bus Line
-	3150 9600 3150 9650
 Wire Wire Line
 	6000 5800 6700 5800
 $Comp
@@ -2422,15 +2408,10 @@ Wire Wire Line
 	1050 3600 950  3600
 Wire Wire Line
 	1050 3550 1050 3600
-Text Notes 1950 3050 0    50   ~ 0
-Add a VIA or test hook
 Text Label 1500 3150 0    50   ~ 0
 AMP_OUT
 Wire Wire Line
-	1450 3050 1850 3050
-Wire Wire Line
 	1450 3150 1850 3150
-NoConn ~ 1850 3050
 $Comp
 L Connector:HDMI_A J4
 U 1 1 61A0195E
@@ -2460,7 +2441,7 @@ Wire Wire Line
 Text Label 5200 1450 0    50   ~ 0
 EN_IPUMP
 Wire Wire Line
-	2800 9650 2950 9650
+	8800 9250 8950 9250
 $Comp
 L Device:R_US R69
 U 1 1 60DC88BE
@@ -2505,19 +2486,6 @@ F 3 "" H 4250 2050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4250 2050 4250 2250
-$Comp
-L Device:R_US R70
-U 1 1 60E5BD98
-P 5000 4250
-F 0 "R70" V 4947 4318 59  0000 L CNN
-F 1 "DNI" V 5052 4318 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5000 4250 50  0001 C CNN
-F 3 "" H 5000 4250 50  0001 C CNN
-F 4 "" H 4947 4418 50  0001 C CNN "Manf#"
-F 5 "1%" H 5000 4250 50  0001 C CNN "Tolerance"
-	1    5000 4250
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Amplifier_Operational:OPA2156xD U25
 U 1 1 60E5DA0E
@@ -2784,8 +2752,8 @@ Wire Wire Line
 Connection ~ 3400 1350
 Wire Wire Line
 	3400 1350 3400 1750
-Text Notes 2450 2300 0    39   ~ 0
-Gain by x10 on cable\nAnd down by x10 on brd\nto reduce cable cross-talk
+Text Notes 2550 2400 0    39   ~ 0
+Gain by x10 on cable\nAnd down by x10 on brd\nto reduce impact of \ncable cross-talk
 NoConn ~ 3400 900 
 $Comp
 L covg-kicad:G6L-1F-TR-DC5 U3
@@ -2837,29 +2805,271 @@ Wire Wire Line
 Wire Wire Line
 	4550 3850 4550 4250
 Wire Wire Line
-	4850 4250 4550 4250
-Connection ~ 4550 4250
-Wire Wire Line
 	4550 4250 4550 4300
-Wire Wire Line
-	5150 4250 5350 4250
 Wire Wire Line
 	2600 800  2600 900 
 Wire Wire Line
 	2450 900  2600 900 
+Connection ~ 2600 900 
+Wire Wire Line
+	2600 900  2600 1000
+Text Label 10900 3400 0    50   ~ 0
+P2_OUT
+Text Label 11200 4800 0    50   ~ 0
+P1_OUT
+Text Label 8900 4950 0    50   ~ 0
+P1
+Text Label 4550 3700 1    50   ~ 0
+V_GND
+Text Label 3950 5500 0    50   ~ 0
+F_MUX_OUT
+$Sheet
+S 3700 4100 600  600 
+U 6217F546
+F0 "compensation_switching" 50
+F1 "compensation_switching.sch" 50
+F2 "SEL[1..4]" I L 3700 4600 50 
+F3 "IN" I L 3700 4300 50 
+F4 "OUT" O R 4300 4300 50 
+$EndSheet
+Connection ~ 4550 4250
+Wire Wire Line
+	5150 4250 5350 4250
+Wire Wire Line
+	4850 4250 4550 4250
+$Comp
+L Device:R_US R70
+U 1 1 60E5BD98
+P 5000 4250
+F 0 "R70" V 4947 4318 59  0000 L CNN
+F 1 "DNI" V 5052 4318 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5000 4250 50  0001 C CNN
+F 3 "" H 5000 4250 50  0001 C CNN
+F 4 "" H 4947 4418 50  0001 C CNN "Manf#"
+F 5 "1%" H 5000 4250 50  0001 C CNN "Tolerance"
+	1    5000 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 6153E07C
+P 14100 8200
+F 0 "TP?" H 14150 8293 50  0000 L CNN
+F 1 "RCT-0C" H 14150 8202 50  0000 L CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 14300 8400 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14300 8500 60  0001 L CNN
+F 4 "A106144CT-ND" H 14300 8600 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 14300 8700 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 14300 8800 60  0001 L CNN "Category"
+F 7 "Test Points" H 14300 8900 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14300 9000 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 14300 9100 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 14300 9200 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 14300 9300 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 14300 9400 60  0001 L CNN "Status"
+	1    14100 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 6153EEE1
+P 14650 8200
+F 0 "TP?" H 14700 8293 50  0000 L CNN
+F 1 "RCT-0C" H 14700 8202 50  0000 L CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 14850 8400 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14850 8500 60  0001 L CNN
+F 4 "A106144CT-ND" H 14850 8600 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 14850 8700 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 14850 8800 60  0001 L CNN "Category"
+F 7 "Test Points" H 14850 8900 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14850 9000 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 14850 9100 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 14850 9200 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 14850 9300 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 14850 9400 60  0001 L CNN "Status"
+	1    14650 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 6153F306
+P 15450 8200
+F 0 "TP?" H 15500 8293 50  0000 L CNN
+F 1 "RCT-0C" H 15500 8202 50  0000 L CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 15650 8400 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15650 8500 60  0001 L CNN
+F 4 "A106144CT-ND" H 15650 8600 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 15650 8700 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 15650 8800 60  0001 L CNN "Category"
+F 7 "Test Points" H 15650 8900 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15650 9000 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 15650 9100 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 15650 9200 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 15650 9300 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 15650 9400 60  0001 L CNN "Status"
+	1    15450 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 6153F62F
+P 14350 9000
+F 0 "TP?" H 14400 9093 50  0000 L CNN
+F 1 "RCT-0C" H 14400 9002 50  0000 L CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 14550 9200 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14550 9300 60  0001 L CNN
+F 4 "A106144CT-ND" H 14550 9400 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 14550 9500 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 14550 9600 60  0001 L CNN "Category"
+F 7 "Test Points" H 14550 9700 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14550 9800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 14550 9900 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 14550 10000 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 14550 10100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 14550 10200 60  0001 L CNN "Status"
+	1    14350 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 6153FF5C
+P 14900 9000
+F 0 "TP?" H 14950 9093 50  0000 L CNN
+F 1 "RCT-0C" H 14950 9002 50  0000 L CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 15100 9200 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15100 9300 60  0001 L CNN
+F 4 "A106144CT-ND" H 15100 9400 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 15100 9500 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 15100 9600 60  0001 L CNN "Category"
+F 7 "Test Points" H 15100 9700 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15100 9800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 15100 9900 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 15100 10000 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 15100 10100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 15100 10200 60  0001 L CNN "Status"
+	1    14900 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 615405CD
+P 15900 8200
+F 0 "TP?" H 15950 8293 50  0000 L CNN
+F 1 "RCT-0C" H 15950 8202 50  0000 L CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 16100 8400 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 16100 8500 60  0001 L CNN
+F 4 "A106144CT-ND" H 16100 8600 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 16100 8700 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 16100 8800 60  0001 L CNN "Category"
+F 7 "Test Points" H 16100 8900 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 16100 9000 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 16100 9100 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 16100 9200 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 16100 9300 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 16100 9400 60  0001 L CNN "Status"
+	1    15900 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 61540CCA
+P 15450 9000
+F 0 "TP?" H 15500 9093 50  0000 L CNN
+F 1 "RCT-0C" H 15500 9002 50  0000 L CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 15650 9200 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15650 9300 60  0001 L CNN
+F 4 "A106144CT-ND" H 15650 9400 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 15650 9500 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 15650 9600 60  0001 L CNN "Category"
+F 7 "Test Points" H 15650 9700 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15650 9800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 15650 9900 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 15650 10000 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 15650 10100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 15650 10200 60  0001 L CNN "Status"
+	1    15450 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6156D02A
+P 14100 8000
+F 0 "#PWR?" H 14100 7750 50  0001 C CNN
+F 1 "GND" V 14105 7872 50  0001 R CNN
+F 2 "" H 14100 8000 50  0001 C CNN
+F 3 "" H 14100 8000 50  0001 C CNN
+	1    14100 8000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6156D7CA
+P 14650 8000
+F 0 "#PWR?" H 14650 7750 50  0001 C CNN
+F 1 "GND" V 14655 7872 50  0001 R CNN
+F 2 "" H 14650 8000 50  0001 C CNN
+F 3 "" H 14650 8000 50  0001 C CNN
+	1    14650 8000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	15450 8900 15450 8450
+Text Label 15450 8850 1    50   ~ 0
+AMP_OUT
+Wire Wire Line
+	14900 8900 14900 8450
+Text Label 14900 8700 1    50   ~ 0
+CMD
+Wire Wire Line
+	14350 8900 14350 8450
+Wire Wire Line
+	15450 8100 15450 7850
+Wire Wire Line
+	15900 8100 15900 7850
+Text Label 15450 8000 1    50   ~ 0
+SCL
+Text Label 15900 8000 1    50   ~ 0
+SDA
+Wire Wire Line
+	14100 8100 14100 8000
+Wire Wire Line
+	14650 8100 14650 8000
+Text Label 14350 8850 1    50   ~ 0
+FDBK
+$Comp
+L dk_Test-Points:RCT-0C TP?
+U 1 1 61775C7A
+P 2100 3050
+F 0 "TP?" V 2127 3000 50  0000 R CNN
+F 1 "RCT-0C" V 2036 3000 50  0000 R CNN
+F 2 "digikey-footprints:PROBE_PAD_0805" H 2300 3250 60  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 2300 3350 60  0001 L CNN
+F 4 "A106144CT-ND" H 2300 3450 60  0001 L CNN "Digi-Key_PN"
+F 5 "RCT-0C" H 2300 3550 60  0001 L CNN "MPN"
+F 6 "Test and Measurement" H 2300 3650 60  0001 L CNN "Category"
+F 7 "Test Points" H 2300 3750 60  0001 L CNN "Family"
+F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 2300 3850 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 2300 3950 60  0001 L CNN "DK_Detail_Page"
+F 10 "PC TEST POINT NATURAL" H 2300 4050 60  0001 L CNN "Description"
+F 11 "TE Connectivity AMP Connectors" H 2300 4150 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2300 4250 60  0001 L CNN "Status"
+	1    2100 3050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 3050 2000 3050
+Wire Bus Line
+	3650 9600 4300 9600
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line
-	3150 9450 3150 9600
+	9150 9050 9150 9250
 Wire Bus Line
 	3250 9050 3250 9350
 Wire Bus Line
 	3350 8550 3350 8850
 Wire Bus Line
-	9300 9050 9300 9500
+	3300 9450 3300 9900
 Wire Bus Line
 	3500 8000 3500 8450
-Connection ~ 2600 900 
-Wire Wire Line
-	2600 900  2600 1000
 $EndSCHEMATC
