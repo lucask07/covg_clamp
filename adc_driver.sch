@@ -104,10 +104,10 @@ P 7050 3950
 AR Path="/6032F251/6097B98D" Ref="R?"  Part="1" 
 AR Path="/6032F251/608FDC40/6097B98D" Ref="R39"  Part="1" 
 F 0 "R39" V 6997 4018 59  0000 L CNN
-F 1 "1820" V 7102 4018 59  0000 L CNN
+F 1 "1500" V 7102 4018 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 7050 3950 50  0001 C CNN
 F 3 "" H 7050 3950 50  0001 C CNN
-F 4 "RC0603FR-071K82L" H 6997 4118 50  0001 C CNN "Manf#"
+F 4 "RC0603FR-071K5L" H 6997 4118 50  0001 C CNN "Manf#"
 F 5 "1%" H 7050 3950 50  0001 C CNN "Tolerance"
 	1    7050 3950
 	0    1    1    0   
@@ -296,10 +296,10 @@ P 6950 3750
 AR Path="/6032F251/6097B99B" Ref="R?"  Part="1" 
 AR Path="/6032F251/608FDC40/6097B99B" Ref="R40"  Part="1" 
 F 0 "R40" V 6897 3818 59  0000 L CNN
-F 1 "1820" V 7002 3818 59  0000 L CNN
+F 1 "1500" V 7002 3818 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 6950 3750 50  0001 C CNN
 F 3 "" H 6950 3750 50  0001 C CNN
-F 4 "RC0603FR-071K82L" H 6897 3918 50  0001 C CNN "Manf#"
+F 4 "RC0603FR-071K5L" H 6897 3918 50  0001 C CNN "Manf#"
 F 5 "1%" H 6950 3750 50  0001 C CNN "Tolerance"
 	1    6950 3750
 	0    -1   -1   0   
@@ -592,8 +592,8 @@ Text Notes 3600 4400 0    50   ~ 0
 G = 1.99
 Text Label 9300 4150 0    50   ~ 0
 VCM
-Text Notes 9700 2500 0    50   ~ 0
-ADC Driver \nAlternative part LMP8350
+Text Notes 7900 2800 0    50   ~ 0
+ADC Driver \nUsing alternative part LMP8350\nWas ADA4932 (but supply issues)
 Text HLabel 4550 3950 0    50   Input ~ 0
 P2
 Text HLabel 2800 2050 0    50   Input ~ 0
@@ -1085,10 +1085,12 @@ Wire Wire Line
 	2800 1450 3150 1450
 Wire Wire Line
 	2800 1450 2800 1400
+Text Notes 4800 6800 0    50   ~ 0
+4.7 uF for the AD8421 inamp
 Wire Bus Line
 	2700 900  2700 1450
 Wire Bus Line
 	900  3450 3050 3450
-Text Notes 4800 6800 0    50   ~ 0
-4.7 uF for the AD8421 inamp
+Text Notes 3400 1000 0    50   ~ 0
+SEL = 0 Switch B to D\n SEL = 1 Switch A to D
 $EndSCHEMATC

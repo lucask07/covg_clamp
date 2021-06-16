@@ -20,11 +20,11 @@ F0 "cal_switching" 50
 F1 "cal_switching.sch" 50
 F2 "ADC_SEL[1..4]" I L 4300 8000 50 
 F3 "CAL_ADC" O L 4300 8350 50 
-F4 "CAL_SIG1" I R 5700 8000 50 
+F4 "CAL_SIG1" B R 5700 8000 50 
 F5 "DAC_SEL[1..4]" I L 4300 8100 50 
 F6 "CAL_DAC" I L 4300 8450 50 
 F7 "CAL_SIG2" B R 5700 8100 50 
-F8 "AMP_OUT" I R 5700 8200 50 
+F8 "INAMP_OUT" I R 5700 8200 50 
 F9 "CC" I R 5700 8300 50 
 $EndSheet
 $Comp
@@ -861,17 +861,6 @@ F 3 "" H 8100 10050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0130
-U 1 1 606DECED
-P 7250 9700
-F 0 "#PWR0130" H 7250 9450 50  0001 C CNN
-F 1 "GND" V 7255 9572 50  0001 R CNN
-F 2 "" H 7250 9700 50  0001 C CNN
-F 3 "" H 7250 9700 50  0001 C CNN
-	1    7250 9700
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR031
 U 1 1 60F70451
 P 2100 10000
@@ -1017,8 +1006,6 @@ Text Label 8900 3400 0    50   ~ 0
 P2
 Text Notes 12650 5550 0    50   ~ 0
 CC (bath)
-Text Notes 2500 10350 0    50   ~ 0
-Add caps for OPA828 and the ADC driver\nTest hooks?\nHave addresses output to top level (not totally necessary if SDA/SCL are different). \n Buffer out calibration switching block.
 Text Notes 650  4650 0    50   ~ 0
 ADS8686 range\n +/-2.5V, +/-5V, +/-10V
 Text Label 850  4950 0    50   ~ 0
@@ -1132,7 +1119,7 @@ CAL_SIG1
 Text Label 5800 8100 0    50   ~ 0
 CAL_SIG2
 Text Label 5800 8200 0    50   ~ 0
-AMP_OUT
+INAMP_OUT
 Text Label 5800 8300 0    50   ~ 0
 CC
 Wire Wire Line
@@ -1460,18 +1447,6 @@ Wire Wire Line
 Wire Wire Line
 	7150 8150 7400 8150
 Wire Wire Line
-	7250 9700 7250 9650
-Wire Wire Line
-	7250 9450 7400 9450
-Wire Wire Line
-	7400 9550 7250 9550
-Wire Wire Line
-	7250 9550 7250 9450
-Wire Wire Line
-	7250 9650 7400 9650
-Wire Wire Line
-	7250 9650 7250 9550
-Wire Wire Line
 	8800 8150 9050 8150
 Wire Wire Line
 	8800 8250 9050 8250
@@ -1613,8 +1588,6 @@ Connection ~ 4550 3300
 Connection ~ 5850 3200
 Connection ~ 2750 5500
 Connection ~ 4550 3850
-Connection ~ 7250 9550
-Connection ~ 7250 9650
 Connection ~ 1850 4950
 Connection ~ 2750 6950
 Connection ~ 1850 6400
@@ -1650,36 +1623,8 @@ F 0 "U12" H 1600 9950 50  0000 C CNN
 F 1 "TCA9555DBR" H 1750 9850 50  0000 C CNN
 F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 3150 7850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tca9555.pdf" H 1600 9750 50  0001 C CNN
+F 4 "TCA9555DBR" H 2100 8850 50  0001 C CNN "Manf#"
 	1    2100 8850
-	1    0    0    -1  
-$EndComp
-Connection ~ 1250 9450
-Wire Wire Line
-	1250 9450 1400 9450
-Wire Wire Line
-	1250 9450 1250 9550
-Wire Wire Line
-	1000 9450 1250 9450
-$Comp
-L power:+3.3V #PWR024
-U 1 1 60AFED8A
-P 1000 9450
-F 0 "#PWR024" H 1000 9300 50  0001 C CNN
-F 1 "+3.3V" H 1015 9623 50  0000 C CNN
-F 2 "" H 1000 9450 50  0001 C CNN
-F 3 "" H 1000 9450 50  0001 C CNN
-	1    1000 9450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR026
-U 1 1 60A00D7E
-P 1250 9700
-F 0 "#PWR026" H 1250 9450 50  0001 C CNN
-F 1 "GND" V 1255 9572 50  0001 R CNN
-F 2 "" H 1250 9700 50  0001 C CNN
-F 3 "" H 1250 9700 50  0001 C CNN
-	1    1250 9700
 	1    0    0    -1  
 $EndComp
 Wire Bus Line
@@ -1688,14 +1633,8 @@ Wire Bus Line
 	3700 8100 4300 8100
 Wire Bus Line
 	3700 8550 3700 8100
-Text Notes 1350 8850 0    50   ~ 0
-Addr = 0100_A2_A1_A0
-Wire Wire Line
-	1250 9550 1400 9550
-Wire Wire Line
-	1250 9700 1250 9650
-Wire Wire Line
-	1250 9650 1400 9650
+Text Notes 1750 8850 0    50   ~ 0
+Addr = \n0100_A2_A1_A0
 Wire Wire Line
 	2100 9950 2100 10000
 $Comp
@@ -1739,6 +1678,7 @@ F 0 "U13" H 7600 9950 50  0000 C CNN
 F 1 "TCA9555DBR" H 7750 9850 50  0000 C CNN
 F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 9150 7850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tca9555.pdf" H 7600 9750 50  0001 C CNN
+F 4 "TCA9555DBR" H 8100 8850 50  0001 C CNN "Manf#"
 	1    8100 8850
 	1    0    0    -1  
 $EndComp
@@ -1801,6 +1741,7 @@ F 0 "U19" H 6675 5687 60  0000 C CNN
 F 1 "TMUX6136PWR" H 6675 5581 60  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 6650 5500 60  0001 C CNN
 F 3 "" H 6000 5400 60  0000 C CNN
+F 4 "TMUX6136PWR" H 6000 5400 50  0001 C CNN "Manf#"
 	1    6000 5400
 	-1   0    0    -1  
 $EndComp
@@ -1930,6 +1871,7 @@ F 0 "U8" H 2250 5317 50  0000 C CNN
 F 1 "OPA2156xD" H 2250 5226 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2350 4950 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 2500 5100 50  0001 C CNN
+F 4 "OPA2156IDR" H 2250 4950 50  0001 C CNN "Manf#"
 	1    2250 4950
 	-1   0    0    -1  
 $EndComp
@@ -1941,6 +1883,7 @@ F 0 "U8" H 2250 6767 50  0000 C CNN
 F 1 "OPA2156xD" H 2250 6676 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2350 6400 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 2500 6550 50  0001 C CNN
+F 4 "OPA2156IDR" H 2250 6400 50  0001 C CNN "Manf#"
 	2    2250 6400
 	-1   0    0    -1  
 $EndComp
@@ -2147,30 +2090,30 @@ SEL=0 ==> B to D
 $Comp
 L Device:C C31
 U 1 1 61E15819
-P 3850 7150
+P 3800 7150
 AR Path="/6032F251/61E15819" Ref="C31"  Part="1" 
 AR Path="/6032F251/608FDC40/61E15819" Ref="C?"  Part="1" 
-F 0 "C31" V 3598 7150 50  0000 C CNN
-F 1 "0.1u" V 3689 7150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3888 7000 50  0001 C CNN
-F 3 "~" H 3850 7150 50  0001 C CNN
-F 4 "CC0603MRX7R8BB104" H 3598 7250 50  0001 C CNN "Manf#"
-F 5 "20%" H 3598 7250 50  0001 C CNN "Tolerance"
-F 6 "25V" H 3598 7250 50  0001 C CNN "voltage"
-	1    3850 7150
+F 0 "C31" V 3548 7150 50  0000 C CNN
+F 1 "0.1u" V 3639 7150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3838 7000 50  0001 C CNN
+F 3 "~" H 3800 7150 50  0001 C CNN
+F 4 "CC0603MRX7R8BB104" H 3548 7250 50  0001 C CNN "Manf#"
+F 5 "20%" H 3548 7250 50  0001 C CNN "Tolerance"
+F 6 "25V" H 3548 7250 50  0001 C CNN "voltage"
+	1    3800 7150
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0149
 U 1 1 61E1581F
-P 3850 7400
+P 3800 7400
 AR Path="/6032F251/61E1581F" Ref="#PWR0149"  Part="1" 
 AR Path="/6032F251/608FDC40/61E1581F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0149" H 3850 7150 50  0001 C CNN
-F 1 "GND" V 3855 7272 50  0001 R CNN
-F 2 "" H 3850 7400 50  0001 C CNN
-F 3 "" H 3850 7400 50  0001 C CNN
-	1    3850 7400
+F 0 "#PWR0149" H 3800 7150 50  0001 C CNN
+F 1 "GND" V 3805 7272 50  0001 R CNN
+F 2 "" H 3800 7400 50  0001 C CNN
+F 3 "" H 3800 7400 50  0001 C CNN
+	1    3800 7400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2217,20 +2160,20 @@ $EndComp
 $Comp
 L power:-15V #PWR0152
 U 1 1 61E15863
-P 3850 6900
+P 3800 6900
 AR Path="/6032F251/61E15863" Ref="#PWR0152"  Part="1" 
 AR Path="/6032F251/608FDC40/61E15863" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0152" H 3850 7000 50  0001 C CNN
-F 1 "-15V" H 3865 7073 50  0000 C CNN
-F 2 "" H 3850 6900 50  0001 C CNN
-F 3 "" H 3850 6900 50  0001 C CNN
-	1    3850 6900
+F 0 "#PWR0152" H 3800 7000 50  0001 C CNN
+F 1 "-15V" H 3815 7073 50  0000 C CNN
+F 2 "" H 3800 6900 50  0001 C CNN
+F 3 "" H 3800 6900 50  0001 C CNN
+	1    3800 6900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 7400 3850 7300
+	3800 7400 3800 7300
 Wire Wire Line
-	3850 7000 3850 6900
+	3800 7000 3800 6900
 Wire Wire Line
 	4250 7400 4250 7300
 Wire Wire Line
@@ -2420,6 +2363,7 @@ F 0 "J4" H 1480 2496 50  0000 L CNN
 F 1 "HDMI_A" V 1500 2150 50  0000 L CNN
 F 2 "covg-kicad:CONN_10029449-111RLF_HDMI_A" H 1075 2450 50  0001 C CNN
 F 3 "https://en.wikipedia.org/wiki/HDMI" H 1075 2450 50  0001 C CNN
+F 4 "10029449-111RLF" H 1050 2450 50  0001 C CNN "Manf#"
 	1    1050 2450
 	-1   0    0    -1  
 $EndComp
@@ -2494,6 +2438,7 @@ F 0 "U25" H 3000 2117 50  0000 C CNN
 F 1 "OPA2156xD" H 3000 2026 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3100 1750 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 3250 1900 50  0001 C CNN
+F 4 "OPA2156IDR" H 3000 1750 50  0001 C CNN "Manf#"
 	1    3000 1750
 	1    0    0    -1  
 $EndComp
@@ -2593,6 +2538,7 @@ F 0 "U25" H 3000 1267 50  0000 C CNN
 F 1 "OPA2156xD" H 3000 1176 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3100 900 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 3250 1050 50  0001 C CNN
+F 4 "OPA2156IDR" H 3000 900 50  0001 C CNN "Manf#"
 	2    3000 900 
 	1    0    0    -1  
 $EndComp
@@ -2851,10 +2797,10 @@ F 5 "1%" H 5000 4250 50  0001 C CNN "Tolerance"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP2
 U 1 1 6153E07C
 P 14100 8200
-F 0 "TP?" H 14150 8293 50  0000 L CNN
+F 0 "TP2" H 14150 8293 50  0000 L CNN
 F 1 "RCT-0C" H 14150 8202 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 14300 8400 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14300 8500 60  0001 L CNN
@@ -2867,14 +2813,15 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 14300 9200 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 14300 9300 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 14300 9400 60  0001 L CNN "Status"
+F 13 "RCT-0C" H 14100 8200 50  0001 C CNN "Manf#"
 	1    14100 8200
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP4
 U 1 1 6153EEE1
 P 14650 8200
-F 0 "TP?" H 14700 8293 50  0000 L CNN
+F 0 "TP4" H 14700 8293 50  0000 L CNN
 F 1 "RCT-0C" H 14700 8202 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 14850 8400 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14850 8500 60  0001 L CNN
@@ -2887,14 +2834,15 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 14850 9200 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 14850 9300 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 14850 9400 60  0001 L CNN "Status"
+F 13 "RCT-0C" H 14650 8200 50  0001 C CNN "Manf#"
 	1    14650 8200
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP6
 U 1 1 6153F306
 P 15450 8200
-F 0 "TP?" H 15500 8293 50  0000 L CNN
+F 0 "TP6" H 15500 8293 50  0000 L CNN
 F 1 "RCT-0C" H 15500 8202 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 15650 8400 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15650 8500 60  0001 L CNN
@@ -2907,14 +2855,15 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 15650 9200 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 15650 9300 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 15650 9400 60  0001 L CNN "Status"
+F 13 "RCT-0C" H 15450 8200 50  0001 C CNN "Manf#"
 	1    15450 8200
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP3
 U 1 1 6153F62F
 P 14350 9000
-F 0 "TP?" H 14400 9093 50  0000 L CNN
+F 0 "TP3" H 14400 9093 50  0000 L CNN
 F 1 "RCT-0C" H 14400 9002 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 14550 9200 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14550 9300 60  0001 L CNN
@@ -2927,14 +2876,15 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 14550 10000 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 14550 10100 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 14550 10200 60  0001 L CNN "Status"
+F 13 "RCT-0C" H 14350 9000 50  0001 C CNN "Manf#"
 	1    14350 9000
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP5
 U 1 1 6153FF5C
 P 14900 9000
-F 0 "TP?" H 14950 9093 50  0000 L CNN
+F 0 "TP5" H 14950 9093 50  0000 L CNN
 F 1 "RCT-0C" H 14950 9002 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 15100 9200 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15100 9300 60  0001 L CNN
@@ -2947,14 +2897,15 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 15100 10000 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 15100 10100 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 15100 10200 60  0001 L CNN "Status"
+F 13 "RCT-0C" H 14900 9000 50  0001 C CNN "Manf#"
 	1    14900 9000
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP8
 U 1 1 615405CD
 P 15900 8200
-F 0 "TP?" H 15950 8293 50  0000 L CNN
+F 0 "TP8" H 15950 8293 50  0000 L CNN
 F 1 "RCT-0C" H 15950 8202 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 16100 8400 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 16100 8500 60  0001 L CNN
@@ -2967,14 +2918,15 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 16100 9200 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 16100 9300 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 16100 9400 60  0001 L CNN "Status"
+F 13 "RCT-0C" H 15900 8200 50  0001 C CNN "Manf#"
 	1    15900 8200
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP7
 U 1 1 61540CCA
 P 15450 9000
-F 0 "TP?" H 15500 9093 50  0000 L CNN
+F 0 "TP7" H 15500 9093 50  0000 L CNN
 F 1 "RCT-0C" H 15500 9002 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 15650 9200 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 15650 9300 60  0001 L CNN
@@ -2987,14 +2939,15 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 15650 10000 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 15650 10100 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 15650 10200 60  0001 L CNN "Status"
+F 13 "RCT-0C" H 15450 9000 50  0001 C CNN "Manf#"
 	1    15450 9000
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0173
 U 1 1 6156D02A
 P 14100 8000
-F 0 "#PWR?" H 14100 7750 50  0001 C CNN
+F 0 "#PWR0173" H 14100 7750 50  0001 C CNN
 F 1 "GND" V 14105 7872 50  0001 R CNN
 F 2 "" H 14100 8000 50  0001 C CNN
 F 3 "" H 14100 8000 50  0001 C CNN
@@ -3002,10 +2955,10 @@ F 3 "" H 14100 8000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0181
 U 1 1 6156D7CA
 P 14650 8000
-F 0 "#PWR?" H 14650 7750 50  0001 C CNN
+F 0 "#PWR0181" H 14650 7750 50  0001 C CNN
 F 1 "GND" V 14655 7872 50  0001 R CNN
 F 2 "" H 14650 8000 50  0001 C CNN
 F 3 "" H 14650 8000 50  0001 C CNN
@@ -3037,10 +2990,10 @@ Wire Wire Line
 Text Label 14350 8850 1    50   ~ 0
 FDBK
 $Comp
-L dk_Test-Points:RCT-0C TP?
+L dk_Test-Points:RCT-0C TP1
 U 1 1 61775C7A
 P 2100 3050
-F 0 "TP?" V 2127 3000 50  0000 R CNN
+F 0 "TP1" V 2127 3000 50  0000 R CNN
 F 1 "RCT-0C" V 2036 3000 50  0000 R CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 2300 3250 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 2300 3350 60  0001 L CNN
@@ -3053,6 +3006,7 @@ F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/34778
 F 10 "PC TEST POINT NATURAL" H 2300 4050 60  0001 L CNN "Description"
 F 11 "TE Connectivity AMP Connectors" H 2300 4150 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 2300 4250 60  0001 L CNN "Status"
+F 13 "RCT-0C" V 2100 3050 50  0001 C CNN "Manf#"
 	1    2100 3050
 	0    -1   -1   0   
 $EndComp
@@ -3060,6 +3014,121 @@ Wire Wire Line
 	1450 3050 2000 3050
 Wire Bus Line
 	3650 9600 4300 9600
+Text HLabel 7150 9650 0    50   Input ~ 0
+A0_EXP1
+Text HLabel 7150 9550 0    50   Input ~ 0
+A1_EXP1
+Text HLabel 7150 9450 0    50   Input ~ 0
+A2_EXP1
+Wire Wire Line
+	7150 9650 7400 9650
+Wire Wire Line
+	7150 9550 7400 9550
+Wire Wire Line
+	7150 9450 7400 9450
+Text Notes 1200 10050 0    50   ~ 0
+110
+Text HLabel 1150 9650 0    50   Input ~ 0
+A0_EXP0
+Text HLabel 1150 9550 0    50   Input ~ 0
+A1_EXP0
+Text HLabel 1150 9450 0    50   Input ~ 0
+A2_EXP0
+Wire Wire Line
+	1150 9650 1400 9650
+Wire Wire Line
+	1150 9550 1400 9550
+Wire Wire Line
+	1150 9450 1400 9450
+Text Notes 7800 8800 0    50   ~ 0
+Addr = \n0100_A2_A1_A0
+$Comp
+L Device:C C39
+U 1 1 60EF28C2
+P 1700 3900
+AR Path="/6032F251/60EF28C2" Ref="C39"  Part="1" 
+AR Path="/6032F251/608FDC40/60EF28C2" Ref="C?"  Part="1" 
+F 0 "C39" V 1448 3900 50  0000 C CNN
+F 1 "0.1u" V 1539 3900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1738 3750 50  0001 C CNN
+F 3 "~" H 1700 3900 50  0001 C CNN
+F 4 "CC0603MRX7R8BB104" H 1448 4000 50  0001 C CNN "Manf#"
+F 5 "20%" H 1448 4000 50  0001 C CNN "Tolerance"
+F 6 "25V" H 1448 4000 50  0001 C CNN "voltage"
+	1    1700 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0184
+U 1 1 60EF28C8
+P 1700 4150
+AR Path="/6032F251/60EF28C8" Ref="#PWR0184"  Part="1" 
+AR Path="/6032F251/608FDC40/60EF28C8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0184" H 1700 3900 50  0001 C CNN
+F 1 "GND" V 1705 4022 50  0001 R CNN
+F 2 "" H 1700 4150 50  0001 C CNN
+F 3 "" H 1700 4150 50  0001 C CNN
+	1    1700 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0185
+U 1 1 60EF28D4
+P 2150 4150
+AR Path="/6032F251/60EF28D4" Ref="#PWR0185"  Part="1" 
+AR Path="/6032F251/608FDC40/60EF28D4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0185" H 2150 3900 50  0001 C CNN
+F 1 "GND" V 2155 4022 50  0001 R CNN
+F 2 "" H 2150 4150 50  0001 C CNN
+F 3 "" H 2150 4150 50  0001 C CNN
+	1    2150 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C40
+U 1 1 60EF28DC
+P 2150 3900
+AR Path="/6032F251/60EF28DC" Ref="C40"  Part="1" 
+AR Path="/6032F251/608FDC40/60EF28DC" Ref="C?"  Part="1" 
+F 0 "C40" V 1898 3900 50  0000 C CNN
+F 1 "0.1u" V 1989 3900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2188 3750 50  0001 C CNN
+F 3 "~" H 2150 3900 50  0001 C CNN
+F 4 "CC0603MRX7R8BB104" H 1898 4000 50  0001 C CNN "Manf#"
+F 5 "25V" H 1898 4000 50  0001 C CNN "voltage"
+	1    2150 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1700 4150 1700 4050
+Wire Wire Line
+	1700 3750 1700 3650
+Wire Wire Line
+	2150 4150 2150 4050
+Wire Wire Line
+	2150 3750 2150 3650
+$Comp
+L power:+5V #PWR0186
+U 1 1 60F1D0DA
+P 1700 3650
+F 0 "#PWR0186" H 1700 3500 50  0001 C CNN
+F 1 "+5V" H 1715 3823 50  0000 C CNN
+F 2 "" H 1700 3650 50  0001 C CNN
+F 3 "" H 1700 3650 50  0001 C CNN
+	1    1700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0187
+U 1 1 60F1D58F
+P 2150 3650
+F 0 "#PWR0187" H 2150 3500 50  0001 C CNN
+F 1 "+5V" H 2165 3823 50  0000 C CNN
+F 2 "" H 2150 3650 50  0001 C CNN
+F 3 "" H 2150 3650 50  0001 C CNN
+	1    2150 3650
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line

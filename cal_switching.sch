@@ -172,8 +172,6 @@ Text HLabel 4450 2750 0    50   Input ~ 0
 ADC_SEL[1..4]
 Text HLabel 4000 2050 0    50   Output ~ 0
 CAL_ADC
-Text HLabel 6650 1500 2    50   Input ~ 0
-CAL_SIG1
 Text Label 4600 1600 0    50   ~ 0
 ADC_SEL1
 Text Label 4600 1900 0    50   ~ 0
@@ -198,18 +196,14 @@ Text Label 4600 5350 0    50   ~ 0
 DAC_SEL3
 Text Label 4600 5650 0    50   ~ 0
 DAC_SEL4
-Text Notes 5150 3800 0    50   ~ 0
-3.3 V compatible logic inputs\nDAC inputs to CAL signals
+Text Notes 5250 3550 0    50   ~ 0
+3.3 V compatible logic inputs \nDAC inputs or GND to CAL signals
 Text HLabel 6600 4950 2    50   BiDi ~ 0
 CAL_SIG2
-Text HLabel 6650 1800 2    50   Input ~ 0
-CAL_SIG2
 Text HLabel 6650 2100 2    50   Input ~ 0
-AMP_OUT
+INAMP_OUT
 Text HLabel 6650 2400 2    50   Input ~ 0
 CC
-Text Notes 7550 2000 0    50   ~ 0
-TODO: x10 buffer for some of these outptus? \n
 Wire Wire Line
 	4750 1150 4750 1300
 Wire Wire Line
@@ -327,4 +321,10 @@ Wire Bus Line
 	4450 1700 4450 2750
 Wire Bus Line
 	4400 4850 4400 5900
+Text Label 6650 1500 0    50   ~ 0
+CAL_SIG1
+Text Label 6650 1800 0    50   ~ 0
+CAL_SIG2
+Text Notes 5250 3850 0    50   ~ 0
+TMUX6111: Logic 0 closes switch\nTMUX6112: Logic 1 closes switch
 $EndSCHEMATC

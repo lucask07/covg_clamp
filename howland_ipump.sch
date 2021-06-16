@@ -137,8 +137,8 @@ Wire Wire Line
 	5550 3000 6500 3000
 Text Notes 5300 4050 0    50   ~ 0
 SDOWN referenced to V-\ninternal pull-down\nenabled when low\n
-Text Notes 5500 3350 0    50   ~ 0
-50 nA to 10 uA\n=> 50 mV to 10 V 
+Text Notes 5200 3450 0    50   ~ 0
+0.26 nA to 2.1 uA\nwith CMD from 1.22 mV to 10 V 
 $Comp
 L Device:R_US R?
 U 1 1 60D78240
