@@ -27,3 +27,6 @@ fp-info-cache
 
 .DS_Store
 *jnk/
+
+*.FCstd
+*.step
