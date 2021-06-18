@@ -2,8 +2,10 @@
 KiCad schematic and layout for the COVG bath and guard clamps. Current plan is that the same design is used for the bath and guard clamps. These clamps will sit on the same PCB, each will have its own input/output connector (HDMI). 
 
 
-- PDF plot of the board schematic is [here](docs/bath_clamp_v1.pdf) 
+### The PDF plot of the board schematic is [here](docs/bath_clamp_v1.pdf) 
 - 2D capture of the 3D model of the board layout is here (so far the bath clamp only): 
+![Alt text](mechanical/3d_rendering_1.png)
+![Alt text](mechanical/3d_rendering_2.png)
 
 ## HDMI: connection from DAQ to daughtercard 
 
