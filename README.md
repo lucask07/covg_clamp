@@ -29,9 +29,10 @@ An HDMI-A cable is used for input and output signals that connects the bath clam
 
 ![Alt text](docs/hdmi.png)
 
-| Pin | HDMI name    | Generic Daughtercard     | Bath clamp | Notes                                                                     |
+
+| Pin | HDMI name    | Generic Daughtercard     | Bath clamp | Notes  |
 |-----|--------------|--------------|------------|---------------------------------------------------------------------------|
-| 1   | Data2+       | fastDAC1     | CMD        | ~1 us settling time                                                                          |
+| 1   | Data2+       | fastDAC1     | CMD        | ~1 us settling time                      |
 | 2   | Data2 shield | gnd          | gnd        |                                                                           |
 | 3   | Data2-       | Analog/GPIO1 | CAL_DAC    |  DAC8050, 16 bit, 5us settle, 5 V supply                                                                         |
 | 4   | Data1+       | fastADC+     | IM_P       | to AD7960/AD7961. Differential low-pass filter on DAQ board                                                                          |
@@ -43,13 +44,14 @@ An HDMI-A cable is used for input and output signals that connects the bath clam
 | 10  | Clock+       | 15V          | 15V        | linear regulator, 75 mA max per channel                                                                         |
 | 11  | Clock shield | gnd          | gnd        |                                                                           |
 | 12  | Clock-       | VCM          | VCM        | buffered on DAQ board, nominal 2.5 V                                                                          |
-| 13  | CEC          | -15V         | -15V       |  linear regulator, 75 mA max per channel                                                                          |
+| 13  | CEC          | -15V         | -15V       |  linear regulator, 75 mA max per channel                             |
 | 14  | Reserved     | open         | open       | This was connected on one of my cables but not guaranteed. Use as grab-bag. |
-| 15  | SCL          | SCL          | SCL        | I2C clock. Pull-up on main DAQ board, 3.3 V levels                                                        |
-| 16  | SDA          | SDA          | SDA        | I2C data. Pull-up on main DAQ board, 3.3 V levels                                                           |
+| 15  | SCL          | SCL          | SCL        | I2C clock. Pull-up on main DAQ board, 3.3 V levels                |
+| 16  | SDA          | SDA          | SDA        | I2C data. Pull-up on main DAQ board, 3.3 V levels                 |
 | 17  | Gnd          | Gnd          | Gnd        |                                                                           |
-| 18  | 5V           | 5V           | 5V         |  Power input from linear regulator, 200 mA max per channel (target)                                                                         |
-| 19  | HPD          | Analog/GPIO3 | AMP_OUT    | to ADS8686 1 MSPS, programmable PGA                                                             |
+| 18  | 5V           | 5V           | 5V         |  Power input from linear regulator, 200 mA max per channel (target)  |
+| 19  | HPD          | Analog/GPIO3 | AMP_OUT    | to ADS8686 1 MSPS, programmable PGA                        |
+
 
 ## Electrode Configurations and Modes 
 
@@ -191,6 +193,10 @@ Now *git clone* (effectively download) the digikey and COVG libraries.
 * The custom COVG library is at [https://github.com/lucask07/covg-kicad-lib](https://github.com/lucask07/covg-kicad-lib)
 	* Use the terminal command: `git clone https://github.com/lucask07/covg-kicad-lib.git `
 	* This is a private repository so will require you to request access to the repository from Lucas. 
+
+### LMP8350 ADC Driver 
+
+[LMP8350](https://rocelec.widen.net/view/pdf/d6pm6sbaz5/lmp8350.pdf?t.download=true&u=5oefqw)
 
 ## Generating a BOM (bill of materials)
 

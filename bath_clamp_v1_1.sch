@@ -2321,27 +2321,19 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0127
 U 1 1 60605E23
-P 650 3600
-F 0 "#PWR0127" H 650 3350 50  0001 C CNN
-F 1 "GND" V 655 3472 50  0001 R CNN
-F 2 "" H 650 3600 50  0001 C CNN
-F 3 "" H 650 3600 50  0001 C CNN
-	1    650  3600
-	0    1    1    0   
+P 1250 3800
+F 0 "#PWR0127" H 1250 3550 50  0001 C CNN
+F 1 "GND" V 1255 3672 50  0001 R CNN
+F 2 "" H 1250 3800 50  0001 C CNN
+F 3 "" H 1250 3800 50  0001 C CNN
+	1    1250 3800
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1150 3550 1150 3600
 Connection ~ 1050 3600
 Wire Wire Line
-	750  3600 750  3550
-Connection ~ 750  3600
-Wire Wire Line
-	850  3600 750  3600
-Wire Wire Line
-	750  3600 650  3600
-Wire Wire Line
 	850  3550 850  3600
-Connection ~ 850  3600
 Wire Wire Line
 	950  3600 850  3600
 Wire Wire Line
@@ -3129,6 +3121,38 @@ F 3 "" H 2150 3650 50  0001 C CNN
 	1    2150 3650
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1250 3800 1250 3600
+Connection ~ 1250 3600
+$Comp
+L Device:Ferrite_Bead FB?
+U 1 1 61B9C943
+P 750 3900
+F 0 "FB?" H 887 3946 50  0000 L CNN
+F 1 "Ferrite_Bead" H 887 3855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" V 680 3900 50  0001 C CNN
+F 3 "~" H 750 3900 50  0001 C CNN
+F 4 "BLM31PG500SN1L" H 750 3900 50  0001 C CNN "Manf#"
+	1    750  3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B9CF45
+P 750 4150
+AR Path="/6032F251/61B9CF45" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/608FDC40/61B9CF45" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 750 3900 50  0001 C CNN
+F 1 "GND" V 755 4022 50  0001 R CNN
+F 2 "" H 750 4150 50  0001 C CNN
+F 3 "" H 750 4150 50  0001 C CNN
+	1    750  4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  4150 750  4050
+Wire Wire Line
+	750  3550 750  3750
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line
