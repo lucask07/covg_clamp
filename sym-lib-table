@@ -150,4 +150,5 @@
   (lib (name dk_Automotive-Relays)(type Legacy)(uri ${MYLIBRARY}/digikey-kicad-library/digikey-symbols/dk_Automotive-Relays.lib)(options "")(descr ""))
   (lib (name dk_Alarms-Buzzers-and-Sirens)(type Legacy)(uri ${MYLIBRARY}/digikey-kicad-library/digikey-symbols/dk_Alarms-Buzzers-and-Sirens.lib)(options "")(descr ""))
   (lib (name dk_Addressable-Specialty)(type Legacy)(uri ${MYLIBRARY}/digikey-kicad-library/digikey-symbols/dk_Addressable-Specialty.lib)(options "")(descr ""))
+  (lib (name covg-kicad)(type Legacy)(uri ${MYLIBRARY}/covg-kicad-lib/covg-kicad.lib)(options "")(descr ""))
 )

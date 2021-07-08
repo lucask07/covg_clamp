@@ -1,0 +1,26 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,(5.1.9-0-10_14)*
+G04 #@! TF.CreationDate,2021-07-02T21:32:49-05:00*
+G04 #@! TF.ProjectId,bath_clamp_v1,62617468-5f63-46c6-916d-705f76312e6b,rev?*
+G04 #@! TF.SameCoordinates,Original*
+G04 #@! TF.FileFunction,Profile,NP*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW (5.1.9-0-10_14)) date 2021-07-02 21:32:49*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 #@! TA.AperFunction,Profile*
+%ADD10C,0.100000*%
+G04 #@! TD*
+G04 APERTURE END LIST*
+D10*
+X83870800Y-266700D02*
+X83870800Y47993300D01*
+X50800Y47993300D02*
+X83870800Y47993300D01*
+X50800Y47993300D02*
+X50800Y-266700D01*
+X50800Y-266700D02*
+X83870800Y-266700D01*
+M02*
