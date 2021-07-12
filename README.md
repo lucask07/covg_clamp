@@ -1,11 +1,11 @@
-# covg_clamp
-KiCad schematic and layout for the COVG bath and guard clamps. Current plan is that the same design is used for the bath and guard clamps. These clamps will sit on the same PCB, each will have its own input/output connector (HDMI). 
+# COVG Clamp Board 
 
+Schematic and layout for the COVG bath and guard clamps. This board sits near electrodes and includes a force output and a high-impedance feedback input to create a closed-loop clamp. Intention is to use the same design for the bath and guard clamps of a COVG amplifiers. The board supports digital programming of the current measurement gain and the feedback loop stability. Switching on the board allows for connect and disconnect of electrodes and injection (or measurements) of calibration signals onto an electrode.
 
 ### The PDF plot of the board schematic is [here](docs/bath_clamp_v1.pdf) 
-- 2D capture of the 3D model of the board layout is here (so far the bath clamp only): 
-![Alt text](mechanical/3d_rendering_1.png)
-![Alt text](mechanical/3d_rendering_2.png)
+- 2D capture of the 3D model of the clamp board layout: 
+<p align="center">
+<img src="mechanical/3d_rendering_1.png" width="400">
 
 ## HDMI: connection from DAQ to daughtercard 
 
@@ -33,29 +33,31 @@ An HDMI-A cable is used for input and output signals that connects the bath clam
 | Pin | HDMI name    | Generic Daughtercard     | Bath clamp | Notes  |
 |-----|--------------|--------------|------------|---------------------------------------------------------------------------|
 | 1   | Data2+       | fastDAC1     | CMD        | ~1 us settling time                      |
-| 2   | Data2 shield | gnd          | gnd        |                                                                           |
-| 3   | Data2-       | Analog/GPIO1 | CAL_DAC    |  DAC8050, 16 bit, 5us settle, 5 V supply                                                                         |
+| 2   | Data2 shield | Gnd          | Gnd        |                                                                           |
+| 3   | Data2-       | Analog/GPIO1 | CAL_DAC    | Analog input signal from DAC8050, 16 bit, 5us settle, 5 V supply                                                                         |
 | 4   | Data1+       | fastADC+     | IM_P       | to AD7960/AD7961. Differential low-pass filter on DAQ board                                                                          |
-| 5   | Data1 shield | gnd          | gnd        |                                                                           |
+| 5   | Data1 shield | Gnd          | Gnd        |                                                                           |
 | 6   | Data1-       | fastADC-     | IM_N       | to AD7960/AD7961. Differential low-pass filter on DAQ board                                                                          |
 | 7   | Data0+       | fastDAC2     | CC         | ~1 us settling time                                                                          |
-| 8   | Data0 shield | gnd          | gnd        |                                                                           |
+| 8   | Data0 shield | Gnd          | Gnd        |                                                                           |
 | 9   | Data0-       | Analog/GPIO2 | CAL_ADC    | to ADS8686 1 MSPS, programmable PGA for range up to +/-10V                                                           |
-| 10  | Clock+       | 15V          | 15V        | linear regulator, 75 mA max per channel                                                                         |
-| 11  | Clock shield | gnd          | gnd        |                                                                           |
+| 10  | Clock+       | 15V          | 15V        | From a linear regulator on the DAQ board, 75 mA max per channel                                                                         |
+| 11  | Clock shield | Gnd          | Gnd        |                                                                           |
 | 12  | Clock-       | VCM          | VCM        | buffered on DAQ board, nominal 2.5 V                                                                          |
-| 13  | CEC          | -15V         | -15V       |  linear regulator, 75 mA max per channel                             |
-| 14  | Reserved     | open         | open       | This was connected on one of my cables but not guaranteed. Use as grab-bag. |
+| 13  | CEC          | -15V         | -15V       | From a linear regulator on the DAQ board, 75 mA max per channel                             |
+| 14  | Reserved     | open         | open       | Resistor jumper on DAQ board sets as analog in, analog out, or digital I/O (@ 3.3 V levels). Default stuffing option is to connect to the general purpose ADC (ADS8686). |
 | 15  | SCL          | SCL          | SCL        | I2C clock. Pull-up on main DAQ board, 3.3 V levels                |
 | 16  | SDA          | SDA          | SDA        | I2C data. Pull-up on main DAQ board, 3.3 V levels                 |
 | 17  | Gnd          | Gnd          | Gnd        |                                                                           |
-| 18  | 5V           | 5V           | 5V         |  Power input from linear regulator, 200 mA max per channel (target)  |
-| 19  | HPD          | Analog/GPIO3 | AMP_OUT    | to ADS8686 1 MSPS, programmable PGA                        |
+| 18  | 5V           | 5V           | 5V         | Power input from linear regulator, 200 mA max per channel (target)  |
+| 19  | HPD          | Analog/GPIO3 | AMP_OUT    | output to ADS8686 1 MSPS, programmable PGA                        |
 
 
 ## Electrode Configurations and Modes 
 
-The electrode connections are tip jack miniature PCB mount connectors for 0.08" diameter pin connections. 
+### Electrodes
+
+The electrode connections are [tip jack miniature PCB mount connectors](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/105-1103-001/241122?s=N4IgTCBcDaIIwAYCsBaOiDMKELiAugL5A) for 0.08" diameter pin connections. 
 
 - J1 corresponds to Dagan P2 - force
 - J2 corresponds to Dagan P1 - sense
@@ -63,23 +65,29 @@ The electrode connections are tip jack miniature PCB mount connectors for 0.08" 
 
 ### Modes 
 **Electrode diagnositcs / calibration / system ID** 
+
 Five relays are used to:
 
-1. Disconnect the electrodes from the active electronics (K2, K1), 
-2. Switch between active and passive clamp (U3), 
-3. Connect calibration signals (ADC or DAC) to the electrodes. 
+1. Disconnect the electrodes from the active electronics (relay K2, K1). Digital control signals: *P1\_E\_CTRL*, *P2\_E\_CTRL*
+2. Switch between active and passive clamp (U3). Digital control signals: *P\_CLAMP\_CTRL*
+3. Connect calibration signals (ADC or DAC) to the electrodes (U4, U5). Digital control signals: *P1\_CAL\_CTRL*, *P2\_CAL\_CTRL*
+A logical high digital control signal closes the Ux relays. A logical high swicthes the Kx relays so that the electronics and electrodes are disconnected. 
+
+**Calibration** 
+When "calibrating" the electrode that is driven by a DAC signal or output along the ADC signal CAL\_ADC is programmable. This output multiplexing is set by DAC\_SEL[1..4] and ADC\_SEL[1..4]. Via DAC\_SEL[1..4] an electrode can be connected to CAL\_DAC or GND. The ADC\_SEL[1..4] controls the signal that is connected to CAL\_ADC pin the options are (CAL\_SIG1, CAL\_SIG2, INAMP\_OUT, CC).   
 
 **Clamping**
 
-- _Voltage clamp_: U1 drives the command voltage (CMD) to electrode P2. Nominal voltage clamp mode will have all 5 relays in nominal position (with 0 coil current).  When in voltage clamp mode that current to P2 (as measured by the voltage across nets RF\_1 and P2) is output by the different ADC driver for 5 MSPS digitization. The settings for U22 (TMUX6136) are S1 = 1 so that the inamp output is buffered out to the 5 MSPS ADC; and S2 = 1 so that the instrumentation amplifier amplifies the voltage difference: (P2 - RF_1). The voltage feedback in voltage clamp mode can be enabled/disabled by the I/O expander siganl *FDBK* (*FDBK*=0 is disabled). 
+- _Voltage clamp_: U1 drives the command voltage (CMD) to electrode P2. Nominal voltage clamp mode will have all 5 relays in nominal position (with 0 coil current).  When in voltage clamp mode the current to P2 (as measured by the voltage across nets RF\_1 and P2) is output by the different ADC driver for 5 MSPS digitization. The settings for U22 (TMUX6136) are S1 = 1 for  the inamp output to be buffered out to the 5 MSPS ADC; and S2 = 1 so that the instrumentation amplifier amplifies the voltage difference: (P2 - RF_1). The voltage feedback in voltage clamp mode can be enabled/disabled by the I/O expander siganl *FDBK* (*FDBK*=0 is disabled). 
 
-- _Current clamp_: The board has a Howland current source that can be used to set the current to P2 based upon the CMD signal (requires A2=A1=A0=0). The output current can range from +/-0.26 nA (with a 1.22 mV CMD) to +/-2.1 uA (with a 10 V CMD signal). The current clamp amplifier has a shutdown pin which should be pulled up to disable the amplifier when in voltage clamp mode. To shutoff the amplifier set EN\_IPUMP to a logical 0. When in current clamp mode the intent is that the 5 MSPS ADC measurement is of P1. This is accomplished by these settings for U22 (TMUX6136): S1 = 0 so that the P2 buffer output voltage is sent to the 5 MSPS ADC; and S2 = 0 so that the instrumentation amplifier amplifies P2 - 0 (RF_1 voltage will not make sense in this mode). In this mode the instrumentation amplifier output can be buffered out the CAL\_OUT line to a 1 MSPS ADC channel. 
+- _Current clamp_: The board has a Howland current source that can be used to set the current to P2 based upon the CMD signal (requires A2=A1=A0=0). The output current can range from +/-0.26 nA (with a 1.22 mV CMD) to +/-2.1 uA (with a 10 V CMD signal). To enable the current clamp either float or drive high the signal EN\_IPUMP. To shutoff the amplifier set EN\_IPUMP to a logical 0. When in current clamp mode the intent is that the 5 MSPS ADC measurement is of P1 (i.e. set current and measure voltage). This is accomplished by these settings for U22 (TMUX6136): S1 = 0 so that the P2 buffer output voltage is sent to the 5 MSPS ADC; and S2 = 0 so that the instrumentation amplifier amplifies P2 - 0 (RF_1 voltage will not make sense in this mode). In this mode the instrumentation amplifier output can buffer out the CAL\_OUT line to a 1 MSPS ADC channel. 
 
 ### Adjustments for clamp stability 
-The P2 signal is amplified and buffered before being fedback to the main clamp amplifier (U15 within feedback\_buffer).  
+The P2 signal is amplified and buffered before being fedback to the main clamp amplifier (U15 within feedback\_buffer). The stability of this loop varies depending upon the load presented by the cell under test, electrode electrical characteristics, and parasitic capacitive coupling between electrodes. The stability of this feedback loop can be adjusted by modification of the feedback buffer gain and by changing the capacitance of a lead compensator at the summing junction of the main amplifier (inverting terminal). 
 
 **Feedback buffer gain**
-The feedback buffer is a non-inverting structure with an adjustable gain set by bits RF[1..4]. The feedback resistor values are 3.01k, 12.1k, 30.1k, and 60.4k. The resistor from the inverting terminal to "ground" is 3.01k creating gains of 
+
+The feedback buffer is a non-inverting structure with an adjustable gain set by I/O expander bits RF[1..4]. The feedback resistor values are 3.01k, 12.1k, 30.1k, and 60.4k. The resistor from the inverting terminal to "ground" is 3.01k creating gains of 
 
 - x2 = 1+3.01k/3.01k 
 - x5 
@@ -87,14 +95,16 @@ The feedback buffer is a non-inverting structure with an adjustable gain set by 
 - x21 
 
 **Feedback buffer offset**
-The feedback buffer has offset adjustment. This is generated by a 10-bit DAC, IC1 (DAC53401), followed by a unipolar to bipolar amplifier (U23). The output of the bipolar converter ranges between +/-1 V (resolution of 1.9 mV / bit). OUT = VDAC*1.666-1. 
 
-(simulation: non_inverting_rpot_bw.asc)
+The feedback buffer has offset adjustment. This is generated by a 10-bit I2C interface DAC, IC1 (DAC53401), followed by a unipolar to bipolar amplifier (U23). The output of the bipolar converter ranges between +/-1 V (resolution of 1.9 mV / bit). OUT = VDAC*1.666-1. 
+
+(simulation: non\_inverting\_rpot\_bw.asc)
 
 **Compensation adjustment**
+
 Adjustments of the closed-loop stability are achieved using four approaches. 
 
-- The primary approach is a lead compensator formed by R30 in parallel with the capacitors in the compensation switching sheet. This method is presented in "Voltage Clamping of Excitable Membranes" by Bezanilla, Vergara, and Taylor. The compensation capacitors (47 pF, 200 pF, 1 nF, 4.7 nF) are selectable using the the TMUX6111 controlled by SEL[1..4].
+- The primary approach is a lead compensator formed by R30 in parallel with the capacitors in the compensation switching sheet. This method is presented in "Voltage Clamping of Excitable Membranes" by Bezanilla, Vergara, and Taylor. The compensation capacitors (47 pF, 200 pF, 1 nF, 4.7 nF) are selectable using the the TMUX6111 I/O expander bits CCOMP[1..4].
 - A second approach is adjusting the gain of the feedback buffer (see above). 
 - A third approach is a stabilizing feedback network of R in series with C; simulations have shown little beneift of this network. Also, beware that the C forms a pole with the current resolving resistor (R\_F) which can be very low frequency. The footprints for these components are included by not populated. This is also presented in Bezanilla, et al.
 - The fourth potential approach is an input lead-lag compensator formed by R69 and C37 (unpopulated). See [TI App Note AN-1604](https://www.ti.com/lit/an/snoa486b/snoa486b.pdf?ts=1623954308102&ref_url=https%253A%252F%252Fwww.google.com%252F)
@@ -131,7 +141,7 @@ The gain options as controled by U17 (DG412 switch) are:
 
 For the instrumentation amplifier Gain = 1 + 9.9 kOhm/RG 
 
-3. **Output ADC driver gain**
+**Output ADC driver gain**
 
 The ADC output driver implements a gain of around 1/3 (0.308 = 499 Ohms/(1500 + 120) Ohms) to scale the maximum output of the instrumenation amplifer (+/-13.5 V) to the range of the AD796x ADC (+/-4.096 V).
 
@@ -176,7 +186,7 @@ The amplifier noise simulates to be (very roughly) 1 nA RMS, such that ADC quant
 |           |          |        |    37.66 |
 
 
-# For Circuit and Board Designers 
+## For Board and FPGA Designers
 
 ## KiCAD Setup (libraries)
 Before opening the project complete these steps to setup your parts libraries. 
@@ -194,11 +204,15 @@ Now *git clone* (effectively download) the digikey and COVG libraries.
 	* Use the terminal command: `git clone https://github.com/lucask07/covg-kicad-lib.git `
 	* This is a private repository so will require you to request access to the repository from Lucas. 
 
+Symbols and footprints custom to this design (and the COVG project in general) are housed in the [covg-kicad-lib repository](https://github.com/lucask07/covg-kicad-lib). This library should be a project specific library in your KiCAD *Symbol Library Management* and *Footrpint Library Management*. 
+
 ### LMP8350 ADC Driver 
 
-[LMP8350](https://rocelec.widen.net/view/pdf/d6pm6sbaz5/lmp8350.pdf?t.download=true&u=5oefqw)
+Initial designs used the ADA4932-1 differential ADC driver to drive the AD7961 on the DAQ board. However, as part of the "chip shortage of 2021" there parts were hard to find in spring of 2021. An alternative part (and possibly better option) used for this board is the [LMP8350](https://rocelec.widen.net/view/pdf/d6pm6sbaz5/lmp8350.pdf?t.download=true&u=5oefqw).
 
-## Generating a BOM (bill of materials)
+## BOM (bill of materials)
+
+The BOM is available [here](bom/bath_clamp_v1_bom.xlsx)
 
 Two command-line tools are useful for finding and ordering the parts for the board. 
 
@@ -206,14 +220,16 @@ Two command-line tools are useful for finding and ordering the parts for the boa
 
 Example to extract parts:
 ```kifield -x covg_daq_v2.sch --recurse -i covg_daq_v2_parts.csv```
-Example to uptate schematic from CSV file. **Don't use this! It seems to incorrectly update some components!!**:
+
+**Don't import parts from the CSV into the board! This seems to incorrectly update some components!!**:
 ``` kifield -x covg_daq_v2_parts.csv --recurse -i covg_daq_v2.sch ```
 
 [kicost](https://github.com/xesscorp/KiCost) which scrapes availability and prices from various distributors and creates a spreadsheet of component cost. 
 
+<!---
 ## Block diagram - To Be Completed! 
 drawio (also named add.diagrams.net) is used to create block diagrams by integrating drawio with the GitHub repository. 
 
 ![Test block diagram](docs/test_github.svg)
 
-
+--->
