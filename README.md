@@ -226,6 +226,10 @@ Example to extract parts:
 
 [kicost](https://github.com/xesscorp/KiCost) which scrapes availability and prices from various distributors and creates a spreadsheet of component cost. 
 
+
+## Funding 
+Research reported in this publication was supported by the National Institute Of Neurological Disorders And Stroke of the National Institutes of Health under Award Number R15NS116907. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.
+
 <!---
 ## Block diagram - To Be Completed! 
 drawio (also named add.diagrams.net) is used to create block diagrams by integrating drawio with the GitHub repository. 
