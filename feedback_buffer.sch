@@ -119,6 +119,7 @@ F 8 "595-DAC53401DSGR" H 5050 4500 50  0001 L CNN "Mouser Part Number"
 F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DAC53401DSGR/?qs=wnTfsH77Xs7g1K1l%2Ft63Fg%3D%3D" H 5050 4400 50  0001 L CNN "Mouser Price/Stock"
 F 10 "DAC53401DSGR" H 5050 4300 50  0001 L CNN "Arrow Part Number"
 F 11 "https://www.arrow.com/en/products/dac53401dsgr/texas-instruments" H 5050 4200 50  0001 L CNN "Arrow Price/Stock"
+F 12 "DAC53401DSGR" H 4000 5000 50  0001 C CNN "Manf#"
 	1    4000 5000
 	1    0    0    -1  
 $EndComp

@@ -317,14 +317,14 @@ Connection ~ 4150 4800
 Connection ~ 4050 5550
 NoConn ~ 5000 5950
 NoConn ~ 5000 2800
-Wire Bus Line
-	4450 1700 4450 2750
-Wire Bus Line
-	4400 4850 4400 5900
 Text Label 6650 1500 0    50   ~ 0
 CAL_SIG1
 Text Label 6650 1800 0    50   ~ 0
 CAL_SIG2
 Text Notes 5250 3850 0    50   ~ 0
 TMUX6111: Logic 0 closes switch\nTMUX6112: Logic 1 closes switch
+Wire Bus Line
+	4450 1700 4450 2750
+Wire Bus Line
+	4400 4850 4400 5900
 $EndSCHEMATC
