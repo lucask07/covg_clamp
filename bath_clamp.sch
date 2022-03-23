@@ -16,8 +16,8 @@ $EndDescr
 $Sheet
 S 1000 750  850  700 
 U 6032F251
-F0 "bath_clamp_v1_1" 50
-F1 "bath_clamp_v1_1.sch" 50
+F0 "bath_clamp_top" 50
+F1 "bath_clamp_top.sch" 50
 F2 "SCL" B L 1000 800 50 
 F3 "SDA" B R 1850 800 50 
 F4 "A0_EXP1" I R 1850 1300 50 
