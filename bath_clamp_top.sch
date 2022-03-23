@@ -155,7 +155,7 @@ F 0 "U2" H 8744 3096 50  0000 L CNN
 F 1 "ADG1208" H 8744 3005 50  0000 L CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 7450 2050 50  0001 L CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG1208_1209.pdf" H 8210 3000 50  0001 C CNN
-F 4 "ADG1208YCPZ-REEL7" H 8744 3196 50  0001 C CNN "Manf#"
+F 4 "ADG1208YRUZ-REEL7" H 8744 3196 50  0001 C CNN "Manf#"
 	1    8200 3000
 	1    0    0    -1  
 $EndComp
@@ -653,6 +653,10 @@ F 1 "OPA828" H 5100 3050 50  0000 L CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5050 3000 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/opa828.pdf" H 5300 3350 50  0001 C CNN
 F 4 "OPA828ID" H 5150 3200 50  0001 C CNN "Manf#"
+F 5 "OPA1641AIDR" H 5150 3200 50  0001 C CNN "Alternate Manf#"
+F 6 "OPA1655DR" H 5150 3200 50  0001 C CNN "Alternate2 Manf#"
+F 7 "AD820BRZ" H 5150 3200 50  0001 C CNN "Alternate3 Manf#"
+F 8 "ADA4625-1ARDZ-R7" H 5150 3200 50  0001 C CNN "Alternate4 Manf#"
 	1    5150 3200
 	1    0    0    -1  
 $EndComp
@@ -2537,23 +2541,6 @@ $EndComp
 Wire Wire Line
 	3400 1350 5700 1350
 Wire Wire Line
-	2600 800  2700 800 
-$Comp
-L power:GND #PWR0174
-U 1 1 6147189F
-P 2450 900
-AR Path="/6032F251/6147189F" Ref="#PWR0174"  Part="1" 
-AR Path="/6032F251/608FDC40/6147189F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0174" H 2450 650 50  0001 C CNN
-F 1 "GND" V 2455 772 50  0001 R CNN
-F 2 "" H 2450 900 50  0001 C CNN
-F 3 "" H 2450 900 50  0001 C CNN
-	1    2450 900 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 1000 2700 1000
-Wire Wire Line
 	3300 900  3400 900 
 $Comp
 L Amplifier_Operational:OPA2156xD U25
@@ -2692,7 +2679,6 @@ Wire Wire Line
 	3400 1350 3400 1750
 Text Notes 2550 2400 0    39   ~ 0
 Gain by x10 on cable\nAnd down by x10 on brd\nto reduce impact of \ncable cross-talk
-NoConn ~ 3400 900 
 $Comp
 L covg-kicad:G6L-1F-TR-DC5 U3
 U 1 1 60C6EAF3
@@ -2744,13 +2730,6 @@ Wire Wire Line
 	4550 3850 4550 4250
 Wire Wire Line
 	4550 4250 4550 4300
-Wire Wire Line
-	2600 800  2600 900 
-Wire Wire Line
-	2450 900  2600 900 
-Connection ~ 2600 900 
-Wire Wire Line
-	2600 900  2600 1000
 Text Label 10900 3400 0    50   ~ 0
 P2_OUT
 Text Label 11200 4800 0    50   ~ 0
@@ -3018,8 +2997,6 @@ Wire Wire Line
 	7150 9550 7400 9550
 Wire Wire Line
 	7150 9450 7400 9450
-Text Notes 1200 10050 0    50   ~ 0
-110
 Text HLabel 1150 9650 0    50   Input ~ 0
 A0_EXP0
 Text HLabel 1150 9550 0    50   Input ~ 0
@@ -3196,6 +3173,29 @@ F 3 "" H 8700 7000 50  0001 C CNN
 	1    8700 7000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2500 1000 2500 1150
+Wire Wire Line
+	2500 1150 3400 1150
+Wire Wire Line
+	3400 1150 3400 900 
+Wire Wire Line
+	2500 1000 2700 1000
+Wire Wire Line
+	2400 800  2700 800 
+$Comp
+L power:+3.3V #PWR?
+U 1 1 625051DB
+P 2400 800
+F 0 "#PWR?" H 2400 650 50  0001 C CNN
+F 1 "+3.3V" H 2415 973 50  0000 C CNN
+F 2 "" H 2400 800 50  0001 C CNN
+F 3 "" H 2400 800 50  0001 C CNN
+	1    2400 800 
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 900  2    50   Input ~ 0
+3V3_BUF
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line
@@ -3208,4 +3208,23 @@ Wire Bus Line
 	3300 9450 3300 9900
 Wire Bus Line
 	3500 8000 3500 8450
+Text Notes 1200 9850 0    50   ~ 0
+3b110
+Text Notes 7200 9800 0    50   ~ 0
+3b000
+Text Notes 900  9950 0    50   ~ 0
+see Root schematic page
+Text Notes 6900 9900 0    50   ~ 0
+see Root schematic page
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6263CFF6
+P 7600 6200
+F 0 "#PWR?" H 7600 6050 50  0001 C CNN
+F 1 "+3.3V" H 7615 6373 50  0000 C CNN
+F 2 "" H 7600 6200 50  0001 C CNN
+F 3 "" H 7600 6200 50  0001 C CNN
+	1    7600 6200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

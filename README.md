@@ -226,6 +226,15 @@ Example to extract parts:
 
 [kicost](https://github.com/xesscorp/KiCost) which scrapes availability and prices from various distributors and creates a spreadsheet of component cost. 
 
+## Changelog (v1 ---> v2)
+1. Add an Alternate Manf# field to all ICs (where possible). The alternative part must be pin compatible. If available add a Alternate2 Manf#. Need alternative to the TMUX6136 (or switch to a 4x SPST + 2 channel inverter). Need alternative to the AD8421 instrumentation amplifier.  
+2. Use +/-15 V op-amp to buffer 3.3 V into amplifier. Eliminates problem of the 3.3 V net rising since the regulator cannot sink current.  (done)
+3. Switch to a DAC with leads to improve solderability. (done)
+4. Correct ADG1208 Manf# to ADG1208YRUZ so that the package matches the footprint (16-TSSOP).  (done)
+5. Change resistor values in adjustable regulators for lower negative voltage. 
+6. Switch LM337 to ___  TPS7A3401DGNT 
+
+
 
 ## Funding 
 Research reported in this publication was supported by the National Institute Of Neurological Disorders And Stroke of the National Institutes of Health under Award Number R15NS116907. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.

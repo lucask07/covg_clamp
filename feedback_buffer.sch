@@ -14,22 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:C C?
-U 1 1 62160D25
-P 3900 5600
-AR Path="/6032F251/62160D25" Ref="C?"  Part="1" 
-AR Path="/6032F251/62017813/62160D25" Ref="C19"  Part="1" 
-F 0 "C19" V 3648 5600 50  0000 C CNN
-F 1 "2.2u" V 3739 5600 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3938 5450 50  0001 C CNN
-F 3 "~" H 3900 5600 50  0001 C CNN
-F 4 "CL10B225KP8NFNC" H 3648 5700 50  0001 C CNN "Manf#"
-F 5 "10%" H 3648 5700 50  0001 C CNN "Tolerance"
-F 6 "10V" H 3648 5700 50  0001 C CNN "voltage"
-	1    3900 5600
-	-1   0    0    1   
-$EndComp
-$Comp
 L covg-kicad:OPA828 U?
 U 1 1 62160D2C
 P 5800 1500
@@ -40,6 +24,10 @@ F 1 "OPA828" H 5750 1350 50  0000 L CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 1300 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/opa828.pdf" H 5950 1650 50  0001 C CNN
 F 4 "OPA828ID" H 5800 1500 50  0001 C CNN "Manf#"
+F 5 "OPA1641AIDR" H 5800 1500 50  0001 C CNN "Alternate Manf#"
+F 6 "OPA1655DR" H 5800 1500 50  0001 C CNN "Alternate2 Manf#"
+F 7 "AD820BRZ" H 5800 1500 50  0001 C CNN "Alternate4 Manf#"
+F 8 "ADA4625-1ARDZ-R7" H 5800 1500 50  0001 C CNN "Alternate3 Manf#"
 	1    5800 1500
 	-1   0    0    -1  
 $EndComp
@@ -84,133 +72,80 @@ F 3 "" H 5900 1200 50  0001 C CNN
 	1    5900 1200
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 62160D4E
-P 4600 5800
-AR Path="/6032F251/62160D4E" Ref="#PWR?"  Part="1" 
-AR Path="/6032F251/62017813/62160D4E" Ref="#PWR0108"  Part="1" 
-F 0 "#PWR0108" H 4600 5550 50  0001 C CNN
-F 1 "GND" V 4605 5672 50  0001 R CNN
-F 2 "" H 4600 5800 50  0001 C CNN
-F 3 "" H 4600 5800 50  0001 C CNN
-	1    4600 5800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6200 2050 6200 1600
 Wire Wire Line
 	6800 1600 7100 1600
-$Comp
-L covg-kicad:DAC53401DSGR IC?
-U 1 1 62160D63
-P 4000 5000
-AR Path="/6032F251/62160D63" Ref="IC?"  Part="1" 
-AR Path="/6032F251/62017813/62160D63" Ref="IC1"  Part="1" 
-F 0 "IC1" H 4600 5265 50  0000 C CNN
-F 1 "DAC53401DSGR" H 4600 5174 50  0000 C CNN
-F 2 "covg-kicad:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_posMask" H 5050 5100 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/dac53401.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1589734386977" H 5050 5000 50  0001 L CNN
-F 4 "Digital to Analog Converters - DAC 10-bit 1-channel DAC with NVM, buffered voltage output and I2C interface 8-WSON -40 to 125" H 5050 4900 50  0001 L CNN "Description"
-F 5 "0.8" H 5050 4800 50  0001 L CNN "Height"
-F 6 "Texas Instruments" H 5050 4700 50  0001 L CNN "Manufacturer_Name"
-F 7 "DAC53401DSGR" H 5050 4600 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "595-DAC53401DSGR" H 5050 4500 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DAC53401DSGR/?qs=wnTfsH77Xs7g1K1l%2Ft63Fg%3D%3D" H 5050 4400 50  0001 L CNN "Mouser Price/Stock"
-F 10 "DAC53401DSGR" H 5050 4300 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/dac53401dsgr/texas-instruments" H 5050 4200 50  0001 L CNN "Arrow Price/Stock"
-F 12 "DAC53401DSGR" H 4000 5000 50  0001 C CNN "Manf#"
-	1    4000 5000
-	1    0    0    -1  
-$EndComp
-Text Label 3750 5100 0    50   ~ 0
+Text Label 2000 5200 0    50   ~ 0
 SCL
-Text Label 3750 5200 0    50   ~ 0
+Text Label 2000 5400 0    50   ~ 0
 SDA
-Text Label 3750 5100 0    50   ~ 0
+Text Label 2000 5200 0    50   ~ 0
 SCL
-Text Label 3750 5200 0    50   ~ 0
+Text Label 2000 5400 0    50   ~ 0
 SDA
-Wire Wire Line
-	4000 5100 3750 5100
-Wire Wire Line
-	3750 5200 4000 5200
-Wire Wire Line
-	4000 5300 3900 5300
-Wire Wire Line
-	3900 5800 4600 5800
-Connection ~ 4600 5800
-Wire Wire Line
-	3900 5800 3900 5750
-Wire Wire Line
-	3900 5450 3900 5300
 $Comp
 L Device:R_US R?
 U 1 1 62160D76
-P 3250 5200
+P 1350 5200
 AR Path="/6032F251/62160D76" Ref="R?"  Part="1" 
 AR Path="/6032F251/62017813/62160D76" Ref="R31"  Part="1" 
-F 0 "R31" V 3197 5268 59  0000 L CNN
-F 1 "10k" V 3302 5268 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 3250 5200 50  0001 C CNN
-F 3 "" H 3250 5200 50  0001 C CNN
-F 4 "RC0603FR-0710KL" H 3197 5368 50  0001 C CNN "Manf#"
-F 5 "5%" H 3250 5200 50  0001 C CNN "Tolerance"
-	1    3250 5200
+F 0 "R31" V 1297 5268 59  0000 L CNN
+F 1 "10k" V 1402 5268 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1350 5200 50  0001 C CNN
+F 3 "" H 1350 5200 50  0001 C CNN
+F 4 "RC0603FR-0710KL" H 1297 5368 50  0001 C CNN "Manf#"
+F 5 "5%" H 1350 5200 50  0001 C CNN "Tolerance"
+	1    1350 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3900 5800 3250 5800
-Connection ~ 3900 5800
-Text Notes 2550 4900 0    50   ~ 0
-A0 to AGND, VDD, SCL or SDA\n\n0x48 = ‘b1001000 (7-bit) with AGND 
+Text Notes 600  4500 0    50   ~ 0
+A0 to VDD, Float, Gnd\n\n0x0D = 7b0001101 when A0 = Gnd\n(and avoid) 0x44 = 7b1000100\n\nTable 1 in datasheet is confusing: \nsee Ti Forum “DAC101C081: DAC101C081 I2C address selection”\nAvoid the 2nd address in the Slave Address column
 $Comp
 L power:GND #PWR?
 U 1 1 62160D82
-P 5200 5300
+P 4100 5400
 AR Path="/6032F251/62160D82" Ref="#PWR?"  Part="1" 
 AR Path="/6032F251/62017813/62160D82" Ref="#PWR0109"  Part="1" 
-F 0 "#PWR0109" H 5200 5050 50  0001 C CNN
-F 1 "GND" V 5205 5172 50  0001 R CNN
-F 2 "" H 5200 5300 50  0001 C CNN
-F 3 "" H 5200 5300 50  0001 C CNN
-	1    5200 5300
+F 0 "#PWR0109" H 4100 5150 50  0001 C CNN
+F 1 "GND" V 4105 5272 50  0001 R CNN
+F 2 "" H 4100 5400 50  0001 C CNN
+F 3 "" H 4100 5400 50  0001 C CNN
+	1    4100 5400
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 62160D8B
-P 5500 5500
+P 4650 5500
 AR Path="/6032F251/62160D8B" Ref="C?"  Part="1" 
 AR Path="/6032F251/608FDC40/62160D8B" Ref="C?"  Part="1" 
 AR Path="/6032F251/62017813/62160D8B" Ref="C20"  Part="1" 
-F 0 "C20" V 5248 5500 50  0000 C CNN
-F 1 "0.1u" V 5339 5500 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5538 5350 50  0001 C CNN
-F 3 "~" H 5500 5500 50  0001 C CNN
-F 4 "CC0603MRX7R8BB104" H 5248 5600 50  0001 C CNN "Manf#"
-F 5 "20%" H 5248 5600 50  0001 C CNN "Tolerance"
-F 6 "25V" H 5248 5600 50  0001 C CNN "voltage"
-	1    5500 5500
+F 0 "C20" V 4398 5500 50  0000 C CNN
+F 1 "0.1u" V 4489 5500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4688 5350 50  0001 C CNN
+F 3 "~" H 4650 5500 50  0001 C CNN
+F 4 "CC0603MRX7R8BB104" H 4398 5600 50  0001 C CNN "Manf#"
+F 5 "20%" H 4398 5600 50  0001 C CNN "Tolerance"
+F 6 "25V" H 4398 5600 50  0001 C CNN "voltage"
+	1    4650 5500
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5500 5800 5500 5650
+	4650 5800 4650 5650
 $Comp
 L power:+5V #PWR?
 U 1 1 62160D92
-P 5500 5250
+P 4650 5200
 AR Path="/6032F251/62160D92" Ref="#PWR?"  Part="1" 
 AR Path="/6032F251/62017813/62160D92" Ref="#PWR0110"  Part="1" 
-F 0 "#PWR0110" H 5500 5100 50  0001 C CNN
-F 1 "+5V" H 5515 5423 50  0000 C CNN
-F 2 "" H 5500 5250 50  0001 C CNN
-F 3 "" H 5500 5250 50  0001 C CNN
-	1    5500 5250
+F 0 "#PWR0110" H 4650 5050 50  0001 C CNN
+F 1 "+5V" H 4665 5373 50  0000 C CNN
+F 2 "" H 4650 5200 50  0001 C CNN
+F 3 "" H 4650 5200 50  0001 C CNN
+	1    4650 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 5800 4600 5800
 $Comp
 L Amplifier_Operational:OPA188xxDBV U?
 U 1 1 62160D99
@@ -222,6 +157,8 @@ F 1 "OPA188xxDBV" H 6994 5055 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 6650 5100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/opa188.pdf" H 6650 5300 50  0001 C CNN
 F 4 "OPA188AIDBVR" H 6650 5100 50  0001 C CNN "Manf#"
+F 5 "OPA180IDBVT" H 6650 5100 50  0001 C CNN "Alternate Manf#"
+F 6 "OPA202IDBVT" H 6650 5100 50  0001 C CNN "Alternate2 Manf#"
 	1    6650 5100
 	1    0    0    -1  
 $EndComp
@@ -253,43 +190,19 @@ F 3 "" H 6550 5400 50  0001 C CNN
 	1    6550 5400
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5500 5250 5500 5350
-Wire Wire Line
-	5500 5250 5350 5250
-Wire Wire Line
-	5350 5250 5350 5200
-Wire Wire Line
-	5350 5200 5200 5200
-Connection ~ 5500 5250
-Wire Wire Line
-	5200 5000 5350 5000
-$Comp
-L power:+3.3V #PWR?
-U 1 1 62160DB2
-P 5800 5250
-AR Path="/6032F251/62160DB2" Ref="#PWR?"  Part="1" 
-AR Path="/6032F251/62017813/62160DB2" Ref="#PWR0125"  Part="1" 
-F 0 "#PWR0125" H 5800 5100 50  0001 C CNN
-F 1 "+3.3V" H 5815 5423 50  0000 C CNN
-F 2 "" H 5800 5250 50  0001 C CNN
-F 3 "" H 5800 5250 50  0001 C CNN
-	1    5800 5250
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_US R?
 U 1 1 62160DBA
-P 6050 5250
+P 5850 5200
 AR Path="/6032F251/62160DBA" Ref="R?"  Part="1" 
 AR Path="/6032F251/62017813/62160DBA" Ref="R47"  Part="1" 
-F 0 "R47" V 5997 5318 59  0000 L CNN
-F 1 "33.2k" V 6102 5318 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6050 5250 50  0001 C CNN
-F 3 "" H 6050 5250 50  0001 C CNN
-F 4 "RC0603FR-0733K2L" H 5997 5418 50  0001 C CNN "Manf#"
-F 5 "1%" H 6050 5250 50  0001 C CNN "Tolerance"
-	1    6050 5250
+F 0 "R47" V 5797 5268 59  0000 L CNN
+F 1 "33.2k" V 5902 5268 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5850 5200 50  0001 C CNN
+F 3 "" H 5850 5200 50  0001 C CNN
+F 4 "RC0603FR-0733K2L" H 5797 5368 50  0001 C CNN "Manf#"
+F 5 "1%" H 5850 5200 50  0001 C CNN "Tolerance"
+	1    5850 5200
 	0    1    1    0   
 $EndComp
 $Comp
@@ -325,45 +238,27 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 62160DD0
-P 6300 6200
+P 6300 6300
 AR Path="/6032F251/62160DD0" Ref="#PWR?"  Part="1" 
 AR Path="/6032F251/62017813/62160DD0" Ref="#PWR0131"  Part="1" 
-F 0 "#PWR0131" H 6300 5950 50  0001 C CNN
-F 1 "GND" V 6305 6072 50  0001 R CNN
-F 2 "" H 6300 6200 50  0001 C CNN
-F 3 "" H 6300 6200 50  0001 C CNN
-	1    6300 6200
+F 0 "#PWR0131" H 6300 6050 50  0001 C CNN
+F 1 "GND" V 6305 6172 50  0001 R CNN
+F 2 "" H 6300 6300 50  0001 C CNN
+F 3 "" H 6300 6300 50  0001 C CNN
+	1    6300 6300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 6200 6300 6100
-Wire Wire Line
 	6300 5800 6500 5800
 Wire Wire Line
-	5800 5250 5900 5250
-Wire Wire Line
-	6200 5250 6300 5250
-Wire Wire Line
-	6300 5250 6300 5200
+	5600 5200 5700 5200
 Wire Wire Line
 	6300 5200 6350 5200
-Wire Wire Line
-	6300 5800 6300 5250
 Connection ~ 6300 5800
-Connection ~ 6300 5250
 Wire Wire Line
 	6800 5800 7100 5800
 Wire Wire Line
 	7100 5800 7100 5100
-Text Notes 5050 4900 0    50   ~ 0
-Use internal reference (1.20 V)\nGain = x1
-Wire Wire Line
-	5200 5100 5350 5100
-Wire Wire Line
-	5350 5100 5350 5000
-Connection ~ 5350 5000
-Wire Wire Line
-	5350 5000 6350 5000
 $Comp
 L Device:C C?
 U 1 1 62160DEA
@@ -603,9 +498,9 @@ Text HLabel 3850 3950 0    50   Input ~ 0
 RF[1..4]
 Text Label 3950 3950 0    50   ~ 0
 RF[1..4]
-Text HLabel 3750 5100 0    50   Input ~ 0
+Text HLabel 2000 5200 0    50   Input ~ 0
 SCL
-Text HLabel 3750 5200 0    50   Input ~ 0
+Text HLabel 2000 5400 0    50   Input ~ 0
 SDA
 $Comp
 L Device:C C?
@@ -742,11 +637,7 @@ Wire Wire Line
 	5750 2050 5850 2050
 Connection ~ 5850 2050
 Wire Wire Line
-	3250 5050 3250 5000
-Wire Wire Line
-	3250 5000 4000 5000
-Wire Wire Line
-	3250 5350 3250 5800
+	1350 5050 1350 5000
 $Comp
 L Analog_Switch:DG412xUE U14
 U 3 1 621ACC09
@@ -780,6 +671,9 @@ F 1 "DG412xUE" H 4950 2226 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4950 1950 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 4950 2050 50  0001 C CNN
 F 4 "DG412CUE+" H 4950 2050 50  0001 C CNN "Manf#"
+F 5 "TMUX6111PWR" H 4950 2050 50  0001 C CNN "Alternate Manf#"
+F 6 "TMUX6112PWR" H 4950 2050 50  0001 C CNN "Alternate2 Manf#"
+F 7 "TMUX6113PWR" H 4950 2050 50  0001 C CNN "Alternate3 Manf#"
 	1    4950 2050
 	1    0    0    -1  
 $EndComp
@@ -966,6 +860,65 @@ Wire Wire Line
 	7750 3450 7750 3300
 Text Notes 7250 5900 0    50   ~ 0
 OFF_ADJ = (VDAC*(1/R50 + 1/R48 + 1/R47)- 3.3/R47)*R50\nOFF_ADJ = VDAC*1.6662 - 0.9940
+Text GLabel 5600 5200 0    50   Input ~ 0
+3V3_BUF
+Wire Wire Line
+	6300 5200 6300 5800
+Wire Wire Line
+	6000 5200 6300 5200
+Connection ~ 6300 5200
+Wire Wire Line
+	4650 5200 4650 5350
+Connection ~ 4650 5200
+$Comp
+L covg-kicad:DAC101C081CIMK_NOPB U?
+U 1 1 625C94E3
+P 3150 5200
+F 0 "U?" H 3150 5788 60  0000 C CNN
+F 1 "DAC101C081CIMK_NOPB" H 3150 5682 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6_HandSoldering" H 3150 5140 60  0001 C CNN
+F 3 "" H 3150 5200 60  0000 C CNN
+F 4 "DAC101C081CIMK/NOPB" H 3150 5200 50  0001 C CNN "Manf#"
+F 5 "DAC121C081CIMK/NOPB" H 3150 5200 50  0001 C CNN "Alternate Manf#"
+	1    3150 5200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 5200 4650 5200
+Wire Wire Line
+	4100 5400 4000 5400
+Wire Wire Line
+	3950 5000 6350 5000
+Wire Wire Line
+	2000 5400 2350 5400
+Wire Wire Line
+	2000 5200 2350 5200
+Wire Wire Line
+	1350 5000 2350 5000
+Wire Wire Line
+	4000 5400 4000 5800
+Wire Wire Line
+	4000 5800 4650 5800
+Connection ~ 4000 5400
+Wire Wire Line
+	4000 5400 3950 5400
+Wire Wire Line
+	1350 5350 1350 5700
+$Comp
+L power:GND #PWR?
+U 1 1 62621C47
+P 1350 5700
+AR Path="/6032F251/62621C47" Ref="#PWR?"  Part="1" 
+AR Path="/6032F251/62017813/62621C47" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1350 5450 50  0001 C CNN
+F 1 "GND" V 1355 5572 50  0001 R CNN
+F 2 "" H 1350 5700 50  0001 C CNN
+F 3 "" H 1350 5700 50  0001 C CNN
+	1    1350 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 6100 6300 6300
 Wire Bus Line
 	4400 2350 4400 3950
 $EndSCHEMATC

@@ -79,6 +79,8 @@ F 1 "TMUX6111PWR" H 5550 2982 60  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 5550 1940 60  0001 C CNN
 F 3 "" H 5550 2000 60  0001 C CNN
 F 4 "TMUX6111PWR" H 5550 2000 50  0001 C CNN "Manf#"
+F 5 "TMUX6112PWR" H 5550 2000 50  0001 C CNN "Alternate Manf#"
+F 6 "DG412CUE+" H 5550 2000 50  0001 C CNN "Alternate2 Manf#"
 	1    5550 2000
 	1    0    0    -1  
 $EndComp
@@ -148,6 +150,8 @@ F 1 "TMUX6111PWR" H 5550 6132 60  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 5550 5090 60  0001 C CNN
 F 3 "" H 5550 5150 60  0001 C CNN
 F 4 "TMUX6111PWR" H 5550 5150 50  0001 C CNN "Manf#"
+F 5 "TMUX6112PWR" H 5550 5150 50  0001 C CNN "Alternate Manf#"
+F 6 "TMUX6113PWR" H 5550 5150 50  0001 C CNN "Alternate2 Manf#"
 	1    5550 5150
 	1    0    0    -1  
 $EndComp
@@ -315,16 +319,46 @@ Connection ~ 4300 1800
 Connection ~ 4300 2050
 Connection ~ 4150 4800
 Connection ~ 4050 5550
-NoConn ~ 5000 5950
-NoConn ~ 5000 2800
 Text Label 6650 1500 0    50   ~ 0
 CAL_SIG1
 Text Label 6650 1800 0    50   ~ 0
 CAL_SIG2
 Text Notes 5250 3850 0    50   ~ 0
 TMUX6111: Logic 0 closes switch\nTMUX6112: Logic 1 closes switch
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6263D73F
+P 4750 5950
+F 0 "#PWR?" H 4750 5800 50  0001 C CNN
+F 1 "+3.3V" H 4765 6123 50  0000 C CNN
+F 2 "" H 4750 5950 50  0001 C CNN
+F 3 "" H 4750 5950 50  0001 C CNN
+	1    4750 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 5950 5000 5950
+Text Notes 4200 6250 0    50   ~ 0
+Pin12 is Vlogic for alternate part DG412CUE+
+$Comp
+L power:+3.3V #PWR?
+U 1 1 62642C9C
+P 4700 2750
+F 0 "#PWR?" H 4700 2600 50  0001 C CNN
+F 1 "+3.3V" H 4715 2923 50  0000 C CNN
+F 2 "" H 4700 2750 50  0001 C CNN
+F 3 "" H 4700 2750 50  0001 C CNN
+	1    4700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2750 4700 2800
+Wire Wire Line
+	4700 2800 5000 2800
 Wire Bus Line
 	4450 1700 4450 2750
 Wire Bus Line
 	4400 4850 4400 5900
+Text Notes 4200 3050 0    50   ~ 0
+Pin12 is Vlogic for alternate part DG412CUE+
 $EndSCHEMATC
