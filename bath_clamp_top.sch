@@ -84,12 +84,11 @@ L covg-kicad:1462042-8 K2
 U 1 1 603F7585
 P 10150 2800
 F 0 "K2" V 10246 2470 50  0000 R CNN
-F 1 "1462042-8" V 10155 2470 50  0000 R CNN
-F 2 "covg-kicad:RELAY_1462042-8" H 10150 2800 50  0001 L BNN
+F 1 "1462042-7" V 10155 2470 50  0000 R CNN
+F 2 "covg-kicad:Relay_SPDT_TE_1462042-7" H 10150 2800 50  0001 L BNN
 F 3 "" H 10150 2800 50  0001 L BNN
-F 4 "1462042-8" H 10246 2570 50  0001 C CNN "Manf#"
-F 5 "917" H 10150 2800 50  0001 L BNN "PARTREV"
-F 6 "Manufacturer recommendation" H 10150 2800 50  0001 L BNN "STANDARD"
+F 4 "1462042-7" H 10246 2570 50  0001 C CNN "Manf#"
+F 5 "1462042-8" V 10150 2800 50  0001 C CNN "Alternate Manf# (footprint diff)"
 	1    10150 2800
 	0    1    1    0   
 $EndComp
@@ -98,12 +97,11 @@ L covg-kicad:1462042-8 K1
 U 1 1 603FDCEF
 P 10200 5550
 F 0 "K1" V 10296 5220 50  0000 R CNN
-F 1 "1462042-8" V 10205 5220 50  0000 R CNN
-F 2 "covg-kicad:RELAY_1462042-8" H 10200 5550 50  0001 L BNN
+F 1 "1462042-7" V 10205 5220 50  0000 R CNN
+F 2 "covg-kicad:Relay_SPDT_TE_1462042-7" H 10200 5550 50  0001 L BNN
 F 3 "" H 10200 5550 50  0001 L BNN
-F 4 "1462042-8" H 10296 5320 50  0001 C CNN "Manf#"
-F 5 "917" H 10200 5550 50  0001 L BNN "PARTREV"
-F 6 "Manufacturer recommendation" H 10200 5550 50  0001 L BNN "STANDARD"
+F 4 "1462042-7" H 10296 5320 50  0001 C CNN "Manf#"
+F 5 "1462042-8" V 10200 5550 50  0001 C CNN "Alternate Manf# (footprint diff)"
 	1    10200 5550
 	0    1    -1   0   
 $EndComp
@@ -121,9 +119,8 @@ F 6 "/product-detail/en/on-semiconductor/MBT3904DW1T1G/MBT3904DW1T1GOSCT-ND/9180
 F 7 "TRANS 2NPN 40V 0.2A SC88" H 12100 8900 60  0001 L CNN "Description"
 F 8 "MBT3904DW1T1GOSCT-ND" H 12100 8300 60  0001 L CNN "Digi-Key_PN"
 F 9 "Transistors - Bipolar (BJT) - Arrays" H 12100 8600 60  0001 L CNN "Family"
-F 10 "MBT3904DW1T1G" H 12100 8400 60  0001 L CNN "MPN"
-F 11 "MBT3904DW1T1G" H 12228 8053 50  0001 C CNN "Manf#"
-F 12 "Active" H 12100 9100 60  0001 L CNN "Status"
+F 10 "MBT3904DW1T1G" H 12228 8053 50  0001 C CNN "Manf#"
+F 11 "Active" H 12100 9100 60  0001 L CNN "Status"
 	1    11900 7900
 	1    0    0    -1  
 $EndComp
@@ -155,7 +152,8 @@ F 0 "U2" H 8744 3096 50  0000 L CNN
 F 1 "ADG1208" H 8744 3005 50  0000 L CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 7450 2050 50  0001 L CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG1208_1209.pdf" H 8210 3000 50  0001 C CNN
-F 4 "ADG1208YRUZ-REEL7" H 8744 3196 50  0001 C CNN "Manf#"
+F 4 "MUX36S08IPWR" H 8200 3000 50  0001 C CNN "Manf#"
+F 5 "ADG1208YRUZ-REEL7" H 8744 3196 50  0001 C CNN "Alternate Manf#"
 	1    8200 3000
 	1    0    0    -1  
 $EndComp
@@ -428,34 +426,34 @@ $EndComp
 $Comp
 L dk_Banana-and-Tip-Connectors-Jacks-Plugs:105-1103-001 J3
 U 1 1 6078E699
-P 12550 5300
-F 0 "J3" H 12628 5288 50  0000 L CNN
-F 1 "105-1103-001" H 12628 5197 50  0000 L CNN
-F 2 "digikey-footprints:Test_Jack_Horiz" H 12750 5500 60  0001 L CNN
-F 3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 5600 60  0001 L CNN
-F 4 "Connectors, Interconnects" H 12750 5900 60  0001 L CNN "Category"
-F 5 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 6100 60  0001 L CNN "DK_Datasheet_Link"
-F 6 "/product-detail/en/cinch-connectivity-solutions-johnson/105-1103-001/J577-ND/241122" H 12750 6200 60  0001 L CNN "DK_Detail_Page"
-F 7 "CONN TIP JACK SOLDER BLACK" H 12750 6300 60  0001 L CNN "Description"
-F 8 "J577-ND" H 12750 5700 60  0001 L CNN "Digi-Key_PN"
-F 9 "Banana and Tip Connectors - Jacks, Plugs" H 12750 6000 60  0001 L CNN "Family"
-F 10 "105-1103-001" H 12750 5800 60  0001 L CNN "MPN"
-F 11 "105-1103-001" H 12628 5388 50  0001 C CNN "Manf#"
-F 12 "Active" H 12750 6500 60  0001 L CNN "Status"
-	1    12550 5300
+P 12550 5050
+F 0 "J3" H 12628 5038 50  0000 L CNN
+F 1 "105-1103-001" H 12628 4947 50  0000 L CNN
+F 2 "digikey-footprints:Test_Jack_Horiz" H 12750 5250 60  0001 L CNN
+F 3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 5350 60  0001 L CNN
+F 4 "Connectors, Interconnects" H 12750 5650 60  0001 L CNN "Category"
+F 5 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 5850 60  0001 L CNN "DK_Datasheet_Link"
+F 6 "/product-detail/en/cinch-connectivity-solutions-johnson/105-1103-001/J577-ND/241122" H 12750 5950 60  0001 L CNN "DK_Detail_Page"
+F 7 "CONN TIP JACK SOLDER BLACK" H 12750 6050 60  0001 L CNN "Description"
+F 8 "J577-ND" H 12750 5450 60  0001 L CNN "Digi-Key_PN"
+F 9 "Banana and Tip Connectors - Jacks, Plugs" H 12750 5750 60  0001 L CNN "Family"
+F 10 "105-1103-001" H 12750 5550 60  0001 L CNN "MPN"
+F 11 "105-1103-001" H 12628 5138 50  0001 C CNN "Manf#"
+F 12 "Active" H 12750 6250 60  0001 L CNN "Status"
+	1    12550 5050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R23
 U 1 1 6080C092
-P 11850 5450
-F 0 "R23" V 11797 5518 59  0000 L CNN
-F 1 "0" V 11902 5518 59  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 11850 5450 50  0001 C CNN
-F 3 "" H 11850 5450 50  0001 C CNN
-F 4 "RC0603FR-070RL" H 11797 5618 50  0001 C CNN "Manf#"
-F 5 "5%" H 11850 5450 50  0001 C CNN "Tolerance"
-	1    11850 5450
+P 11450 5200
+F 0 "R23" V 11397 5268 59  0000 L CNN
+F 1 "0" V 11502 5268 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 11450 5200 50  0001 C CNN
+F 3 "" H 11450 5200 50  0001 C CNN
+F 4 "RC0603FR-070RL" H 11397 5368 50  0001 C CNN "Manf#"
+F 5 "5%" H 11450 5200 50  0001 C CNN "Tolerance"
+	1    11450 5200
 	0    1    1    0   
 $EndComp
 $Comp
@@ -835,7 +833,7 @@ F 0 "R19" V 2297 5568 59  0000 L CNN
 F 1 "20k" V 2402 5568 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 2350 5500 50  0001 C CNN
 F 3 "" H 2350 5500 50  0001 C CNN
-F 4 "" H 2297 5668 50  0001 C CNN "Manf#"
+F 4 "RC0603FR-0720KL" H 2297 5668 50  0001 C CNN "Manf#"
 F 5 "5%" H 2350 5500 50  0001 C CNN "Tolerance"
 	1    2350 5500
 	0    -1   -1   0   
@@ -976,9 +974,9 @@ Text Label 8900 3400 0    50   ~ 0
 P2
 Text Label 5650 3200 0    50   ~ 0
 RF_1
-Text Notes 12650 5550 0    50   ~ 0
+Text Notes 12650 5300 0    50   ~ 0
 CC (bath)
-Text Label 11200 5450 0    50   ~ 0
+Text Label 11050 5200 0    50   ~ 0
 CC
 Text Label 3400 2900 1    50   ~ 0
 CMD_BUF
@@ -1008,7 +1006,7 @@ Text Label 9300 1050 0    50   ~ 0
 P2_CAL_CTRL
 Text Label 8900 3400 0    50   ~ 0
 P2
-Text Notes 12650 5550 0    50   ~ 0
+Text Notes 12650 5300 0    50   ~ 0
 CC (bath)
 Text Notes 650  4650 0    50   ~ 0
 ADS8686 range\n +/-2.5V, +/-5V, +/-10V
@@ -1335,7 +1333,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 3200 6050 3350
 Wire Wire Line
-	11200 5450 11700 5450
+	11050 5200 11300 5200
 Wire Wire Line
 	11900 7400 11900 7500
 Wire Wire Line
@@ -1628,6 +1626,7 @@ F 1 "TCA9555DBR" H 1750 9850 50  0000 C CNN
 F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 3150 7850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tca9555.pdf" H 1600 9750 50  0001 C CNN
 F 4 "TCA9555DBR" H 2100 8850 50  0001 C CNN "Manf#"
+F 5 "TCA9555DBT" H 2100 8850 50  0001 C CNN "Alternate Manf#"
 	1    2100 8850
 	1    0    0    -1  
 $EndComp
@@ -1644,21 +1643,19 @@ Wire Wire Line
 $Comp
 L Device:C C6
 U 1 1 619D6409
-P 12250 5450
-F 0 "C6" V 11998 5450 50  0000 C CNN
-F 1 "4.7n" V 12089 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 12288 5300 50  0001 C CNN
-F 3 "~" H 12250 5450 50  0001 C CNN
-F 4 "CC0603JRX7R9BB472" H 11998 5550 50  0001 C CNN "Manf#"
-F 5 "5%" H 11998 5550 50  0001 C CNN "Tolerance"
-F 6 "50V" H 11998 5550 50  0001 C CNN "voltage"
-	1    12250 5450
+P 12250 5200
+F 0 "C6" V 11998 5200 50  0000 C CNN
+F 1 "4.7n" V 12089 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12288 5050 50  0001 C CNN
+F 3 "~" H 12250 5200 50  0001 C CNN
+F 4 "CC0603JRX7R9BB472" H 11998 5300 50  0001 C CNN "Manf#"
+F 5 "5%" H 11998 5300 50  0001 C CNN "Tolerance"
+F 6 "50V" H 11998 5300 50  0001 C CNN "voltage"
+	1    12250 5200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	12400 5450 12550 5450
-Wire Wire Line
-	12100 5450 12000 5450
+	12400 5200 12550 5200
 $Sheet
 S 7300 4850 800  500 
 U 62017813
@@ -1683,6 +1680,7 @@ F 1 "TCA9555DBR" H 7750 9850 50  0000 C CNN
 F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 9150 7850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tca9555.pdf" H 7600 9750 50  0001 C CNN
 F 4 "TCA9555DBR" H 8100 8850 50  0001 C CNN "Manf#"
+F 5 "TCA9555DBT" H 8100 8850 50  0001 C CNN "Alternate Manf#"
 	1    8100 8850
 	1    0    0    -1  
 $EndComp
@@ -1851,8 +1849,6 @@ Wire Wire Line
 	6000 5900 6400 5900
 Text Label 6150 5900 0    50   ~ 0
 RF_1
-Wire Wire Line
-	6000 6000 6400 6000
 Text Label 6050 6000 0    50   ~ 0
 CAL_OUT
 Wire Wire Line
@@ -1876,6 +1872,8 @@ F 1 "OPA2156xD" H 2250 5226 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2350 4950 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 2500 5100 50  0001 C CNN
 F 4 "OPA2156IDR" H 2250 4950 50  0001 C CNN "Manf#"
+F 5 "OPA1656ID" H 2250 4950 50  0001 C CNN "Alternate Manf#"
+F 6 "OPA1688ID" H 2250 4950 50  0001 C CNN "Alternate2 Manf#"
 	1    2250 4950
 	-1   0    0    -1  
 $EndComp
@@ -1888,6 +1886,8 @@ F 1 "OPA2156xD" H 2250 6676 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2350 6400 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 2500 6550 50  0001 C CNN
 F 4 "OPA2156IDR" H 2250 6400 50  0001 C CNN "Manf#"
+F 5 "OPA1656ID" H 2250 6400 50  0001 C CNN "Alternate Manf#"
+F 6 "OPA1688ID" H 2250 6400 50  0001 C CNN "Alternate2 Manf#"
 	2    2250 6400
 	-1   0    0    -1  
 $EndComp
@@ -1925,7 +1925,7 @@ F 3 "" H 3400 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 5600 3950 6300
+	3950 5600 3950 6200
 $Comp
 L Device:R_US R20
 U 1 1 610EE45B
@@ -1966,6 +1966,7 @@ F 0 "C28" V 2200 7150 50  0000 C CNN
 F 1 "DNI" V 2200 7350 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2338 7100 50  0001 C CNN
 F 3 "~" H 2300 7250 50  0001 C CNN
+F 4 "CC0603FRNPO0BN680" V 2300 7250 50  0001 C CNN "Manf#"
 	1    2300 7250
 	0    1    1    0   
 $EndComp
@@ -1986,6 +1987,7 @@ F 0 "C27" V 2200 5700 50  0000 C CNN
 F 1 "DNI" V 2250 5950 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2338 5650 50  0001 C CNN
 F 3 "~" H 2300 5800 50  0001 C CNN
+F 4 "CC0603FRNPO0BN680" V 2300 5800 50  0001 C CNN "Manf#"
 	1    2300 5800
 	0    1    1    0   
 $EndComp
@@ -2293,7 +2295,7 @@ Wire Wire Line
 Text Label 2950 4850 0    50   ~ 0
 P1_BUF
 Wire Wire Line
-	4650 5500 3950 5500
+	4650 5500 4450 5500
 Wire Wire Line
 	3950 5500 3950 5050
 Wire Wire Line
@@ -2435,6 +2437,8 @@ F 1 "OPA2156xD" H 3000 2026 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3100 1750 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 3250 1900 50  0001 C CNN
 F 4 "OPA2156IDR" H 3000 1750 50  0001 C CNN "Manf#"
+F 5 "OPA1656ID" H 3000 1750 50  0001 C CNN "Alternate Manf#"
+F 6 "OPA1688ID" H 3000 1750 50  0001 C CNN "Alternate2 Manf#"
 	1    3000 1750
 	1    0    0    -1  
 $EndComp
@@ -2502,7 +2506,7 @@ F 0 "R67" V 2847 1318 59  0000 L CNN
 F 1 "DNI" V 2952 1318 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 2900 1250 50  0001 C CNN
 F 3 "" H 2900 1250 50  0001 C CNN
-F 4 "" H 2847 1418 50  0001 C CNN "Manf#"
+F 4 "RC0603FR-070RL" H 2847 1418 50  0001 C CNN "Manf#"
 F 5 "1%" H 2900 1250 50  0001 C CNN "Tolerance"
 	1    2900 1250
 	0    1    1    0   
@@ -2535,6 +2539,8 @@ F 1 "OPA2156xD" H 3000 1176 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3100 900 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa2156.pdf" H 3250 1050 50  0001 C CNN
 F 4 "OPA2156IDR" H 3000 900 50  0001 C CNN "Manf#"
+F 5 "OPA1656ID" H 3000 900 50  0001 C CNN "Alternate Manf#"
+F 6 "OPA1688ID" H 3000 900 50  0001 C CNN "Alternate2 Manf#"
 	2    3000 900 
 	1    0    0    -1  
 $EndComp
@@ -2688,6 +2694,7 @@ F 1 "G6L-1F-TR-DC5" H 10050 4281 60  0000 C CNN
 F 2 "covg-kicad:G6L-1F-TR-DC5" H 10250 4240 60  0001 C CNN
 F 3 "" H 9450 4000 60  0000 C CNN
 F 4 "G6L-1F-TR-DC5" H 10050 4487 50  0001 C CNN "Manf#"
+F 5 "G6L-1F-DC4.5" H 9450 4000 50  0001 C CNN "Alternate Manf#"
 	1    9450 4000
 	1    0    0    -1  
 $EndComp
@@ -2700,6 +2707,7 @@ F 1 "G6L-1F-TR-DC5" H 12200 2281 60  0000 C CNN
 F 2 "covg-kicad:G6L-1F-TR-DC5" H 12400 2240 60  0001 C CNN
 F 3 "" H 11600 2000 60  0000 C CNN
 F 4 "G6L-1F-TR-DC5" H 12200 2487 50  0001 C CNN "Manf#"
+F 5 "G6L-1F-DC4.5" H 11600 2000 50  0001 C CNN "Alternate Manf#"
 	1    11600 2000
 	1    0    0    -1  
 $EndComp
@@ -2712,6 +2720,7 @@ F 1 "G6L-1F-TR-DC5" H 12100 6381 60  0000 C CNN
 F 2 "covg-kicad:G6L-1F-TR-DC5" H 12300 6340 60  0001 C CNN
 F 3 "" H 11500 6100 60  0000 C CNN
 F 4 "G6L-1F-TR-DC5" H 12100 6587 50  0001 C CNN "Manf#"
+F 5 "G6L-1F-DC4.5" H 11500 6100 50  0001 C CNN "Alternate Manf#"
 	1    11500 6100
 	1    0    0    -1  
 $EndComp
@@ -3184,10 +3193,10 @@ Wire Wire Line
 Wire Wire Line
 	2400 800  2700 800 
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0207
 U 1 1 625051DB
 P 2400 800
-F 0 "#PWR?" H 2400 650 50  0001 C CNN
+F 0 "#PWR0207" H 2400 650 50  0001 C CNN
 F 1 "+3.3V" H 2415 973 50  0000 C CNN
 F 2 "" H 2400 800 50  0001 C CNN
 F 3 "" H 2400 800 50  0001 C CNN
@@ -3196,6 +3205,98 @@ F 3 "" H 2400 800 50  0001 C CNN
 $EndComp
 Text GLabel 3400 900  2    50   Input ~ 0
 3V3_BUF
+Text Notes 1200 9850 0    50   ~ 0
+3b110
+Text Notes 7200 9800 0    50   ~ 0
+3b000
+Text Notes 900  9950 0    50   ~ 0
+see Root schematic page
+Text Notes 6900 9900 0    50   ~ 0
+see Root schematic page
+$Comp
+L Device:R_US R68
+U 1 1 624FDC32
+P 5350 4950
+F 0 "R68" V 5297 5018 59  0000 L CNN
+F 1 "0" V 5402 5018 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 4950 50  0001 C CNN
+F 3 "" H 5350 4950 50  0001 C CNN
+F 4 "RC0603FR-070RL" H 5297 5118 50  0001 C CNN "Manf#"
+F 5 "5%" H 5350 4950 50  0001 C CNN "Tolerance"
+	1    5350 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R72
+U 1 1 624FE30A
+P 5350 6950
+F 0 "R72" V 5297 7018 59  0000 L CNN
+F 1 "0" V 5402 7018 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 6950 50  0001 C CNN
+F 3 "" H 5350 6950 50  0001 C CNN
+F 4 "RC0603FR-070RL" H 5297 7118 50  0001 C CNN "Manf#"
+F 5 "5%" H 5350 6950 50  0001 C CNN "Tolerance"
+	1    5350 6950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 4950 4450 4950
+Wire Wire Line
+	4450 4950 4450 5500
+Connection ~ 4450 5500
+Wire Wire Line
+	4450 5500 3950 5500
+Wire Wire Line
+	5500 4950 6700 4950
+Connection ~ 6700 4950
+Wire Wire Line
+	5200 6950 4450 6950
+Wire Wire Line
+	4450 6950 4450 6200
+Wire Wire Line
+	4450 6200 3950 6200
+Connection ~ 3950 6200
+Wire Wire Line
+	3950 6200 3950 6300
+Wire Wire Line
+	5500 6950 6700 6950
+Wire Wire Line
+	6700 6950 6700 6000
+Wire Wire Line
+	6000 6000 6700 6000
+Text Notes 10500 3000 0    50   ~ 0
+6.0 mm by \n10.0 mm
+$Comp
+L Device:C C?
+U 1 1 62573817
+P 11650 5450
+F 0 "C?" V 11398 5450 50  0000 C CNN
+F 1 "DNI" V 11489 5450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11688 5300 50  0001 C CNN
+F 3 "~" H 11650 5450 50  0001 C CNN
+F 4 "CC0603JRX7R9BB472" H 11398 5550 50  0001 C CNN "Manf#"
+F 5 "5%" H 11398 5550 50  0001 C CNN "Tolerance"
+F 6 "50V" H 11398 5550 50  0001 C CNN "voltage"
+	1    11650 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 625748EF
+P 11650 5650
+F 0 "#PWR?" H 11650 5400 50  0001 C CNN
+F 1 "GND" V 11655 5522 50  0001 R CNN
+F 2 "" H 11650 5650 50  0001 C CNN
+F 3 "" H 11650 5650 50  0001 C CNN
+	1    11650 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 5650 11650 5600
+Wire Wire Line
+	11600 5200 11650 5200
+Wire Wire Line
+	11650 5300 11650 5200
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line
@@ -3208,23 +3309,7 @@ Wire Bus Line
 	3300 9450 3300 9900
 Wire Bus Line
 	3500 8000 3500 8450
-Text Notes 1200 9850 0    50   ~ 0
-3b110
-Text Notes 7200 9800 0    50   ~ 0
-3b000
-Text Notes 900  9950 0    50   ~ 0
-see Root schematic page
-Text Notes 6900 9900 0    50   ~ 0
-see Root schematic page
-$Comp
-L power:+3.3V #PWR?
-U 1 1 6263CFF6
-P 7600 6200
-F 0 "#PWR?" H 7600 6050 50  0001 C CNN
-F 1 "+3.3V" H 7615 6373 50  0000 C CNN
-F 2 "" H 7600 6200 50  0001 C CNN
-F 3 "" H 7600 6200 50  0001 C CNN
-	1    7600 6200
-	1    0    0    -1  
-$EndComp
+Connection ~ 11650 5200
+Wire Wire Line
+	11650 5200 12100 5200
 $EndSCHEMATC

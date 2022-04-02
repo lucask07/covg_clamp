@@ -204,7 +204,9 @@ Now *git clone* (effectively download) the digikey and COVG libraries.
 	* Use the terminal command: `git clone https://github.com/lucask07/covg-kicad-lib.git `
 	* This is a private repository so will require you to request access to the repository from Lucas. 
 
-Symbols and footprints custom to this design (and the COVG project in general) are housed in the [covg-kicad-lib repository](https://github.com/lucask07/covg-kicad-lib). This library should be a project specific library in your KiCAD *Symbol Library Management* and *Footrpint Library Management*. 
+Symbols and footprints custom to this design (and the COVG project in general) are housed in the [covg-kicad-lib repository](https://github.com/lucask07/covg-kicad-lib). This library should be a project specific library in your KiCAD *Symbol Library Management* and *Footprint Library Management*. 
+
+* Another library in use is the [agg library](https://github.com/adamgreig/agg-kicad)
 
 ### LMP8350 ADC Driver 
 
@@ -227,13 +229,22 @@ Example to extract parts:
 [kicost](https://github.com/xesscorp/KiCost) which scrapes availability and prices from various distributors and creates a spreadsheet of component cost. 
 
 ## Changelog (v1 ---> v2)
-1. Add an Alternate Manf# field to all ICs (where possible). The alternative part must be pin compatible. If available add a Alternate2 Manf#. Need alternative to the TMUX6136 (or switch to a 4x SPST + 2 channel inverter). Need alternative to the AD8421 instrumentation amplifier.  
+List on NB#1 pg 76.
+
+1. Add an 'Alternate Manf#' field to all ICs (where possible). The alternative part must be pin compatible. If available add an 'Alternate2 Manf#'. 
 2. Use +/-15 V op-amp to buffer 3.3 V into amplifier. Eliminates problem of the 3.3 V net rising since the regulator cannot sink current.  (done)
-3. Switch to a DAC with leads to improve solderability. (done)
+3. Switch to a DAC with leads to improve solderability. Part chosen was the DAC101C081CIMK/NOPB.
 4. Correct ADG1208 Manf# to ADG1208YRUZ so that the package matches the footprint (16-TSSOP).  (done)
 5. Change resistor values in adjustable regulators for lower negative voltage. 
-6. Switch LM337 to ___  TPS7A3401DGNT 
+6. Switch LM337 negative regulator to MIC5270YM5-TR (alternate MIC5270-4.1YM5-TR).  Another option considered was the TPS7A3401DGNT. 
+7. Need alternative to the AD8421 instrumentation amplifier in 8-MSOP. Locating an 8-MSOP instrumentation amplifier was challenging. Switched to an 8-SOIC footprint. 
+8. The SMT SPDT relay 1462042-8 was not avaliable. The through hole version is available 1462042-7. Added new footprint to covg-library named Relay_SPDT_TE_1462042-7.
+9. Need alternative to the TMUX6136 (or switch to a 4x SPST + 2 channel inverter). The findchips risk for the TMUX6136 was low so kept this part but added 0 Ohm resistors that can be populated for a default MUX configuration.
+10. Mini banana  NOT YET DONE!
+11. More ground test points  NOT YET DONE!
+12. Fixed swap of SCL and SDA (correct by changing routing at the connector to keep other routing correct) NOT YET DONE!
 
+Use the Value field to indiciate DNI (do not install) but keep the MANF# up to date. 
 
 
 ## Funding 

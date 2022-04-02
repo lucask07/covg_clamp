@@ -262,6 +262,8 @@ F 1 "DG412xUE" V 2700 5150 50  0000 L CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 2650 5200 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 2650 5300 50  0001 C CNN
 F 4 "DG412CUE+" H 2604 5530 50  0001 C CNN "Manf#"
+F 5 "TMUX6111PWR" V 2650 5300 50  0001 C CNN "Alternate Manf#"
+F 6 "TMUX6112PWR" V 2650 5300 50  0001 C CNN "Alternate2 Manf#"
 	5    2650 5300
 	0    1    1    0   
 $EndComp
@@ -371,6 +373,8 @@ F 1 "DG412xUE" V 1395 3930 50  0000 L CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 1350 3700 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 1350 3800 50  0001 C CNN
 F 4 "DG412CUE+" V 1350 3800 50  0001 C CNN "Manf#"
+F 5 "TMUX6111PWR" V 1350 3800 50  0001 C CNN "Alternate Manf#"
+F 6 "TMUX6112PWR" V 1350 3800 50  0001 C CNN "Alternate2 Manf#"
 	1    1350 3800
 	0    1    1    0   
 $EndComp
@@ -576,9 +580,11 @@ U 1 1 60FC96A6
 P 5150 3750
 F 0 "U18" H 5694 3796 50  0000 L CNN
 F 1 "AD8421ARZ" H 5694 3705 50  0000 L CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5050 3750 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5050 3750 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8421.pdf" H 5600 3350 50  0001 C CNN
-F 4 "AD8421ARMZ" H 5694 3896 50  0001 C CNN "Manf#"
+F 4 "AD8421ARZ" H 5694 3896 50  0001 C CNN "Manf#"
+F 5 "INA849DR" H 5150 3750 50  0001 C CNN "Alternate Manf#"
+F 6 "AD8429ARZ" H 5150 3750 50  0001 C CNN "Alternate2 Manf#"
 	1    5150 3750
 	1    0    0    -1  
 $EndComp
@@ -597,7 +603,7 @@ G = 1.99
 Text Label 9300 4150 0    50   ~ 0
 VCM
 Text Notes 7900 2800 0    50   ~ 0
-ADC Driver \nUsing alternative part LMP8350\nWas ADA4932 (but supply issues)
+ADC Driver \nUsing alternative part LMP8350\nWas ADA4932 (but supply issues)\nLMP8350 max supply of 12 V \n(clamp board design has: 7V + 4V negative)
 Text HLabel 4550 3950 0    50   Input ~ 0
 P2
 Text HLabel 2800 2050 0    50   Input ~ 0
@@ -883,7 +889,7 @@ F 0 "R55" V 647 4018 59  0000 L CNN
 F 1 "DNI" V 752 4018 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 700 3950 50  0001 C CNN
 F 3 "" H 700 3950 50  0001 C CNN
-F 4 "" H 647 4118 50  0001 C CNN "Manf#"
+F 4 "RC0603FR-0710KL" H 647 4118 50  0001 C CNN "Manf#"
 F 5 "1%" H 700 3950 50  0001 C CNN "Tolerance"
 	1    700  3950
 	-1   0    0    1   
@@ -954,8 +960,6 @@ INAMP_OUT
 Wire Wire Line
 	4500 1650 4650 1650
 Wire Wire Line
-	4650 1650 4650 3550
-Wire Wire Line
 	4650 3550 4850 3550
 Wire Wire Line
 	4500 1550 6400 1550
@@ -1014,7 +1018,9 @@ F 0 "U24" H 7950 3750 60  0000 C CNN
 F 1 "LMP8350MA_NOPB" H 8300 3650 60  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8200 3750 60  0001 C CNN
 F 3 "" H 7700 3650 60  0000 C CNN
-F 4 "LMP8350MA/NOPB" H 7700 3650 50  0001 C CNN "Manf#"
+F 4 "LMP8350MAX/NOPB" H 7700 3650 50  0001 C CNN "Manf#"
+F 5 "LMP8350MA/NOPB" H 7700 3650 50  0001 C CNN "Alternate Manf#"
+F 6 "AD8138AARZ-R7" H 7700 3650 50  0001 C CNN "Alternate2 Manf#"
 	1    7700 3650
 	1    0    0    -1  
 $EndComp
@@ -1080,14 +1086,14 @@ Wire Wire Line
 Wire Wire Line
 	9650 3850 9300 3850
 Wire Wire Line
-	9650 3550 9650 3850
+	9650 3550 9650 3600
 Wire Wire Line
 	2800 1450 3150 1450
 Wire Wire Line
 	2800 1450 2800 1400
 Text Notes 4800 6800 0    50   ~ 0
 4.7 uF for the AD8421 inamp
-Text Notes 3400 1000 0    50   ~ 0
+Text Notes 3350 2700 0    50   ~ 0
 SEL = 0 Switch B to D\n SEL = 1 Switch A to D
 Text Label 7700 4250 2    50   ~ 0
 LMP_EN
@@ -1103,7 +1109,7 @@ F 0 "R65" V 6947 5968 59  0000 L CNN
 F 1 "DNI" V 7050 5750 59  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 7000 5900 50  0001 C CNN
 F 3 "" H 7000 5900 50  0001 C CNN
-F 4 "" H 6947 6068 50  0001 C CNN "Manf#"
+F 4 "RC0603FR-0710KL" H 6947 6068 50  0001 C CNN "Manf#"
 F 5 "5%" H 7000 5900 50  0001 C CNN "Tolerance"
 	1    7000 5900
 	-1   0    0    1   
@@ -1297,8 +1303,79 @@ F 3 "" H 9900 4800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9900 4750 9900 4800
+$Comp
+L Device:R_US R?
+U 1 1 624E2110
+P 4150 700
+AR Path="/6032F251/624E2110" Ref="R?"  Part="1" 
+AR Path="/6032F251/608FDC40/624E2110" Ref="R73"  Part="1" 
+F 0 "R73" V 4097 768 59  0000 L CNN
+F 1 "0" V 4202 768 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4150 700 50  0001 C CNN
+F 3 "" H 4150 700 50  0001 C CNN
+F 4 "RC0603FR-070RL" H 4097 868 50  0001 C CNN "Manf#"
+F 5 "1%" H 4150 700 50  0001 C CNN "Tolerance"
+	1    4150 700 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 624E35D5
+P 4150 950
+AR Path="/6032F251/624E35D5" Ref="R?"  Part="1" 
+AR Path="/6032F251/608FDC40/624E35D5" Ref="R74"  Part="1" 
+F 0 "R74" V 4097 1018 59  0000 L CNN
+F 1 "0" V 4202 1018 59  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4150 950 50  0001 C CNN
+F 3 "" H 4150 950 50  0001 C CNN
+F 4 "RC0603FR-070RL" H 4097 1118 50  0001 C CNN "Manf#"
+F 5 "1%" H 4150 950 50  0001 C CNN "Tolerance"
+	1    4150 950 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 700  6400 700 
+Wire Wire Line
+	6400 700  6400 1550
+Connection ~ 6400 1550
+Text Label 3450 700  0    50   ~ 0
+INAMP_OUT
+Wire Wire Line
+	3450 700  4000 700 
+Text HLabel 3700 950  0    50   Input ~ 0
+RF_1
+Wire Wire Line
+	3700 950  4000 950 
+Wire Wire Line
+	4300 950  4650 950 
+Wire Wire Line
+	4650 950  4650 1650
+Connection ~ 4650 1650
+Wire Wire Line
+	4650 1650 4650 3550
+Text Notes 4400 900  0    50   ~ 0
+The TMUX6136 is out of stock.\nAllow for a default configuration with 0 Ohm Rs.
 Wire Bus Line
 	2700 900  2700 1450
 Wire Bus Line
 	900  3450 3050 3450
+$Comp
+L Device:C C?
+U 1 1 624CB27E
+P 9650 3750
+AR Path="/6032F251/624CB27E" Ref="C?"  Part="1" 
+AR Path="/6032F251/608FDC40/624CB27E" Ref="C?"  Part="1" 
+F 0 "C?" V 9398 3750 50  0000 C CNN
+F 1 "0.01u" V 9489 3750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9688 3600 50  0001 C CNN
+F 3 "~" H 9650 3750 50  0001 C CNN
+F 4 "CC0603MRX7R8BB103" H 9398 3850 50  0001 C CNN "Manf#"
+F 5 "20%" H 9398 3850 50  0001 C CNN "Tolerance"
+F 6 "25V" H 9398 3850 50  0001 C CNN "voltage"
+	1    9650 3750
+	-1   0    0    1   
+$EndComp
+Connection ~ 9650 3600
+Wire Wire Line
+	9650 3600 9650 3850
 $EndSCHEMATC

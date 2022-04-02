@@ -125,6 +125,7 @@ F 1 "OPA991S" H 5544 3655 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 5350 3450 50  0001 L CNN
 F 3 "https://www.ti.com/lit/ds/symlink/opa991.pdf" H 5350 3850 50  0001 C CNN
 F 4 "OPA991SIDBVR" H 5200 3700 50  0001 C CNN "Manf#"
+F 5 "OPA990SIDBVR" H 5200 3700 50  0001 C CNN "Alternate Manf#"
 	1    5200 3700
 	1    0    0    -1  
 $EndComp
