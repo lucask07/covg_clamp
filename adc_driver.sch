@@ -1060,7 +1060,6 @@ Wire Wire Line
 	8600 3050 9650 3050
 Wire Wire Line
 	9650 3050 9650 3550
-Connection ~ 9650 3550
 Wire Wire Line
 	7400 3050 7400 3750
 Wire Wire Line
@@ -1085,8 +1084,6 @@ Wire Wire Line
 	7700 4250 7700 4150
 Wire Wire Line
 	9650 3850 9300 3850
-Wire Wire Line
-	9650 3550 9650 3600
 Wire Wire Line
 	2800 1450 3150 1450
 Wire Wire Line
@@ -1355,27 +1352,11 @@ Wire Wire Line
 	4650 1650 4650 3550
 Text Notes 4400 900  0    50   ~ 0
 The TMUX6136 is out of stock.\nAllow for a default configuration with 0 Ohm Rs.
+Wire Wire Line
+	9650 3850 9650 3550
+Connection ~ 9650 3550
 Wire Bus Line
 	2700 900  2700 1450
 Wire Bus Line
 	900  3450 3050 3450
-$Comp
-L Device:C C?
-U 1 1 624CB27E
-P 9650 3750
-AR Path="/6032F251/624CB27E" Ref="C?"  Part="1" 
-AR Path="/6032F251/608FDC40/624CB27E" Ref="C?"  Part="1" 
-F 0 "C?" V 9398 3750 50  0000 C CNN
-F 1 "0.01u" V 9489 3750 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9688 3600 50  0001 C CNN
-F 3 "~" H 9650 3750 50  0001 C CNN
-F 4 "CC0603MRX7R8BB103" H 9398 3850 50  0001 C CNN "Manf#"
-F 5 "20%" H 9398 3850 50  0001 C CNN "Tolerance"
-F 6 "25V" H 9398 3850 50  0001 C CNN "voltage"
-	1    9650 3750
-	-1   0    0    1   
-$EndComp
-Connection ~ 9650 3600
-Wire Wire Line
-	9650 3600 9650 3850
 $EndSCHEMATC

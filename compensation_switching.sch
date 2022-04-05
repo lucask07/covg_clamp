@@ -260,7 +260,21 @@ Connection ~ 4150 3900
 Connection ~ 4150 3600
 Connection ~ 4150 3850
 Connection ~ 6950 3800
-NoConn ~ 4850 4600
+$Comp
+L power:+3.3V #PWR?
+U 1 1 624F74AE
+P 4700 4550
+F 0 "#PWR?" H 4700 4400 50  0001 C CNN
+F 1 "+3.3V" H 4715 4723 50  0000 C CNN
+F 2 "" H 4700 4550 50  0001 C CNN
+F 3 "" H 4700 4550 50  0001 C CNN
+	1    4700 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4550 4700 4600
+Wire Wire Line
+	4700 4600 4850 4600
 Wire Bus Line
 	4450 3500 4450 4650
 $EndSCHEMATC

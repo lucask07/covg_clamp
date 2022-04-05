@@ -2840,27 +2840,6 @@ F 13 "RCT-0C" H 15450 8200 50  0001 C CNN "Manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Test-Points:RCT-0C TP3
-U 1 1 6153F62F
-P 14350 9000
-F 0 "TP3" H 14400 9093 50  0000 L CNN
-F 1 "RCT-0C" H 14400 9002 50  0000 L CNN
-F 2 "digikey-footprints:PROBE_PAD_0805" H 14550 9200 60  0001 L CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14550 9300 60  0001 L CNN
-F 4 "A106144CT-ND" H 14550 9400 60  0001 L CNN "Digi-Key_PN"
-F 5 "RCT-0C" H 14550 9500 60  0001 L CNN "MPN"
-F 6 "Test and Measurement" H 14550 9600 60  0001 L CNN "Category"
-F 7 "Test Points" H 14550 9700 60  0001 L CNN "Family"
-F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14550 9800 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 14550 9900 60  0001 L CNN "DK_Detail_Page"
-F 10 "PC TEST POINT NATURAL" H 14550 10000 60  0001 L CNN "Description"
-F 11 "TE Connectivity AMP Connectors" H 14550 10100 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 14550 10200 60  0001 L CNN "Status"
-F 13 "RCT-0C" H 14350 9000 50  0001 C CNN "Manf#"
-	1    14350 9000
-	1    0    0    -1  
-$EndComp
-$Comp
 L dk_Test-Points:RCT-0C TP5
 U 1 1 6153FF5C
 P 14900 9000
@@ -2954,8 +2933,6 @@ Wire Wire Line
 Text Label 14900 8700 1    50   ~ 0
 CMD
 Wire Wire Line
-	14350 8900 14350 8450
-Wire Wire Line
 	15450 8100 15450 7850
 Wire Wire Line
 	15900 8100 15900 7850
@@ -2967,8 +2944,6 @@ Wire Wire Line
 	14100 8100 14100 8000
 Wire Wire Line
 	14650 8100 14650 8000
-Text Label 14350 8850 1    50   ~ 0
-FDBK
 $Comp
 L dk_Test-Points:RCT-0C TP1
 U 1 1 61775C7A
@@ -3267,10 +3242,10 @@ Wire Wire Line
 Text Notes 10500 3000 0    50   ~ 0
 6.0 mm by \n10.0 mm
 $Comp
-L Device:C C?
+L Device:C C48
 U 1 1 62573817
 P 11650 5450
-F 0 "C?" V 11398 5450 50  0000 C CNN
+F 0 "C48" V 11398 5450 50  0000 C CNN
 F 1 "DNI" V 11489 5450 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 11688 5300 50  0001 C CNN
 F 3 "~" H 11650 5450 50  0001 C CNN
@@ -3281,10 +3256,10 @@ F 6 "50V" H 11398 5550 50  0001 C CNN "voltage"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0188
 U 1 1 625748EF
 P 11650 5650
-F 0 "#PWR?" H 11650 5400 50  0001 C CNN
+F 0 "#PWR0188" H 11650 5400 50  0001 C CNN
 F 1 "GND" V 11655 5522 50  0001 R CNN
 F 2 "" H 11650 5650 50  0001 C CNN
 F 3 "" H 11650 5650 50  0001 C CNN
@@ -3297,6 +3272,9 @@ Wire Wire Line
 	11600 5200 11650 5200
 Wire Wire Line
 	11650 5300 11650 5200
+Connection ~ 11650 5200
+Wire Wire Line
+	11650 5200 12100 5200
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line
@@ -3309,7 +3287,4 @@ Wire Bus Line
 	3300 9450 3300 9900
 Wire Bus Line
 	3500 8000 3500 8450
-Connection ~ 11650 5200
-Wire Wire Line
-	11650 5200 12100 5200
 $EndSCHEMATC
