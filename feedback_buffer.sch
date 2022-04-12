@@ -699,6 +699,8 @@ F 1 "DG412xUE" H 7750 2976 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 7750 2700 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/DG411-DG413.pdf" H 7750 2800 50  0001 C CNN
 F 4 "DG412CUE+" H 7750 2800 50  0001 C CNN "Manf#"
+F 5 "TMUX6111PWR" H 7750 2800 50  0001 C CNN "Alternate Manf#"
+F 6 "TMUX6112PWR" H 7750 2800 50  0001 C CNN "Alternate2 Manf#"
 	5    7750 2800
 	1    0    0    -1  
 $EndComp

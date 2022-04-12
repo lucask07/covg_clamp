@@ -1,17 +1,17 @@
 
-(rules PCB bath_clamp_v1
+(rules PCB bath_clamp
   (snap_angle 
     fortyfive_degree
   )
   (autoroute_settings
     (fanout off)
-    (eu.mihosoft.freerouting.autoroute on)
+    (autoroute on)
     (postroute on)
     (vias on)
-    (via_costs 5)
+    (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 152)
+    (start_pass_no 237)
     (layer_rule Top
       (active on)
       (preferred_direction horizontal)
@@ -27,20 +27,20 @@
     (layer_rule Route3
       (active on)
       (preferred_direction vertical)
-      (preferred_direction_trace_costs 2.0)
-      (against_preferred_direction_trace_costs 4.0)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
     )
     (layer_rule Route14
       (active on)
       (preferred_direction horizontal)
-      (preferred_direction_trace_costs 2.0)
-      (against_preferred_direction_trace_costs 4.0)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.7)
     )
     (layer_rule Route15
       (active on)
       (preferred_direction vertical)
-      (preferred_direction_trace_costs 2.0)
-      (against_preferred_direction_trace_costs 4.0)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
     )
     (layer_rule Bottom
       (active on)
@@ -53,12 +53,9 @@
     (width 127.0)
     (clear 127.2)
     (clear 63.5 (type smd_to_turn_gap))
-    (clear 305.0 (type default_"cap_sensitive"))
     (clear 31.8 (type smd_smd))
-    (clear 305.0 (type smd_"cap_sensitive"))
-    (clear 305.0 (type "kicad_default"_"cap_sensitive"))
-    (clear 305.0 (type Power_"cap_sensitive"))
-    (clear 305.0 (type "cap_sensitive"_"cap_sensitive"))
+    (clear 100.2 (type Power_Power))
+    (clear 100.2 (type "cap_sensitive"_"cap_sensitive"))
   )
   (padstack "Via[0-5]_600:300_um"
     (shape
@@ -78,27 +75,6 @@
     )
     (shape
       (circle Bottom 600.0 0.0 0.0)
-    )
-    (attach off)
-  )
-  (padstack "Via[0-5]_889:381_um"
-    (shape
-      (circle Top 889.0 0.0 0.0)
-    )
-    (shape
-      (circle Route2 889.0 0.0 0.0)
-    )
-    (shape
-      (circle Route3 889.0 0.0 0.0)
-    )
-    (shape
-      (circle Route14 889.0 0.0 0.0)
-    )
-    (shape
-      (circle Route15 889.0 0.0 0.0)
-    )
-    (shape
-      (circle Bottom 889.0 0.0 0.0)
     )
     (attach off)
   )
@@ -123,41 +99,62 @@
     )
     (attach off)
   )
-  (via 
-    "Via[0-5]_600:300_um" "Via[0-5]_600:300_um" default
+  (padstack "Via[0-5]_889:381_um"
+    (shape
+      (circle Top 889.0 0.0 0.0)
+    )
+    (shape
+      (circle Route2 889.0 0.0 0.0)
+    )
+    (shape
+      (circle Route3 889.0 0.0 0.0)
+    )
+    (shape
+      (circle Route14 889.0 0.0 0.0)
+    )
+    (shape
+      (circle Route15 889.0 0.0 0.0)
+    )
+    (shape
+      (circle Bottom 889.0 0.0 0.0)
+    )
+    (attach off)
   )
   (via 
-    "Via[0-5]_889:381_um" "Via[0-5]_889:381_um" default
+    "Via[0-5]_600:300_um" "Via[0-5]_600:300_um" default
   )
   (via 
     "Via[0-5]_700:300_um" "Via[0-5]_700:300_um" default
   )
   (via 
-    "Via[0-5]_600:300_um-kicad_default" "Via[0-5]_600:300_um" "kicad_default"
+    "Via[0-5]_889:381_um" "Via[0-5]_889:381_um" default
   )
   (via 
-    "Via[0-5]_889:381_um-kicad_default" "Via[0-5]_889:381_um" "kicad_default"
+    "Via[0-5]_600:300_um-kicad_default" "Via[0-5]_600:300_um" "kicad_default"
   )
   (via 
     "Via[0-5]_700:300_um-kicad_default" "Via[0-5]_700:300_um" "kicad_default"
   )
   (via 
-    "Via[0-5]_600:300_um-Power" "Via[0-5]_600:300_um" Power
+    "Via[0-5]_889:381_um-kicad_default" "Via[0-5]_889:381_um" "kicad_default"
   )
   (via 
-    "Via[0-5]_889:381_um-Power" "Via[0-5]_889:381_um" Power
+    "Via[0-5]_600:300_um-Power" "Via[0-5]_600:300_um" Power
   )
   (via 
     "Via[0-5]_700:300_um-Power" "Via[0-5]_700:300_um" Power
   )
   (via 
+    "Via[0-5]_889:381_um-Power" "Via[0-5]_889:381_um" Power
+  )
+  (via 
     "Via[0-5]_600:300_um-cap_sensitive" "Via[0-5]_600:300_um" "cap_sensitive"
   )
   (via 
-    "Via[0-5]_889:381_um-cap_sensitive" "Via[0-5]_889:381_um" "cap_sensitive"
+    "Via[0-5]_700:300_um-cap_sensitive" "Via[0-5]_700:300_um" "cap_sensitive"
   )
   (via 
-    "Via[0-5]_700:300_um-cap_sensitive" "Via[0-5]_700:300_um" "cap_sensitive"
+    "Via[0-5]_889:381_um-cap_sensitive" "Via[0-5]_889:381_um" "cap_sensitive"
   )
   (via_rule
     default "Via[0-5]_600:300_um"
@@ -183,25 +180,25 @@
   )
   (class "kicad_default"
     "Net-(U1-Pad8)" "Net-(U1-Pad5)" "Net-(U1-Pad1)" "Net-(R36-Pad2)" "Net-(K1-Pad5)" "Net-(K2-Pad5)" "Net-(Q1-Pad5)" "Net-(Q3-Pad2)"
-    "Net-(Q3-Pad5)" "/bath_clamp_v1_1/P1_E" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "/bath_clamp_v1_1/P1_CAL" "Net-(D5-Pad2)" "/bath_clamp_v1_1/A1" "/bath_clamp_v1_1/A2"
-    "/bath_clamp_v1_1/EN" "/bath_clamp_v1_1/A0" "/bath_clamp_v1_1/AMP_OUT" "Net-(C6-Pad2)" "Net-(C6-Pad1)" "Net-(C9-Pad2)" "Net-(C10-Pad2)" "Net-(C11-Pad2)"
-    "Net-(C12-Pad2)" "Net-(C19-Pad2)" "Net-(C23-Pad2)" "Net-(C23-Pad1)" "Net-(C24-Pad2)" "Net-(C25-Pad2)" "Net-(C26-Pad2)" "Net-(IC1-Pad7)"
-    /SDA /SCL "Net-(IC1-Pad1)" "Net-(Q4-Pad2)" "Net-(Q4-Pad5)" "Net-(R2-Pad2)" "Net-(R3-Pad2)" "Net-(R4-Pad2)"
-    "Net-(R5-Pad2)" "Net-(R6-Pad2)" "Net-(R7-Pad2)" "Net-(R8-Pad2)" "/bath_clamp_v1_1/P2_CAL_CTRL" "/bath_clamp_v1_1/P2_E_CTRL" "/bath_clamp_v1_1/P1_CAL_CTRL" "/bath_clamp_v1_1/P1_E_CTRL"
-    "/bath_clamp_v1_1/PCLAMP_CTRL" "Net-(R14-Pad1)" "Net-(R16-Pad1)" "Net-(R26-Pad1)" "Net-(R35-Pad2)" "Net-(R35-Pad1)" "Net-(R37-Pad2)" "Net-(R38-Pad2)"
-    "Net-(R39-Pad1)" "Net-(R40-Pad1)" "Net-(R42-Pad1)" "Net-(R43-Pad2)" "/bath_clamp_v1_1/OUT_P" "/bath_clamp_v1_1/OUT_N" "Net-(R47-Pad1)" "Net-(R49-Pad2)"
-    "Net-(H1-Pad1)" "/bath_clamp_v1_1/CAL_SIG2" "/bath_clamp_v1_1/CAL_SIG1" "Net-(U6-Pad7)" "Net-(U7-Pad8)" "Net-(U7-Pad5)" "Net-(U9-Pad3)" "Net-(U10-Pad6)"
-    "Net-(U10-Pad5)" "/bath_clamp_v1_1/G3" "/bath_clamp_v1_1/G2" "/bath_clamp_v1_1/G1" "/bath_clamp_v1_1/CCOMP4" "/bath_clamp_v1_1/CCOMP3" "/bath_clamp_v1_1/CCOMP2" "/bath_clamp_v1_1/CCOMP1"
-    "/bath_clamp_v1_1/DAC_SEL4" "/bath_clamp_v1_1/DAC_SEL3" "/bath_clamp_v1_1/DAC_SEL2" "/bath_clamp_v1_1/DAC_SEL1" "/bath_clamp_v1_1/ADC_SEL4" "/bath_clamp_v1_1/ADC_SEL3" "/bath_clamp_v1_1/ADC_SEL2" "/bath_clamp_v1_1/ADC_SEL1"
-    "Net-(U12-Pad1)" "/bath_clamp_v1_1/RF4" "/bath_clamp_v1_1/RF3" "/bath_clamp_v1_1/RF2" "/bath_clamp_v1_1/RF1" "Net-(U13-Pad1)" "Net-(U15-Pad8)" "Net-(U15-Pad5)"
-    "Net-(U15-Pad1)" "Net-(U16-Pad12)" "Net-(U17-Pad10)" "/bath_clamp_v1_1/CAL_ADC" "Net-(U20-Pad12)" "Net-(U21-Pad12)" "/bath_clamp_v1_1/CAL_DAC" "Net-(H3-Pad1)"
-    "Net-(H7-Pad1)" "/bath_clamp_v1_1/RF_1" "Net-(C27-Pad2)" "Net-(C27-Pad1)" "Net-(C28-Pad2)" "Net-(C28-Pad1)" "Net-(C33-Pad2)" "Net-(C33-Pad1)"
-    "/bath_clamp_v1_1/P1_BUF" "Net-(R1-Pad1)" "Net-(R20-Pad2)" "Net-(R20-Pad1)" "Net-(R39-Pad2)" "Net-(R40-Pad2)" "Net-(R52-Pad1)" "/bath_clamp_v1_1/adc_driver/G4"
-    "Net-(R57-Pad1)" "/bath_clamp_v1_1/FDBK" "/bath_clamp_v1_1/RF_1_OUT" "/bath_clamp_v1_1/S2" "/bath_clamp_v1_1/S1" "/bath_clamp_v1_1/INAMP_OUT" "Net-(U18-Pad1)" "Net-(U19-Pad16)"
-    "Net-(U19-Pad15)" "Net-(U19-Pad14)" "/bath_clamp_v1_1/CAL_OUT" "Net-(U19-Pad8)" "Net-(U19-Pad7)" "Net-(U22-Pad16)" "Net-(U22-Pad15)" "Net-(U22-Pad14)"
-    "Net-(U22-Pad8)" "Net-(U22-Pad7)" "Net-(J4-Pad14)" "Net-(Q2-Pad3)" "Net-(Q2-Pad1)" "Net-(R28-Pad1)" "/bath_clamp_v1_1/howland_ipump/I_OUT" "/bath_clamp_v1_1/EN_IPUMP"
-    "Net-(C37-Pad1)" "/bath_clamp_v1_1/CMD_BUF" "Net-(R63-Pad1)" "Net-(H5-Pad1)" "Net-(C1-Pad1)" "Net-(U25-Pad7)" "/bath_clamp_v1_1/F_MUX_OUT" "Net-(FB1-Pad1)"
-    "/bath_clamp_v1_1/adc_driver/LMP_EN"
+    "Net-(Q3-Pad5)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "Net-(D5-Pad2)" "Net-(C6-Pad2)" "Net-(C9-Pad2)" "Net-(C10-Pad2)" "Net-(C11-Pad2)"
+    "Net-(C12-Pad2)" "Net-(C23-Pad2)" "Net-(C23-Pad1)" "Net-(C24-Pad2)" "Net-(C25-Pad2)" "Net-(C26-Pad2)" /SDA /SCL
+    "Net-(IC1-Pad1)" "Net-(Q4-Pad2)" "Net-(Q4-Pad5)" "Net-(R2-Pad2)" "Net-(R3-Pad2)" "Net-(R4-Pad2)" "Net-(R5-Pad2)" "Net-(R6-Pad2)"
+    "Net-(R7-Pad2)" "Net-(R8-Pad2)" "Net-(R16-Pad1)" "Net-(R26-Pad1)" "Net-(R35-Pad2)" "Net-(R35-Pad1)" "Net-(R37-Pad2)" "Net-(R38-Pad2)"
+    "Net-(R39-Pad1)" "Net-(R40-Pad1)" "Net-(R43-Pad2)" "Net-(R47-Pad1)" "Net-(R49-Pad2)" "Net-(H1-Pad1)" "Net-(U6-Pad7)" "Net-(U10-Pad6)"
+    "Net-(U10-Pad5)" "Net-(U12-Pad1)" "Net-(U13-Pad1)" "Net-(U15-Pad8)" "Net-(U15-Pad5)" "Net-(U15-Pad1)" "Net-(U17-Pad10)" "Net-(H3-Pad1)"
+    "Net-(H7-Pad1)" "Net-(C27-Pad2)" "Net-(C27-Pad1)" "Net-(C28-Pad2)" "Net-(C28-Pad1)" "Net-(C33-Pad2)" "Net-(C33-Pad1)" "Net-(R1-Pad1)"
+    "Net-(R20-Pad2)" "Net-(R20-Pad1)" "Net-(R39-Pad2)" "Net-(R40-Pad2)" "Net-(R52-Pad1)" "Net-(R57-Pad1)" "Net-(U19-Pad16)" "Net-(U19-Pad15)"
+    "Net-(U19-Pad14)" "Net-(U19-Pad8)" "Net-(U19-Pad7)" "Net-(U22-Pad16)" "Net-(U22-Pad15)" "Net-(U22-Pad14)" "Net-(U22-Pad8)" "Net-(U22-Pad7)"
+    "Net-(J4-Pad14)" "Net-(Q2-Pad3)" "Net-(Q2-Pad1)" "Net-(R28-Pad1)" "Net-(C37-Pad1)" "Net-(R63-Pad1)" "Net-(H5-Pad1)" "Net-(C1-Pad1)"
+    "Net-(FB1-Pad1)" "/bath_clamp_top/RF_1" "Net-(C5-Pad1)" "Net-(C48-Pad1)" "/bath_clamp_top/V_GND" "Net-(C19-Pad1)" "/bath_clamp_top/VCM" "/bath_clamp_top/P1_E"
+    "/bath_clamp_top/P1_CAL" "Net-(IC1-Pad6)" "/bath_clamp_top/P2_OUT" "/bath_clamp_top/P1_OUT" "/bath_clamp_top/AMP_OUT" "/bath_clamp_top/CMD" "/bath_clamp_top/CAL_DAC" "/bath_clamp_top/OUT_P"
+    "/bath_clamp_top/OUT_N" "/bath_clamp_top/CC" "/bath_clamp_top/CAL_ADC" "/bath_clamp_top/P1" "/bath_clamp_top/P2" "/bath_clamp_top/P1_BUF" "/bath_clamp_top/P2_CAL_CTRL" "/bath_clamp_top/P2_E_CTRL"
+    "/bath_clamp_top/P1_CAL_CTRL" "/bath_clamp_top/P1_E_CTRL" "/bath_clamp_top/PCLAMP_CTRL" "Net-(R14-Pad2)" "/bath_clamp_top/EN" "/bath_clamp_top/CMD_BUF" "/bath_clamp_top/F_MUX_OUT" "/bath_clamp_top/adc_driver/LMP_EN"
+    "3V3_BUF" "/bath_clamp_top/howland_ipump/I_OUT" "/bath_clamp_top/adc_driver/G4" "/bath_clamp_top/EN_IPUMP" "/bath_clamp_top/CAL_OUT" "/bath_clamp_top/INAMP_OUT" "Net-(R74-Pad1)" "/bath_clamp_top/FDBK"
+    "/bath_clamp_top/A1" "/bath_clamp_top/A2" "/bath_clamp_top/A0" "/bath_clamp_top/CAL_SIG1" "/bath_clamp_top/CAL_SIG2" "Net-(U7-Pad1)" "/bath_clamp_top/RF4" "/bath_clamp_top/RF3"
+    "/bath_clamp_top/RF2" "/bath_clamp_top/RF1" "/bath_clamp_top/CCOMP4" "/bath_clamp_top/CCOMP3" "/bath_clamp_top/CCOMP2" "/bath_clamp_top/CCOMP1" "/bath_clamp_top/DAC_SEL4" "/bath_clamp_top/DAC_SEL3"
+    "/bath_clamp_top/DAC_SEL2" "/bath_clamp_top/DAC_SEL1" "/bath_clamp_top/ADC_SEL4" "/bath_clamp_top/ADC_SEL3" "/bath_clamp_top/ADC_SEL2" "/bath_clamp_top/ADC_SEL1" "/bath_clamp_top/RF_1_OUT" "/bath_clamp_top/S2"
+    "/bath_clamp_top/S1" "/bath_clamp_top/G3" "/bath_clamp_top/G2" "/bath_clamp_top/G1" "Net-(R42-Pad1)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
@@ -223,7 +220,6 @@
     )
   )
   (class "cap_sensitive"
-    "/bath_clamp_v1_1/P2" "/bath_clamp_v1_1/CC" "/bath_clamp_v1_1/CMD" "/bath_clamp_v1_1/VCM" "/bath_clamp_v1_1/V_GND" "/bath_clamp_v1_1/P2_OUT" "/bath_clamp_v1_1/P1_OUT" "/bath_clamp_v1_1/P1"
     (clearance_class "cap_sensitive")
     (via_rule cap_sensitive)
     (rule

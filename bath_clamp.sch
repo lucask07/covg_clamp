@@ -120,9 +120,9 @@ F 0 "C3" V 3448 2450 50  0000 C CNN
 F 1 "10u" V 3539 2450 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3738 2300 50  0001 C CNN
 F 3 "~" H 3700 2450 50  0001 C CNN
-F 4 "" H 3448 2550 50  0001 C CNN "Manf#"
-F 5 "20%" H 3448 2550 50  0001 C CNN "Tolerance"
-F 6 "25V" H 3448 2550 50  0001 C CNN "voltage"
+F 4 "CL21A106KOQNNNE" H 3448 2550 50  0001 C CNN "Manf#"
+F 5 "10%" H 3448 2550 50  0001 C CNN "Tolerance"
+F 6 "16V" H 3448 2550 50  0001 C CNN "voltage"
 	1    3700 2450
 	1    0    0    -1  
 $EndComp
@@ -221,8 +221,9 @@ F 0 "U10" H 8200 3317 50  0000 C CNN
 F 1 "LP2951_SOIC" H 8200 3226 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8200 2100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lp2951-n.pdf" H 8200 2750 50  0001 C CNN
-F 4 "LP2951ACDR2G" H 8200 3417 50  0001 C CNN "Manf#"
+F 4 "LP2951-30DR" H 8200 3417 50  0001 C CNN "Manf#"
 F 5 "LP2951-03YM-TR" H 8200 2750 50  0001 C CNN "Alternate Manf#"
+F 6 "LP2951ACDR2G" H 8200 2750 50  0001 C CNN "Alternate2 Manf#"
 	1    8200 2750
 	1    0    0    -1  
 $EndComp
@@ -350,7 +351,7 @@ P 900 6850
 AR Path="/6032F251/60EC1EFA" Ref="H?"  Part="1" 
 AR Path="/60EC1EFA" Ref="H1"  Part="1" 
 F 0 "H1" H 1000 6899 50  0000 L CNN
-F 1 "MountingHole_Pad" H 1000 6808 50  0000 L CNN
+F 1 "DNI" H 1000 6808 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 900 6850 50  0001 C CNN
 F 3 "~" H 900 6850 50  0001 C CNN
 	1    900  6850
@@ -363,7 +364,7 @@ P 900 7350
 AR Path="/6032F251/60EC1F00" Ref="H?"  Part="1" 
 AR Path="/60EC1F00" Ref="H3"  Part="1" 
 F 0 "H3" H 1000 7399 50  0000 L CNN
-F 1 "MountingHole_Pad" H 1000 7308 50  0000 L CNN
+F 1 "DNI" H 1000 7308 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 900 7350 50  0001 C CNN
 F 3 "~" H 900 7350 50  0001 C CNN
 	1    900  7350
@@ -376,7 +377,7 @@ P 1900 7350
 AR Path="/6032F251/60EC1F06" Ref="H?"  Part="1" 
 AR Path="/60EC1F06" Ref="H7"  Part="1" 
 F 0 "H7" H 2000 7399 50  0000 L CNN
-F 1 "MountingHole_Pad" H 2000 7308 50  0000 L CNN
+F 1 "DNI" H 2000 7308 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 1900 7350 50  0001 C CNN
 F 3 "~" H 1900 7350 50  0001 C CNN
 	1    1900 7350
@@ -389,7 +390,7 @@ P 1900 6850
 AR Path="/6032F251/60EC1F0C" Ref="H?"  Part="1" 
 AR Path="/60EC1F0C" Ref="H5"  Part="1" 
 F 0 "H5" H 2000 6899 50  0000 L CNN
-F 1 "MountingHole_Pad" H 2000 6808 50  0000 L CNN
+F 1 "DNI" H 2000 6808 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 1900 6850 50  0001 C CNN
 F 3 "~" H 1900 6850 50  0001 C CNN
 	1    1900 6850
@@ -689,9 +690,9 @@ F 0 "U7" H 2800 3225 50  0000 C CNN
 F 1 "MIC5270" H 2800 3134 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 2500 2600 50  0001 L CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/mic5270.pdf" H 2500 2500 50  0001 L CNN
-F 4 "2510308" H 2500 2400 50  0001 L CNN "Farnell"
-F 5 "MIC5270-4.1YM5-TR" H 2800 2900 50  0001 C CNN "Manf#"
-F 6 "MIC5270YM5-TR" H 2800 2900 50  0001 C CNN "Alternate Manf#"
+F 4 "MIC5270-4.1YM5-TR" H 2800 2900 50  0001 C CNN "Manf#"
+F 5 "MIC5270YM5-TR" H 2800 2900 50  0001 C CNN "Alternate Manf#"
+F 6 "TSOT vs SOT is just the height" H 2800 2900 50  0001 C CNN "Notes"
 	1    2800 2900
 	1    0    0    -1  
 $EndComp
@@ -822,4 +823,80 @@ ESR must be increased \nfor the LP2981\n(but not the LP2985)
 Wire Wire Line
 	5900 2700 6650 2700
 Connection ~ 6650 2700
+Wire Wire Line
+	4450 6250 4450 6500
+$Comp
+L Connector:TestPoint TP10
+U 1 1 62528920
+P 5050 6250
+F 0 "TP10" H 5108 6368 50  0000 L CNN
+F 1 "DNI" H 5108 6277 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 5250 6250 50  0001 C CNN
+F 3 "~" H 5250 6250 50  0001 C CNN
+	1    5050 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 6250 5050 6500
+$Comp
+L power:GND #PWR0216
+U 1 1 6252892B
+P 5050 6500
+F 0 "#PWR0216" H 5050 6250 50  0001 C CNN
+F 1 "GND" H 5055 6327 50  0000 C CNN
+F 2 "" H 5050 6500 50  0001 C CNN
+F 3 "" H 5050 6500 50  0001 C CNN
+	1    5050 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP11
+U 1 1 62528935
+P 5600 6250
+F 0 "TP11" H 5658 6368 50  0000 L CNN
+F 1 "DNI" H 5658 6277 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 5800 6250 50  0001 C CNN
+F 3 "~" H 5800 6250 50  0001 C CNN
+	1    5600 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6250 5600 6500
+$Comp
+L power:GND #PWR0217
+U 1 1 62528940
+P 5600 6500
+F 0 "#PWR0217" H 5600 6250 50  0001 C CNN
+F 1 "GND" H 5605 6327 50  0000 C CNN
+F 2 "" H 5600 6500 50  0001 C CNN
+F 3 "" H 5600 6500 50  0001 C CNN
+	1    5600 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 625BD5CD
+P 4450 6250
+F 0 "TP9" H 4508 6368 50  0000 L CNN
+F 1 "DNI" H 4508 6277 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 4650 6250 50  0001 C CNN
+F 3 "~" H 4650 6250 50  0001 C CNN
+	1    4450 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0218
+U 1 1 625BD5D8
+P 4450 6500
+F 0 "#PWR0218" H 4450 6250 50  0001 C CNN
+F 1 "GND" H 4455 6327 50  0000 C CNN
+F 2 "" H 4450 6500 50  0001 C CNN
+F 3 "" H 4450 6500 50  0001 C CNN
+	1    4450 6500
+	1    0    0    -1  
+$EndComp
+Text Notes 4550 5950 0    50   ~ 0
+For 0.1” header pins. \n2 mm diameter.
+Text Notes 3850 2350 0    50   ~ 0
+-2V5 is the negative rail\nWill not always be -2V5\n(generally more negative)
 $EndSCHEMATC

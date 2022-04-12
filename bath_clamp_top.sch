@@ -35,15 +35,9 @@ F 0 "J1" H 12628 3238 50  0000 L CNN
 F 1 "105-1103-001" H 12628 3147 50  0000 L CNN
 F 2 "digikey-footprints:Test_Jack_Horiz" H 12750 3450 60  0001 L CNN
 F 3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 3550 60  0001 L CNN
-F 4 "Connectors, Interconnects" H 12750 3850 60  0001 L CNN "Category"
-F 5 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 4050 60  0001 L CNN "DK_Datasheet_Link"
-F 6 "/product-detail/en/cinch-connectivity-solutions-johnson/105-1103-001/J577-ND/241122" H 12750 4150 60  0001 L CNN "DK_Detail_Page"
-F 7 "CONN TIP JACK SOLDER BLACK" H 12750 4250 60  0001 L CNN "Description"
-F 8 "J577-ND" H 12750 3650 60  0001 L CNN "Digi-Key_PN"
-F 9 "Banana and Tip Connectors - Jacks, Plugs" H 12750 3950 60  0001 L CNN "Family"
-F 10 "105-1103-001" H 12750 3750 60  0001 L CNN "MPN"
-F 11 "105-1103-001" H 12628 3338 50  0001 C CNN "Manf#"
-F 12 "Active" H 12750 4450 60  0001 L CNN "Status"
+F 4 "105-1103-001" H 12628 3338 50  0001 C CNN "Manf#"
+F 5 "CONN TIP JACK SOLDER BLACK" H 12550 3250 50  0001 C CNN "Description"
+F 6 "Cinch Connectivity Solutions Johnson" H 12550 3250 50  0001 C CNN "Manufacturer"
 	1    12550 3250
 	1    0    0    -1  
 $EndComp
@@ -55,15 +49,8 @@ F 0 "J2" H 12628 4638 50  0000 L CNN
 F 1 "105-1103-001" H 12628 4547 50  0000 L CNN
 F 2 "digikey-footprints:Test_Jack_Horiz" H 12750 4850 60  0001 L CNN
 F 3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 4950 60  0001 L CNN
-F 4 "Connectors, Interconnects" H 12750 5250 60  0001 L CNN "Category"
-F 5 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 5450 60  0001 L CNN "DK_Datasheet_Link"
-F 6 "/product-detail/en/cinch-connectivity-solutions-johnson/105-1103-001/J577-ND/241122" H 12750 5550 60  0001 L CNN "DK_Detail_Page"
-F 7 "CONN TIP JACK SOLDER BLACK" H 12750 5650 60  0001 L CNN "Description"
-F 8 "J577-ND" H 12750 5050 60  0001 L CNN "Digi-Key_PN"
-F 9 "Banana and Tip Connectors - Jacks, Plugs" H 12750 5350 60  0001 L CNN "Family"
-F 10 "105-1103-001" H 12750 5150 60  0001 L CNN "MPN"
-F 11 "105-1103-001" H 12628 4738 50  0001 C CNN "Manf#"
-F 12 "Active" H 12750 5850 60  0001 L CNN "Status"
+F 4 "105-1103-001" H 12628 4738 50  0001 C CNN "Manf#"
+F 5 "CONN TIP JACK SOLDER BLACK" H 12550 4650 50  0001 C CNN "Description"
 	1    12550 4650
 	1    0    0    -1  
 $EndComp
@@ -85,7 +72,7 @@ U 1 1 603F7585
 P 10150 2800
 F 0 "K2" V 10246 2470 50  0000 R CNN
 F 1 "1462042-7" V 10155 2470 50  0000 R CNN
-F 2 "covg-kicad:Relay_SPDT_TE_1462042-7" H 10150 2800 50  0001 L BNN
+F 2 "RELAY_1462042-8" H 10150 2800 50  0001 L BNN
 F 3 "" H 10150 2800 50  0001 L BNN
 F 4 "1462042-7" H 10246 2570 50  0001 C CNN "Manf#"
 F 5 "1462042-8" V 10150 2800 50  0001 C CNN "Alternate Manf# (footprint diff)"
@@ -98,7 +85,7 @@ U 1 1 603FDCEF
 P 10200 5550
 F 0 "K1" V 10296 5220 50  0000 R CNN
 F 1 "1462042-7" V 10205 5220 50  0000 R CNN
-F 2 "covg-kicad:Relay_SPDT_TE_1462042-7" H 10200 5550 50  0001 L BNN
+F 2 "RELAY_1462042-8" H 10200 5550 50  0001 L BNN
 F 3 "" H 10200 5550 50  0001 L BNN
 F 4 "1462042-7" H 10296 5320 50  0001 C CNN "Manf#"
 F 5 "1462042-8" V 10200 5550 50  0001 C CNN "Alternate Manf# (footprint diff)"
@@ -111,16 +98,10 @@ U 1 1 604062BF
 P 11900 7900
 F 0 "Q3" H 12228 7953 60  0000 L CNN
 F 1 "MBT3904DW1T1G" V 12400 7600 60  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 12100 8100 60  0001 L CNN
+F 2 "digikey-footprints:SOT-363" H 12100 8100 60  0001 L CNN
 F 3 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 12100 8200 60  0001 L CNN
-F 4 "Discrete Semiconductor Products" H 12100 8500 60  0001 L CNN "Category"
-F 5 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 12100 8700 60  0001 L CNN "DK_Datasheet_Link"
-F 6 "/product-detail/en/on-semiconductor/MBT3904DW1T1G/MBT3904DW1T1GOSCT-ND/918012" H 12100 8800 60  0001 L CNN "DK_Detail_Page"
-F 7 "TRANS 2NPN 40V 0.2A SC88" H 12100 8900 60  0001 L CNN "Description"
-F 8 "MBT3904DW1T1GOSCT-ND" H 12100 8300 60  0001 L CNN "Digi-Key_PN"
-F 9 "Transistors - Bipolar (BJT) - Arrays" H 12100 8600 60  0001 L CNN "Family"
-F 10 "MBT3904DW1T1G" H 12228 8053 50  0001 C CNN "Manf#"
-F 11 "Active" H 12100 9100 60  0001 L CNN "Status"
+F 4 "TRANS 2NPN 40V 0.2A SC88" H 12100 8900 60  0001 L CNN "Description"
+F 5 "MBT3904DW1T1G" H 12228 8053 50  0001 C CNN "Manf#"
 	1    11900 7900
 	1    0    0    -1  
 $EndComp
@@ -130,17 +111,10 @@ U 1 1 604077DA
 P 11750 4150
 F 0 "Q1" H 12078 4203 60  0000 L CNN
 F 1 "MBT3904DW1T1G" V 12250 3850 60  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 11950 4350 60  0001 L CNN
+F 2 "digikey-footprints:SOT-363" H 11950 4350 60  0001 L CNN
 F 3 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 11950 4450 60  0001 L CNN
-F 4 "Discrete Semiconductor Products" H 11950 4750 60  0001 L CNN "Category"
-F 5 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 11950 4950 60  0001 L CNN "DK_Datasheet_Link"
-F 6 "/product-detail/en/on-semiconductor/MBT3904DW1T1G/MBT3904DW1T1GOSCT-ND/918012" H 11950 5050 60  0001 L CNN "DK_Detail_Page"
-F 7 "TRANS 2NPN 40V 0.2A SC88" H 11950 5150 60  0001 L CNN "Description"
-F 8 "MBT3904DW1T1GOSCT-ND" H 11950 4550 60  0001 L CNN "Digi-Key_PN"
-F 9 "Transistors - Bipolar (BJT) - Arrays" H 11950 4850 60  0001 L CNN "Family"
-F 10 "MBT3904DW1T1G" H 11950 4650 60  0001 L CNN "MPN"
-F 11 "MBT3904DW1T1G" H 12078 4303 50  0001 C CNN "Manf#"
-F 12 "Active" H 11950 5350 60  0001 L CNN "Status"
+F 4 "TRANS 2NPN 40V 0.2A SC88" H 11950 5150 60  0001 L CNN "Description"
+F 5 "MBT3904DW1T1G" H 12078 4303 50  0001 C CNN "Manf#"
 	1    11750 4150
 	0    -1   -1   0   
 $EndComp
@@ -431,15 +405,8 @@ F 0 "J3" H 12628 5038 50  0000 L CNN
 F 1 "105-1103-001" H 12628 4947 50  0000 L CNN
 F 2 "digikey-footprints:Test_Jack_Horiz" H 12750 5250 60  0001 L CNN
 F 3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 5350 60  0001 L CNN
-F 4 "Connectors, Interconnects" H 12750 5650 60  0001 L CNN "Category"
-F 5 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 12750 5850 60  0001 L CNN "DK_Datasheet_Link"
-F 6 "/product-detail/en/cinch-connectivity-solutions-johnson/105-1103-001/J577-ND/241122" H 12750 5950 60  0001 L CNN "DK_Detail_Page"
-F 7 "CONN TIP JACK SOLDER BLACK" H 12750 6050 60  0001 L CNN "Description"
-F 8 "J577-ND" H 12750 5450 60  0001 L CNN "Digi-Key_PN"
-F 9 "Banana and Tip Connectors - Jacks, Plugs" H 12750 5750 60  0001 L CNN "Family"
-F 10 "105-1103-001" H 12750 5550 60  0001 L CNN "MPN"
-F 11 "105-1103-001" H 12628 5138 50  0001 C CNN "Manf#"
-F 12 "Active" H 12750 6250 60  0001 L CNN "Status"
+F 4 "105-1103-001" H 12628 5138 50  0001 C CNN "Manf#"
+F 5 "CONN TIP JACK SOLDER BLACK" H 12550 5050 50  0001 C CNN "Description"
 	1    12550 5050
 	1    0    0    -1  
 $EndComp
@@ -677,17 +644,11 @@ U 1 1 60A3AA53
 P 10550 1650
 F 0 "Q4" H 10878 1703 60  0000 L CNN
 F 1 "MBT3904DW1T1G" V 11050 1350 60  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 10750 1850 60  0001 L CNN
+F 2 "digikey-footprints:SOT-363" H 10750 1850 60  0001 L CNN
 F 3 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 10750 1950 60  0001 L CNN
-F 4 "Discrete Semiconductor Products" H 10750 2250 60  0001 L CNN "Category"
-F 5 "http://www.onsemi.com/pub/Collateral/MBT3904DW1T1-D.PDF" H 10750 2450 60  0001 L CNN "DK_Datasheet_Link"
-F 6 "/product-detail/en/on-semiconductor/MBT3904DW1T1G/MBT3904DW1T1GOSCT-ND/918012" H 10750 2550 60  0001 L CNN "DK_Detail_Page"
-F 7 "TRANS 2NPN 40V 0.2A SC88" H 10750 2650 60  0001 L CNN "Description"
-F 8 "MBT3904DW1T1GOSCT-ND" H 10750 2050 60  0001 L CNN "Digi-Key_PN"
-F 9 "Transistors - Bipolar (BJT) - Arrays" H 10750 2350 60  0001 L CNN "Family"
-F 10 "MBT3904DW1T1G" H 10750 2150 60  0001 L CNN "MPN"
-F 11 "MBT3904DW1T1G" H 10878 1803 50  0001 C CNN "Manf#"
-F 12 "Active" H 10750 2850 60  0001 L CNN "Status"
+F 4 "TRANS 2NPN 40V 0.2A SC88" H 10750 2650 60  0001 L CNN "Description"
+F 5 "MBT3904DW1T1G" H 10878 1803 50  0001 C CNN "Manf#"
+F 6 "ON Semiconductor" H 10550 1650 50  0001 C CNN "Manufacturer"
 	1    10550 1650
 	1    0    0    -1  
 $EndComp
@@ -1293,13 +1254,13 @@ Wire Wire Line
 Wire Wire Line
 	10550 1050 10550 1250
 Wire Wire Line
-	10900 4800 12550 4800
+	10900 4800 12050 4800
 Wire Wire Line
 	11600 2100 11350 2100
 Wire Wire Line
 	11350 2100 11350 3400
 Wire Wire Line
-	11350 3400 12550 3400
+	11350 3400 12050 3400
 Wire Wire Line
 	7150 2700 7800 2700
 Wire Wire Line
@@ -1643,19 +1604,19 @@ Wire Wire Line
 $Comp
 L Device:C C6
 U 1 1 619D6409
-P 12250 5200
-F 0 "C6" V 11998 5200 50  0000 C CNN
-F 1 "4.7n" V 12089 5200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 12288 5050 50  0001 C CNN
-F 3 "~" H 12250 5200 50  0001 C CNN
-F 4 "CC0603JRX7R9BB472" H 11998 5300 50  0001 C CNN "Manf#"
-F 5 "5%" H 11998 5300 50  0001 C CNN "Tolerance"
-F 6 "50V" H 11998 5300 50  0001 C CNN "voltage"
-	1    12250 5200
+P 11900 5200
+F 0 "C6" V 11648 5200 50  0000 C CNN
+F 1 "4.7n" V 11739 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11938 5050 50  0001 C CNN
+F 3 "~" H 11900 5200 50  0001 C CNN
+F 4 "CC0603JRX7R9BB472" H 11648 5300 50  0001 C CNN "Manf#"
+F 5 "5%" H 11648 5300 50  0001 C CNN "Tolerance"
+F 6 "50V" H 11648 5300 50  0001 C CNN "voltage"
+	1    11900 5200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	12400 5200 12550 5200
+	12050 5200 12550 5200
 $Sheet
 S 7300 4850 800  500 
 U 62017813
@@ -1740,7 +1701,7 @@ L covg-kicad:TMUX6136PWR U19
 U 1 1 60A974B3
 P 6000 5400
 F 0 "U19" H 6675 5687 60  0000 C CNN
-F 1 "TMUX6136PWR" H 6675 5581 60  0000 C CNN
+F 1 "DNI" H 6675 5581 60  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 6650 5500 60  0001 C CNN
 F 3 "" H 6000 5400 60  0000 C CNN
 F 4 "TMUX6136PWR" H 6000 5400 50  0001 C CNN "Manf#"
@@ -2305,18 +2266,14 @@ Wire Wire Line
 Connection ~ 3450 4300
 Wire Wire Line
 	3450 4300 3700 4300
-Text Label 1700 2750 0    50   ~ 0
-SDA
 Text Label 1700 2850 0    50   ~ 0
-SCL
-Text HLabel 1850 2850 2    50   BiDi ~ 0
+SDA
+Text Label 1700 2750 0    50   ~ 0
 SCL
 Text HLabel 1850 2750 2    50   BiDi ~ 0
+SCL
+Text HLabel 1850 2850 2    50   BiDi ~ 0
 SDA
-Wire Wire Line
-	1450 2850 1850 2850
-Wire Wire Line
-	1450 2750 1850 2750
 Wire Wire Line
 	1150 3600 1250 3600
 Connection ~ 1150 3600
@@ -2683,7 +2640,7 @@ Wire Wire Line
 Connection ~ 3400 1350
 Wire Wire Line
 	3400 1350 3400 1750
-Text Notes 2550 2400 0    39   ~ 0
+Text Notes 2650 2450 0    39   ~ 0
 Gain by x10 on cable\nAnd down by x10 on brd\nto reduce impact of \ncable cross-talk
 $Comp
 L covg-kicad:G6L-1F-TR-DC5 U3
@@ -2691,7 +2648,7 @@ U 1 1 60C6EAF3
 P 9450 4000
 F 0 "U3" H 10050 4387 60  0000 C CNN
 F 1 "G6L-1F-TR-DC5" H 10050 4281 60  0000 C CNN
-F 2 "covg-kicad:G6L-1F-TR-DC5" H 10250 4240 60  0001 C CNN
+F 2 "G6L-1F-TR-DC5" H 10250 4240 60  0001 C CNN
 F 3 "" H 9450 4000 60  0000 C CNN
 F 4 "G6L-1F-TR-DC5" H 10050 4487 50  0001 C CNN "Manf#"
 F 5 "G6L-1F-DC4.5" H 9450 4000 50  0001 C CNN "Alternate Manf#"
@@ -2805,16 +2762,11 @@ F 0 "TP4" H 14700 8293 50  0000 L CNN
 F 1 "RCT-0C" H 14700 8202 50  0000 L CNN
 F 2 "digikey-footprints:PROBE_PAD_0805" H 14850 8400 60  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14850 8500 60  0001 L CNN
-F 4 "A106144CT-ND" H 14850 8600 60  0001 L CNN "Digi-Key_PN"
-F 5 "RCT-0C" H 14850 8700 60  0001 L CNN "MPN"
-F 6 "Test and Measurement" H 14850 8800 60  0001 L CNN "Category"
-F 7 "Test Points" H 14850 8900 60  0001 L CNN "Family"
-F 8 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773266&DocType=DS&DocLang=English" H 14850 9000 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 14850 9100 60  0001 L CNN "DK_Detail_Page"
-F 10 "PC TEST POINT NATURAL" H 14850 9200 60  0001 L CNN "Description"
-F 11 "TE Connectivity AMP Connectors" H 14850 9300 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 14850 9400 60  0001 L CNN "Status"
-F 13 "RCT-0C" H 14650 8200 50  0001 C CNN "Manf#"
+F 4 "Test Points" H 14850 8900 60  0001 L CNN "Family"
+F 5 "/product-detail/en/te-connectivity-amp-connectors/RCT-0C/A106144CT-ND/3477801" H 14850 9100 60  0001 L CNN "DK_Detail_Page"
+F 6 "PC TEST POINT NATURAL" H 14850 9200 60  0001 L CNN "Description"
+F 7 "TE Connectivity AMP Connectors" H 14850 9300 60  0001 L CNN "Manufacturer"
+F 8 "RCT-0C" H 14650 8200 50  0001 C CNN "Manf#"
 	1    14650 8200
 	1    0    0    -1  
 $EndComp
@@ -3274,7 +3226,136 @@ Wire Wire Line
 	11650 5300 11650 5200
 Connection ~ 11650 5200
 Wire Wire Line
-	11650 5200 12100 5200
+	11650 5200 11750 5200
+$Comp
+L Device:C C49
+U 1 1 6255ED9E
+P 2500 1900
+AR Path="/6032F251/6255ED9E" Ref="C49"  Part="1" 
+AR Path="/6032F251/608FDC40/6255ED9E" Ref="C?"  Part="1" 
+F 0 "C49" V 2450 2000 50  0000 C CNN
+F 1 "DNI" V 2450 1750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2538 1750 50  0001 C CNN
+F 3 "~" H 2500 1900 50  0001 C CNN
+F 4 "CC0603JRNPO9BN100" H 2248 2000 50  0001 C CNN "Manf#"
+F 5 "5%" H 2248 2000 50  0001 C CNN "Tolerance"
+F 6 "50V" H 2248 2000 50  0001 C CNN "voltage"
+	1    2500 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0219
+U 1 1 6255EDA8
+P 2500 2150
+AR Path="/6032F251/6255EDA8" Ref="#PWR0219"  Part="1" 
+AR Path="/6032F251/608FDC40/6255EDA8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0219" H 2500 1900 50  0001 C CNN
+F 1 "GND" V 2505 2022 50  0001 R CNN
+F 2 "" H 2500 2150 50  0001 C CNN
+F 3 "" H 2500 2150 50  0001 C CNN
+	1    2500 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2150 2500 2050
+Wire Wire Line
+	2500 1750 2500 1650
+$Comp
+L Connector:TestPoint TP13
+U 1 1 625C1C37
+P 12050 3350
+F 0 "TP13" H 12108 3468 50  0000 L CNN
+F 1 "TestPoint" H 12108 3377 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 12250 3350 50  0001 C CNN
+F 3 "~" H 12250 3350 50  0001 C CNN
+	1    12050 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP14
+U 1 1 625C3748
+P 12050 4750
+F 0 "TP14" H 12108 4868 50  0000 L CNN
+F 1 "TestPoint" H 12108 4777 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 12250 4750 50  0001 C CNN
+F 3 "~" H 12250 4750 50  0001 C CNN
+	1    12050 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP15
+U 1 1 625F2B92
+P 12050 5150
+F 0 "TP15" H 12108 5268 50  0000 L CNN
+F 1 "TestPoint" H 12108 5177 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 12250 5150 50  0001 C CNN
+F 3 "~" H 12250 5150 50  0001 C CNN
+	1    12050 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12050 3350 12050 3400
+Connection ~ 12050 3400
+Wire Wire Line
+	12050 3400 12550 3400
+Wire Wire Line
+	12050 4750 12050 4800
+Connection ~ 12050 4800
+Wire Wire Line
+	12050 4800 12550 4800
+Wire Wire Line
+	12050 5150 12050 5200
+Connection ~ 12050 5200
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 626867AE
+P 15700 7550
+F 0 "J5" V 15572 7730 50  0000 L CNN
+F 1 "Conn_01x04" V 15663 7730 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 15700 7550 50  0001 C CNN
+F 3 "~" H 15700 7550 50  0001 C CNN
+F 4 "PR20204VBNN" V 15700 7550 50  0001 C CNN "Manf#"
+	1    15700 7550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	15500 7350 15500 6900
+$Comp
+L power:+3.3V #PWR0220
+U 1 1 626B6126
+P 15500 6900
+F 0 "#PWR0220" H 15500 6750 50  0001 C CNN
+F 1 "+3.3V" H 15515 7073 50  0000 C CNN
+F 2 "" H 15500 6900 50  0001 C CNN
+F 3 "" H 15500 6900 50  0001 C CNN
+	1    15500 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15600 7350 15600 7000
+Wire Wire Line
+	15700 7350 15700 7000
+Text Label 15600 7150 1    50   ~ 0
+SCL
+Text Label 15700 7150 1    50   ~ 0
+SDA
+$Comp
+L power:GND #PWR0221
+U 1 1 62745679
+P 15800 7100
+F 0 "#PWR0221" H 15800 6850 50  0001 C CNN
+F 1 "GND" V 15805 6972 50  0001 R CNN
+F 2 "" H 15800 7100 50  0001 C CNN
+F 3 "" H 15800 7100 50  0001 C CNN
+	1    15800 7100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	15800 7100 15800 7350
+Wire Wire Line
+	1450 2750 1850 2750
+Wire Wire Line
+	1450 2850 1850 2850
 Wire Bus Line
 	9200 9450 9200 9750
 Wire Bus Line
