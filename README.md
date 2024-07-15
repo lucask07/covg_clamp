@@ -1,5 +1,7 @@
 # COVG Clamp Board 
 
+[![DOI](https://zenodo.org/badge/365096100.svg)](https://zenodo.org/doi/10.5281/zenodo.12746048)
+
 Schematic and layout for the COVG bath and guard clamps. This board sits near electrodes and includes a force output and a high-impedance feedback input to create a closed-loop clamp. Intention is to use the same design for the bath and guard clamps of a COVG amplifiers. The board supports digital programming of the current measurement gain and the feedback loop stability. Switching on the board allows for connect and disconnect of electrodes and injection (or measurements) of calibration signals onto an electrode.
 
 ### The PDF plot of the board schematic is [here](docs/bath_clamp.pdf) 
