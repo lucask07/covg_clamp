@@ -7,6 +7,12 @@ Schematic and layout for the COVG bath and guard clamps. This board sits near el
 <p align="center">
 <img src="mechanical/3d_rendering_1.png" width="400">
 
+## Acknowledgements 
+
+If this work contributes to your research please cite:
+
+I. Delgadillo Bonequi, A. Stroschein, and L. J. Koerner, “A field-programmable gate array (FPGA)-based data acquisition system for closed-loop experiments,” Review of Scientific Instruments, vol. 93, no. 11, p. 114712, Nov. 2022, [doi: 10.1063/5.0121898](http://doi.org/10.1063/5.0121898).
+
 ## HDMI: connection from DAQ to daughtercard 
 
 The digital COVG project uses the concept of one main data acquition board connected to an FPGA. The main data acquisition board has multiple channels that extend to daughtercards. The connection to each daughtercard allows for low-latency control by connections to high-speed ADCs and DACs on the daq board. For COVG the daughtercards are the bath clamp; the guard clamp; the voltage clamp and I force; and the V1/V2. The connectivity to the daughtercard is generalized and will be the same for each. 
